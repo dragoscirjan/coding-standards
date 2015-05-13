@@ -304,7 +304,21 @@ threeLongArguments(
 );
 ```
 
-##Control Statements
+##Control Statements & Loops
+
+Any control statement or loop using syntax inspired from BASIC programming language, are strongly un-adviced, but not forbidden.
+
+```php
+if ($a == 1): // recommended not to use this syntax
+    // your code here
+endif
+
+// should be replaced with
+
+if ($a == 1) {
+    // your code here  
+}
+```
 
 ###If/Else/Elseif
 
@@ -335,6 +349,7 @@ The intention of this latter declaration format is to prevent issues when adding
 
 For "if" statements that include "elseif" or "else", the formatting conventions are similar to the "if" construct. The following examples demonstrate proper formatting for "if" statements with "else" and/or "elseif" constructs:
 
+```php
 if ($a != 2) {
     $a = 2;
 } else {
@@ -361,14 +376,26 @@ if (($a == $b)
 } else {
     $a = $b;
 }
-PHP allows statements to be written without braces in some circumstances. This coding standard makes no differentiation- all "if", "elseif" or "else" statements must use braces.
+```
 
-Switch
+PHP allows statements to be written without braces in some circumstances. This coding standard makes no differentiation all "if", "elseif" or "else" statements must use braces.
+
+Furthermore, if STRICT mode is chosen, no "if" statement cannot be defined without having it's else statement even if empty.
+
+```php
+if ($a == 1) {
+  $a = 2;
+} else {
+
+}
+
+###Switch
 
 Control statements written with the "switch" statement must have a single space before the opening parenthesis of the conditional statement and after the closing parenthesis.
 
 All content within the "switch" statement must be indented using four spaces. Content under each "case" statement must be indented using an additional four spaces.
 
+```php
 switch ($numPeople) {
     case 1:
         break;
@@ -379,69 +406,95 @@ switch ($numPeople) {
     default:
         break;
 }
+```
+
 The construct default should never be omitted from a switch statement.
 
 Note: It is sometimes useful to write a case statement which falls through to the next case by not including a break or return within that case. To distinguish these cases from bugs, any case statement where break or return are omitted should contain a comment indicating that the break was intentionally omitted.
 
-Inline Documentation
-Documentation Format
+###Loops (for / foreach / while)
 
-All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit: » http://phpdoc.org/
+No loop statement will be used without opening and closing brackets.
+
+```php
+for ($i = 0; $i < 10; $i++) {
+    // your code here
+}
+
+foreach ($array as $key => $value) {
+    // your code here
+}
+
+while ($i > 0) {
+    // your code here
+}
+
+do {
+    // your code here
+} while ($i > 0);
+```
+
+##Inline Documentation
+
+###Documentation Format
+
+All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit: [» http://phpdoc.org/](http://phpdoc.org/1)
 
 All class files must contain a "file-level" docblock at the top of each file and a "class-level" docblock immediately above each class. Examples of such docblocks can be found below.
 
-Files
+### Files
 
 Every file that contains PHP code must have a docblock at the top of the file that contains these phpDocumentor tags at a minimum:
 
+```php
 /**
-* Short description for file
-*
-* Long description for file (if any)...
-*
-* LICENSE: Some license information
-*
-* @category   Zend
-* @package    Zend_Magic
-* @subpackage Wand
-* @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
-* @license    http://framework.zend.com/license   BSD License
-* @version    $Id:$
-* @link       http://framework.zend.com/package/PackageName
-* @since      File available since Release 1.5.0
-*/
-The @category annotation must have a value of "Zend".
+ * Short description for file
+ *
+ * Long description for file (if any)...
+ *
+ * LICENSE: Some license information
+ *
+ * @copyright  Copyright (c) 2007-2015 IT Media Connect S.R.L. (http://www.itmediaconnect.ro)
+ * @license    https://github.com/ITMCdev/{PROJECT-NAME}/blob/master/LICENSE License Type
+ * @version    $Id:$
+ * @link       https://github.com/ITMCdev/{PROJECT-NAME}
+ * @link       https://github.com/ITMCdev/{PROJECT-NAME}/issues
+ * @since      File available since Release 1.5.0
+ */
+```
 
-The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the "Zend" prefix, and the component name.
+The @category annotation must have a value of "Itmc" or project's name abbreviation (i.e. "Athem").
 
-The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Zend_Magic_Wand", or uses that classname as part of its prefix.
+The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the "Itmc" prefix, and the component name.
 
-Classes
+The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Itmc_Soap_Client", or uses that classname as part of its prefix.
+
+### Classes
 
 Every class must have a docblock that contains these phpDocumentor tags at a minimum:
 
+```php
 /**
-* Short description for class
-*
-* Long description for class (if any)...
-*
-* @category   Zend
-* @package    Zend_Magic
-* @subpackage Wand
-* @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
-* @license    http://framework.zend.com/license   BSD License
-* @version    Release: @package_version@
-* @link       http://framework.zend.com/package/PackageName
-* @since      Class available since Release 1.5.0
-* @deprecated Class deprecated in Release 2.0.0
-*/
-The @category annotation must have a value of "Zend".
+ * Short description for class
+ *
+ * Long description for class (if any)...
+ *
+ * @category   Itmc
+ * @package    Itmc_Soap
+ * @subpackage Client
+ * @version    Release: @package_version@
+ * @since      Class available since Release 1.5.0
+ * @deprecated Class deprecated in Release 2.0.0
+ */
+```
 
-The @package annotation must be assigned, and should be equivalent to the component to which the class belongs; typically, this will only have two segments, the "Zend" prefix, and the component name.
+The @category annotation must have a value of "Itmc" or project's name abbreviation (i.e. "Athem").
 
-The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class described is either "Zend_Magic_Wand", or uses that classname as part of its prefix.
+The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the "Itmc" prefix, and the component name.
 
-Functions
+The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Itmc_Soap_Client", or uses that classname as part of its prefix.
+
+###Functions
 
 Every function, including object methods, must have a docblock that contains at a minimum:
 
@@ -455,4 +508,45 @@ It is not necessary to use the "@access" tag because the access level is already
 
 If a function or method may throw an exception, use @throws for all known exception classes:
 
-@throws exceptionclass [description]
+```php
+/**
+ * @throws exceptionclass [description]
+ */
+```
+
+### In-line Comments
+
+Single line comments should be made using the "//" syntax. Using "#" is not recommended, but not forbidden.
+
+Multi line comments should always be wrapped between "/*" and "*/" characters.
+
+If comment is of stronger importance, comments should follow the example bellow:
+
+```php
+/*************************************************
+ * This is a comment
+ *************************************************/
+
+ Such comments should not exceed more than 5 lines of text, underlining the most important part of documentation.
+
+###Code Examples
+
+Following the phpDocumentor documentation, code examples must have the following syntax:
+
+```php
+/**
+ * My function
+ *
+ * Here is an inline example:
+ * <code>
+ * <?php
+ * echo strlen('6');
+ * ?>
+ * </code>
+ * @example /path/to/example.php How to use this function
+ * @example anotherexample.inc This example is in the "examples" subdirectory
+ */
+function mine()
+{
+}
+```
