@@ -55,9 +55,27 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 
 ### MVC
 
+#### Athem
+
+Comments will be added at the right time.
+
 #### Phalcon
 
-http://phalconphp.com/en/
+Phalcon is by far the fastest php framework we encountered.
+
+#####Pros
+* a framework in a single DLL file
+* did we mention how FAST IT IS?
+* easy to learn, easy syntax
+* developer tools
+
+#####Cons
+* young
+* a framework in a single DLL file which gives:
+* lack of transparency
+* hard to debug
+
+In order to install it, go to their [download](http://phalconphp.com/en/download) page.
 
 #### Symphony
 
@@ -66,8 +84,6 @@ https://symfony.com/
 ##### Silex
 
 http://silex.sensiolabs.org/
-
-#### Athem
 
 ### ORM
 
