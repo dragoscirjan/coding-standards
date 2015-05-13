@@ -59,7 +59,7 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 
 Comments will be added at the right time.
 
-#### Phalcon
+#### Phalcon ![Phalcon Framework](images/fwk-phalcon.png "Phalcon Framework")
 
 Phalcon is by far the fastest php framework we encountered.
 
