@@ -11,7 +11,7 @@ Topics covered in [IT Media Connect](http://itmediaconnect.ro/) products' coding
 * [File Formatting](file-formating.md)
 * [Naming Conventions](naming-conventions.md)
 * [Coding Style](coding-style.md)
-* [Inline Documentation](inline-documentation.md)
+* [Recommended Tools](recommended-tools.md)
 
 **Note**: Mainly [IT Media Connect](http://itmediaconnect.ro/) is a [PHP](http://php.net/) company, thus all documentation written further will be developed over [PHP](http://php.net/) coding language.
 
@@ -31,3 +31,12 @@ Languages included in [IT Media Connect](http://itmediaconnect.ro/) products' co
 
 ## Goals
 Coding standards are important in any development project, but they are particularly important when many developers are working on the same project. Coding standards help ensure that the code is high quality, has fewer bugs, and can be easily maintained.
+
+
+Php: http://www.php-fig.org/psr/psr-1/
+Php: http://www.php-fig.org/psr/psr-2/
+Php: https://www.drupal.org/coding-standards
+https://make.wordpress.org/core/handbook/coding-standards/php/
+https://pear.php.net/manual/en/standards.php
+http://fuelphp.com/docs/general/coding_standards.html
+* [Symfony Coding Standards](http://symfony.com/doc/current/contributing/code/standards.html)

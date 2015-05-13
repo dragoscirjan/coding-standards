@@ -13,21 +13,17 @@ This documentation has been written using [Daring Fireball](http://daringfirebal
 
 Also, this documentation has been inspired by [Zend Framework 1.2* Coding Standard](http://framework.zend.com/manual/1.12/en/coding-standard.html), along with other coding standards mentioned below:
 
-* [Symfony Coding Standards](http://symfony.com/doc/current/contributing/code/standards.html)
-* TODO:
 
-Java: http://www.oracle.com/technetwork/java/codeconvtoc-136057.html
-Java: https://google-styleguide.googlecode.com/svn/trunk/javaguide.html
-Java: http://javascript.crockford.com/javacodeconventions.pdf
+## NOTE
 
-Python: https://www.python.org/dev/peps/pep-0008/
+The content of this documentation is a draft. It contains sets of standards and tools our company uses.
 
-Php: http://www.php-fig.org/psr/psr-1/
-Php: http://www.php-fig.org/psr/psr-2/
-Php: https://www.drupal.org/coding-standards
-https://make.wordpress.org/core/handbook/coding-standards/php/
-https://pear.php.net/manual/en/standards.php
-http://fuelphp.com/docs/general/coding_standards.html
+We reserve the right to
+* modify it at any time without giving any reason to any other entity but [IT Media Connect](https://itmediaconnect.ro)
+* impose this standards and tools for the private and open projects [IT Media Connect](https://itmediaconnect.ro) will initiate.
 
-CoffeeScript: http://www.coffeelint.org/
-http://docs.buildbot.net/latest/developer/coffeescript-style.html
+By presenting this to you, the public, [IT Media Connect](https://itmediaconnect.ro) does not intent to influence anyone in using any of the information compiled further.
+
+Thus said, we are NOT paid to recommend any tool, coding standard, or any other type of information presented in this document. We're simply presenting the information as is, as gathered and evaluated to fit our purposes.
+
+[IT Media Connect](https://itmediaconnect.ro) does not feel obliged to give any reason or explain why we chose to use the compiled list of tools, coding styles, etc.
