@@ -18,3 +18,7 @@ Line termination follows the Unix text file convention. Lines must end with a si
 **Note**: Do not use carriage returns (CR) as is the convention in Apple OS's (0x0D) or the carriage return - linefeed combination (CRLF) as is standard for the Windows OS (0x0D, 0x0A).
 
 *Thus said, please configure your IDEs accordingly.*
+
+## Note
+
+For simplifying the trouble of configuring your IDEs, you could always use the [.editorconfig](.editorconfig) file based on [» http://editorconfig.org](http://editorconfig.org).
