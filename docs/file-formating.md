@@ -21,4 +21,4 @@ Line termination follows the Unix text file convention. Lines must end with a si
 
 ## Note
 
-For simplifying the trouble of configuring your IDEs, you could always use the [.editorconfig](.editorconfig) file based on [» http://editorconfig.org](http://editorconfig.org).
+For simplifying the trouble of configuring your IDEs, you could always use the [.editorconfig](../../raw/master/.editorconfig) file based on [» http://editorconfig.org](http://editorconfig.org).
