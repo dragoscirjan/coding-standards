@@ -20,6 +20,9 @@ charset = utf-8
 [Makefile]
 indent_style = tab
 
+[Vagrantfile]
+indent_size = 2
+
 # Matches the exact files either package.json or .travis.yml
 [{package.json,.travis.yml,*.yml}]
 indent_style = space
