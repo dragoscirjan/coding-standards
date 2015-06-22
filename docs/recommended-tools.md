@@ -2,7 +2,7 @@
 
 ## IDE
 
-### ![JetBrains PhpStorm](http://blog.jetbrains.com/wp-content/uploads/2013/09/phpstorm_logo_icon.jpg "JetBrains PhpStorm" =40x40) JetBrains PhpStorm
+### ![JetBrains PhpStorm](http://blog.jetbrains.com/wp-content/uploads/2013/09/phpstorm_logo_icon.jpg "JetBrains PhpStorm"){:height="36px" width="36px"} JetBrains PhpStorm
 
 PhpStorm’s smart code editor provides excellent support for PHP (including the latest language versions and frameworks), HTML, JavaScript, CSS, Sass, Less, CoffeeScript, and many other languages. Enjoy coding with intelligent context-aware code completion, error detection, and on-the-fly code inspections & fixes.​
 
