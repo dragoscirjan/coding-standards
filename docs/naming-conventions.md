@@ -98,3 +98,6 @@ All letters used in a constant name must be capitalized, while all words in a co
 For example, EMBED_SUPPRESS_EMBED_EXCEPTION is permitted but EMBED_SUPPRESSEMBEDEXCEPTION is not.
 
 Constants must be defined as class members with the "const" modifier. Defining constants in the global scope with the "define" function is permitted but strongly discouraged.
+
+<hr />
+[&laquo; Recommended Tools](recommended-tools.md) / [Home &raquo;](../README.md)

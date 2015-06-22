@@ -550,3 +550,6 @@ function mine()
 {
 }
 ```
+
+<hr />
+[&laquo; Naming Conventions](naming-conventions.md) / [Recommended Tools &raquo;](recommended-tools.md)
