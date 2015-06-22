@@ -13,15 +13,16 @@ Topics covered in [IT Media Connect](http://itmediaconnect.ro/) products' coding
 * [Coding Style](coding-style.md)
 * [Recommended Tools](recommended-tools.md)
 
-**Note**: Mainly [IT Media Connect](http://itmediaconnect.ro/) is a [PHP](http://php.net/) company, thus all documentation written further will be developed over [PHP](http://php.net/) coding language.
+**Note**: In this section we will debate coding standards related to [Adobe](http://www.adobe.com/products/coldfusion-family.html) [ColdFusion](overview.md) programming language, treating both ColdFusion Markup Language (CFML) and ColdFusion Scripting Language (CFScript) whether if they run on [Adobe](http://www.adobe.com/products/coldfusion-family.html)&copy; [ColdFusion Server](http://www.adobe.com/products/coldfusion-family.html), [Railo](http://www.getrailo.org), [Lucee](http://lucee.org) or [OpenBD](http://openbd.org).
 
-However, [PHP](http://php.net/) is not the only language we are using, so we tried extending and adapting coding standards to all coding languages used in our company. Also, with each adopted coding language, we engage in adding and adapting our coding standards to that specific language as well.
+**Note**: Please note that this coding standards where written first for [PHP](../../overview.md) and than addapted for multiple languages, including [Adobe](http://www.adobe.com/products/coldfusion-family.html) [ColdFusion](overview.md).
 
 Languages included in [IT Media Connect](http://itmediaconnect.ro/) products' coding standards include:
 
-* [CoffeeScript](part/coffee/overview.md)
+* [Adobe](http://www.adobe.com/products/coldfusion-family.html)&copy; [ColdFusion](overview.md)
+* [Zend](http://zend.com)&copy; [Php](../../overview.md)
 * *Following languages are still in our TODO list*
-* [Adobe](http://www.adobe.com/products/coldfusion-family.html) [ColdFusion](part/cfc/overview.md) (not completed)
+* [CoffeeScript](part/coffee/overview.md)
 * [Google](http://code.google.com/p/dart/) [ColdFusion](part/dart/overview.md) (not completed)
 * [Css (Less, S(a|c)ss)](part/css/overview.md) (not completed)
 * [Html (Jade, Haml, Twig)](part/html/overview.md) (not completed)
@@ -40,3 +41,6 @@ https://make.wordpress.org/core/handbook/coding-standards/php/
 https://pear.php.net/manual/en/standards.php
 http://fuelphp.com/docs/general/coding_standards.html
 * [Symfony Coding Standards](http://symfony.com/doc/current/contributing/code/standards.html)
+
+<hr />
+[&laquo; Home](../README.md) / [File Formating &raquo;](file-formating.md)

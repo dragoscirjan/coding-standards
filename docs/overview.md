@@ -19,9 +19,9 @@ However, [PHP](http://php.net/) is not the only language we are using, so we tri
 
 Languages included in [IT Media Connect](http://itmediaconnect.ro/) products' coding standards include:
 
-* [CoffeeScript](part/coffee/overview.md)
+* [Adobe](http://www.adobe.com/products/coldfusion-family.html) [ColdFusion](part/cfc/overview.md)
 * *Following languages are still in our TODO list*
-* [Adobe](http://www.adobe.com/products/coldfusion-family.html) [ColdFusion](part/cfc/overview.md) (not completed)
+* [CoffeeScript](part/coffee/overview.md)
 * [Google](http://code.google.com/p/dart/) [ColdFusion](part/dart/overview.md) (not completed)
 * [Css (Less, S(a|c)ss)](part/css/overview.md) (not completed)
 * [Html (Jade, Haml, Twig)](part/html/overview.md) (not completed)
