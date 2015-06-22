@@ -1,12 +1,8 @@
-<style>
-    @import url(styles.css);
-</style>
-
 # PHP Recommended Tools
 
 ## IDE
 
-### JetBrains PhpStorm
+### ![JetBrains PhpStorm](http://blog.jetbrains.com/wp-content/uploads/2013/09/phpstorm_logo_icon.jpg "JetBrains PhpStorm" =40x40) JetBrains PhpStorm
 
 PhpStorm’s smart code editor provides excellent support for PHP (including the latest language versions and frameworks), HTML, JavaScript, CSS, Sass, Less, CoffeeScript, and many other languages. Enjoy coding with intelligent context-aware code completion, error detection, and on-the-fly code inspections & fixes.​
 
@@ -177,7 +173,7 @@ http://phpdebugbar.com/
 
 ## Continuous Integration
 
-NOTE: This is a document proposal. None of this CI tools have been tested yet. 
+NOTE: This is a document proposal. None of this CI tools have been tested yet.
 
 * [PHP CI](https://www.phptesting.org)
 * [Travis CI](https://travis-ci.org)
