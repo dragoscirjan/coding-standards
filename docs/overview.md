@@ -40,3 +40,6 @@ https://make.wordpress.org/core/handbook/coding-standards/php/
 https://pear.php.net/manual/en/standards.php
 http://fuelphp.com/docs/general/coding_standards.html
 * [Symfony Coding Standards](http://symfony.com/doc/current/contributing/code/standards.html)
+
+<hr />
+[&laquo; Home](../README.md) / [File Formating &raquo;](file-formating.md)
