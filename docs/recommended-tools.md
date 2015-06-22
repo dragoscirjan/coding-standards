@@ -1,3 +1,7 @@
+<style>
+    @import url(styles.css);
+</style>
+
 # PHP Recommended Tools
 
 ## IDE
@@ -169,3 +173,70 @@ https://phpunit.de/
 The DebugBar integrates easily in any projects and can display profiling data from any part of your application. It comes built-in with data collectors for standard PHP features and popular projects.
 
 http://phpdebugbar.com/
+
+
+## Continuous Integration
+
+NOTE: This is a document proposal. None of this
+
+### PHP CI
+
+<table class="ci">
+  <tr>
+    <td>
+
+<h5>![PHP CI](https://www.phptesting.org/assets/images/logo.png "PHP CI")</h5>
+
+PHPCI is a free and open source continuous integration tool specifically designed for PHP. Built with simplicity in mind and featuring integrations with all of your favourite testing tools, we've created the very best platform for testing your PHP projects.<br /><br />
+
+[PHP CI Home Page](https://www.phptesting.org)
+
+    </td>
+    <td>
+
+<h5>![PHP CI](https://www.phptesting.org/assets/images/logo.png "PHP CI")</h5>
+
+PHPCI is a free and open source continuous integration tool specifically designed for PHP. Built with simplicity in mind and featuring integrations with all of your favourite testing tools, we've created the very best platform for testing your PHP projects.<br /><br />
+
+[PHP CI Home Page](https://www.phptesting.org)
+
+    </td>
+    <td>
+
+<h5>![PHP CI](https://www.phptesting.org/assets/images/logo.png "PHP CI")</h5>
+
+PHPCI is a free and open source continuous integration tool specifically designed for PHP. Built with simplicity in mind and featuring integrations with all of your favourite testing tools, we've created the very best platform for testing your PHP projects.<br /><br />
+
+[PHP CI Home Page](https://www.phptesting.org)
+
+    </td>
+    <td>
+
+<h5>![PHP CI](https://www.phptesting.org/assets/images/logo.png "PHP CI")</h5>
+
+PHPCI is a free and open source continuous integration tool specifically designed for PHP. Built with simplicity in mind and featuring integrations with all of your favourite testing tools, we've created the very best platform for testing your PHP projects.<br /><br />
+
+[PHP CI Home Page](https://www.phptesting.org)
+
+    </td>
+  </tr>
+</table>
+
+
+
+## Travis CI
+
+https://travis-ci.org/
+https://github.com/travis-ci
+
+## Jenkins CI
+
+https://jenkins-ci.org/
+
+## Team City
+
+https://www.jetbrains.com/teamcity/
+
+## Bamboo
+
+https://www.atlassian.com/software/bamboo
