@@ -100,4 +100,4 @@ For example, EMBED_SUPPRESS_EMBED_EXCEPTION is permitted but EMBED_SUPPRESSEMBED
 Constants must be defined as class members with the "const" modifier. Defining constants in the global scope with the "define" function is permitted but strongly discouraged.
 
 <hr />
-[&laquo; Recommended Tools](recommended-tools.md) / [Home &raquo;](../README.md)
+[&laquo; File Formating](file-formating.md) / [Coding Style &raquo;](coding-style.md)
