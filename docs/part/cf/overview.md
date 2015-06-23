@@ -1,6 +1,6 @@
 # Overview
 
-**Note**: This document is an adaptation of the [PHP](../../overview.md) coding standards written by [IT Media Connect](http://itmediaconnect.ro/), for [Adobe](http://www.adobe.com/products/coldfusion-family.html) [ColdFusion](overview.md) programming language.
+**Note**: This document is an adaptation of the [PHP](../../overview.md) coding standards written by [IT Media Connect](http://itmediaconnect.ro/), for [Adobe](http://www.adobe.com/products/coldfusion-family.html)<sup>&copy;</sup> [ColdFusion](overview.md) programming language.
 
 Topics covered in [IT Media Connect](http://itmediaconnect.ro/) products' coding standards include:
 
