@@ -1,9 +1,8 @@
 # File Formatting
 
 ## General
-For files that contain only [PHP](http://php.net/) code, the closing tag ("?>") is never permitted. It is not required by [PHP](http://php.net/), and omitting it prevents the accidental injection of trailing white space into the response.
 
-**Note**: Important: Inclusion of arbitrary binary data as permitted by __HALT_COMPILER() is prohibited from [PHP](http://php.net/) files in the [IT Media Connect](http://itmediaconnect.ro/) projects or files derived from them. Use of this feature is only permitted for some installation scripts.
+**TODO**
 
 ## Indentation
 

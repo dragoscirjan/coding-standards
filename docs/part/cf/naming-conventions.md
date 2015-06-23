@@ -1,6 +1,6 @@
 #Naming Conventions
 
-**Note**: This file in inspired from [Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.naming-conventions.html)
+**TODO**: 
 
 ##Classes
 

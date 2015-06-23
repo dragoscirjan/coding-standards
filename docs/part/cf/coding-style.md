@@ -2,13 +2,13 @@
 
 **Note**: This file in inspired from [Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.coding-style.html)
 
-## PHP Code Demarcation
-PHP code must always be delimited by the full-form, standard PHP tags:
+## CFScript Code Demarcation
+CFSript code must always be delimited by the full-form, standard `<cfscript>` tags:
 
-```php
-<?php
+```cfml
+<cfscript>
 // your code here
-?>
+</cfscript>
 ```
 Short tags are never allowed. For files containing only PHP code, the closing tag must always be omitted (See General standards).
 
