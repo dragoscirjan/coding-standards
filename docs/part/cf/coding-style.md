@@ -10,7 +10,6 @@ CFSript code must always be delimited by the full-form, standard `<cfscript>` ta
 // your code here
 </cfscript>
 ```
-Short tags are never allowed. For files containing only PHP code, the closing tag must always be omitted (See General standards).
 
 ##Strings
 
@@ -18,8 +17,13 @@ Short tags are never allowed. For files containing only PHP code, the closing ta
 
 When a string is literal (contains no variable substitutions), the apostrophe or "single quote" should always be used to demarcate the string:
 
-```php
-$a = 'Example String';
+```cfml
+<!--- CFML --->
+<cfset var a = 'Example String' />
+<!--- CFScript --->
+<cfscript>
+var a = 'Example String';
+</cfscript>
 ```
 
 ###String Literals Containing Apostrophes
