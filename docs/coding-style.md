@@ -163,7 +163,7 @@ class SampleClass
 
 Member variables must be named according to project's variable naming conventions. If no other convention is chosen, naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
-If decided by developer team, private variable naming may contain the underscore "_" character as a prefix (i.e. _camelCaseNamingConvention).
+If decided by developer team, private variable naming may contain the underscore "\_" character as a prefix (i.e. \_camelCaseNamingConvention).
 
 Any variables declared in a class must be listed at the top of the class, above the declaration of any methods.
 
@@ -181,7 +181,7 @@ Giving access to member variables directly by declaring them as public is permit
 
 If no other convention is chosen, method naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
-If decided by developer team, private method naming may contain the underscore "_" character as a prefix (i.e. _camelCaseNamingConvention).
+If decided by developer team, private method naming may contain the underscore "\_" character as a prefix (i.e. \_camelCaseNamingConvention).
 
 As with classes, the brace should always be written on the line underneath the function name. Space between the function name and the opening parenthesis for the arguments is not permitted.
 

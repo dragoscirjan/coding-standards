@@ -30,81 +30,97 @@ var a = 'Example String';
 
 When a literal string itself contains apostrophes, it is permitted to demarcate the string with quotation marks or "double quotes". This is especially useful for SQL statements:
 
-```php
-$sql = "SELECT `id`, `name` from `people` "
-     . "WHERE `name`='Fred' OR `name`='Susan'";
+```cfml
+<cfquery>
+    SELECT `id`, `name` from `people`
+    WHERE `name`='Fred' OR `name`='Susan'
+</cfquery>
 ```
 
 This syntax is preferred over escaping apostrophes as it is much easier to read.
 
-###Variable Substitution
+###Variable Substitution & String Concatenation
 
-Variable substitution is permitted using either of these forms:
+ColdFusion does not have an in-string variable substitution syntax, everything being done using the [Replace](http://cfdocs.org/replace) functions, or using concatenation syntax.
 
-```php
-$greeting = "Hello $name, welcome back!";
-
-$greeting = "Hello {$name}, welcome back!";
-```
-For consistency, this form is *not* permitted:
-
-```php
-$greeting = "Hello ${name}, welcome back!";
-```
-###String Concatenation
-
-Strings must be concatenated using the "." operator. A space must always be added before and after the "." operator to improve readability:
-
-```php
-$company = 'Code' . ' ' . 'Styling';
+```cfml
+<!--- CFML --->
+<cfset var greeting = replace("Hello {name}, welcome back!", '{name}', name) />
+<!--- CFScript --->
+<cfscript>
+var greeting = replace("Hello {name}, welcome back!", '{name}', name)
+</cfscript>
 ```
 
-When concatenating strings with the "." operator, it is encouraged to break the statement into multiple lines to improve readability. In these cases, each successive line should be padded with white space such that the "."; operator is aligned under the "=" operator:
+or
 
-```php
-$sql = "SELECT `id`, `name` FROM `people` "
-     . "WHERE `name` = 'Susan' "
-     . "ORDER BY `name` ASC ";
+```cfml
+<!--- CFML --->
+<cfset var greeting = "Hello " & name & ", welcome back!" />
+<!--- CFScript --->
+<cfscript>
+var greeting = "Hello " & name & ", welcome back!";
+</cfscript>
+```
+
+Strings must be concatenated using the "&" operator. A space must always be added before and after the "." operator to improve readability.
+
+When concatenating strings with the "&" operator, it is encouraged to break the statement into multiple lines to improve readability. In these cases, each successive line should be padded with white space such that the "."; operator is aligned under the "=" operator:
+
+```cfml
+<!--- CFML --->
+<cfset var sqlcmd = "SELECT `id`, `name` FROM `people` "
+    & "WHERE `name` = 'Susan' "
+    & "ORDER BY `name` ASC " />
+ <!--- CFScript --->
+<cfscript>
+var sqlcmd = "SELECT `id`, `name` FROM `people` "
+    & "WHERE `name` = 'Susan' "
+    & "ORDER BY `name` ASC ";
+</cfscript>
 ```
 
 ##Arrays
 
 ###Numerically Indexed Arrays
 
-Negative numbers are not permitted as indices.
+Negative numbers are not permitted as indices. Also **zero** is not permitted as indice.
 
 An indexed array may start with any non-negative number, however all base indices besides 0 are discouraged.
 
-When declaring indexed arrays with the Array function, a trailing space must be added after each comma delimiter to improve readability:
+When declaring arrays with the, a trailing space must be added after each comma delimiter to improve readability:
 
-```php
-$sampleArray = array(1, 2, 3, 'Zend', 'Studio');
+```cfml
+<!--- CFML --->
+<cfset var sampleArray = (1, 2, 3, 'Zend', 'Studio') />
+ <!--- CFScript --->
+<cfscript>
+var sampleArray = (1, 2, 3, 'Zend', 'Studio');
+</cfscript>
 ```
 
 It is permitted to declare multi-line indexed arrays using the "array" construct. The initial array item may begin on the following line. If so, it should be padded at one indentation level greater than the line containing the array declaration, and all successive lines should have the same indentation; the closing paren should be on a line by itself at the same indentation level as the line containing the array declaration:
 
-```php
-$sampleArray = array(
+```cfml
+<!--- CFML --->
+<cfset var sampleArray = (
     1, 2, 3, 'Zend', 'Studio',
-    $a, $b, $c,
-    56.44, $d, 500,
+    a, b, c,
+    56.44, $d, 500
+) />
+ <!--- CFScript --->
+<cfscript>
+var sampleArray = (
+    1, 2, 3, 'Zend', 'Studio',
+    a, b, c,
+    56.44, d, 500
 );
+</cfscript>
 ```
-
-When using this latter declaration, we encourage using a trailing comma for the last item in the array; this minimizes the impact of adding new items on successive lines, and helps to ensure no parse errors occur due to a missing comma.
 
 ###Associative Arrays
 
-When declaring associative arrays with the Array construct, breaking the statement into multiple lines is mandatory. The initial array item must begin on the following line. If so, it should be padded at one indentation level greater than the line containing the array declaration, and all successive lines should have the same indentation; the closing parent should be on a line by itself at the same indentation level as the line containing the array declaration. For readability, the various "=>" assignment operators should be padded such that they align.
-
-```php
-$sampleArray = array(
-    'firstKey'  => 'firstValue',
-    'secondKey' => 'secondValue',
-);
-```
-
-When using this latter declaration, we encourage using a trailing comma for the last item in the array; this minimizes the impact of adding new items on successive lines, and helps to ensure no parse errors occur due to a missing comma.
+Associative arrays are not present in Cold Fusion.
 
 ##Classes
 
@@ -167,7 +183,7 @@ class SampleClass
 
 Member variables must be named according to project's variable naming conventions. If no other convention is chosen, naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
-If decided by developer team, private variable naming may contain the underscore "_" character as a prefix (i.e. _camelCaseNamingConvention).
+If decided by developer team, private variable naming may contain the underscore "\_" character as a prefix (i.e. \_camelCaseNamingConvention).
 
 Any variables declared in a class must be listed at the top of the class, above the declaration of any methods.
 
@@ -185,7 +201,7 @@ Giving access to member variables directly by declaring them as public is permit
 
 If no other convention is chosen, method naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
-If decided by developer team, private method naming may contain the underscore "_" character as a prefix (i.e. _camelCaseNamingConvention).
+If decided by developer team, private method naming may contain the underscore "\_" character as a prefix (i.e. \_camelCaseNamingConvention).
 
 As with classes, the brace should always be written on the line underneath the function name. Space between the function name and the opening parenthesis for the arguments is not permitted.
 
@@ -448,23 +464,23 @@ All class files must contain a "file-level" docblock at the top of each file and
 
 ### Files
 
-Every file that contains PHP code must have a docblock at the top of the file that contains these phpDocumentor tags at a minimum:
+Every file that contains CMLF/CFScript code must have a docblock at the top of the file that contains these phpDocumentor tags at a minimum (we are aware phpDocumentor will not function for ColdFusion, yet we consider it a point of reference):
 
-```php
-/**
- * Short description for file
- *
- * Long description for file (if any)...
- *
- * LICENSE: Some license information
- *
- * @copyright  Copyright (c) 2007-2015 IT Media Connect S.R.L. (http://www.itmediaconnect.ro)
- * @license    https://github.com/ITMCdev/{PROJECT-NAME}/blob/master/LICENSE License Type
- * @version    $Id:$
- * @link       https://github.com/ITMCdev/{PROJECT-NAME}
- * @link       https://github.com/ITMCdev/{PROJECT-NAME}/issues
- * @since      File available since Release 1.5.0
- */
+```cfml
+<!---
+ Short description for file
+
+ Long description for file (if any)...
+
+ LICENSE: Some license information
+
+ @copyright  Copyright (c) 2007-2015 IT Media Connect S.R.L. (http://www.itmediaconnect.ro)
+ @license    https://github.com/ITMCdev/{PROJECT-NAME}/blob/master/LICENSE License Type
+ @version    $Id:$
+ @link       https://github.com/ITMCdev/{PROJECT-NAME}
+ @link       https://github.com/ITMCdev/{PROJECT-NAME}/issues
+ @since      File available since Release 1.5.0
+--->
 ```
 
 The @category annotation must have a value of "Itmc" or project's name abbreviation (i.e. "Athem").
@@ -477,19 +493,19 @@ The @subpackage annotation is optional. If provided, it should be the subcompone
 
 Every class must have a docblock that contains these phpDocumentor tags at a minimum:
 
-```php
-/**
- * Short description for class
- *
- * Long description for class (if any)...
- *
- * @category   Itmc
- * @package    Itmc_Soap
- * @subpackage Client
- * @version    Release: @package_version@
- * @since      Class available since Release 1.5.0
- * @deprecated Class deprecated in Release 2.0.0
- */
+```cfml
+<!---
+ Short description for class
+
+ Long description for class (if any)...
+
+ @category   Itmc
+ @package    Itmc_Soap
+ @subpackage Client
+ @version    Release: @package_version@
+ @since      Class available since Release 1.5.0
+ @deprecated Class deprecated in Release 2.0.0
+--->
 ```
 
 The @category annotation must have a value of "Itmc" or project's name abbreviation (i.e. "Athem").

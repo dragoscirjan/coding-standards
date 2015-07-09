@@ -176,10 +176,19 @@ http://phpdebugbar.com/
 NOTE: This is a document proposal. None of this CI tools have been tested yet.
 
 * [PHP CI](https://www.phptesting.org)
+* [Gitlab CI](https://github.com/gitlabhq/gitlab-ci)
 * [Travis CI](https://travis-ci.org)
 * [Jenkins CI](https://jenkins-ci.org)
 * [Team City](https://www.jetbrains.com/teamcity)
 * [Bamboo](https://www.atlassian.com/software/bamboo)
+
+
+## Code Quality
+
+NOTE: This is a document proposal. None of this CI tools have been tested yet.
+
+* [Code Climate](https://codeclimate.com)
+* [Coveralls](https://coveralls.io)
 
 <hr />
 [&laquo; Coding Sylte](coding-style.md) / [Home &raquo;](../README.md)
