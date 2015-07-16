@@ -54,44 +54,44 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 ##### Linters
 
 | Language/IDE | Atom                       | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
-| ------------ | : ------------------------ | :------: |
-| **Ansible** | linter-ansible-lint         | $1600 |
-| C/C++/Obj-C | atom-lint                   | $1600 |
-| CSS         | atom-lint, linter-ccslint   | $1600 |
-| - LESS      | linter-less                 | $1600 |
-| - SASS      | linter-9e-sass              | $1600 |
-| - SCSS      | atom-lint, linter-scss-lint | $1600 |
-| ColdFusion  | -                           | $1600 |
-| HTML        | -                           | $1600 |
-|  - Jade     | -                           | $1600 |
-|  - Haml     | linter-haml                 | $1600 |
-|  - Jinja    | -                           | $1600 |
-| Java        | linter-javac                | $1600 |
-| JavaScript  | atom-lint                   | $1600 |
-|  - Coffee   | atom-lint, coffee-lint      | $1600 |
-| PHP         | linter-php                  |   $12 |
-| Python      | atom-lint                   |    $1 |
-| Ruby        | atom-lint                   |    $1 |
-| XML         | linter-xmllint              |    $1 |
+| ------------ | : ------------------------ | :------: | - | - | - | - | - |
+| **Ansible** | linter-ansible-lint         | - | - | - | - | - | - |
+| C/C++/Obj-C | atom-lint                   | - | - | - | - | - | - |
+| CSS         | atom-lint, linter-ccslint   | - | - | - | - | - | - |
+| - LESS      | linter-less                 | - | - | - | - | - | - |
+| - SASS      | linter-9e-sass              | - | - | - | - | - | - |
+| - SCSS      | atom-lint, linter-scss-lint | - | - | - | - | - | - |
+| ColdFusion  | -                           | - | - | - | - | - | - |
+| HTML        | -                           | - | - | - | - | - | - |
+|  - Jade     | -                           | - | - | - | - | - | - |
+|  - Haml     | linter-haml                 | - | - | - | - | - | - |
+|  - Jinja    | -                           | - | - | - | - | - | - |
+| Java        | linter-javac                | - | - | - | - | - | - |
+| JavaScript  | atom-lint                   | - | - | - | - | - | - |
+|  - Coffee   | atom-lint, coffee-lint      | - | - | - | - | - | - |
+| PHP         | linter-php                  | - | - | - | - | - | - |
+| Python      | atom-lint                   | - | - | - | - | - | - |
+| Ruby        | atom-lint                   | - | - | - | - | - | - |
+| XML         | linter-xmllint              | - | - | - | - | - | - |
 
 ##### Languages
 
 | Language/IDE | Atom                       | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
 |--------------|:---------------------------|:--------:|
-| **Ansible** | linter-ansible-lint         | $1600 |
-| C/C++/Obj-C | atom-lint                   | $1600 |
-| CSS         | atom-lint, linter-ccslint   | $1600 |
-| - LESS      | linter-less                 | $1600 |
-| - SASS      | linter-9e-sass              | $1600 |
-| - SCSS      | atom-lint, linter-scss-lint | $1600 |
-| ColdFusion  | -                           | $1600 |
-| HTML        | -                           | $1600 |
-|  - Jade     | -                           | $1600 |
-|  - Haml     | linter-haml                 | $1600 |
-|  - Jinja    | -                           | $1600 |
-| Java        | linter-javac                | $1600 |
-| JavaScript  | atom-lint                   | $1600 |
-|  - Coffee   | atom-lint, coffee-lint      | $1600 |
+| **Ansible** | linter-ansible-lint         | $- |
+| C/C++/Obj-C | atom-lint                   | $- |
+| CSS         | atom-lint, linter-ccslint   | $- |
+| - LESS      | linter-less                 | $- |
+| - SASS      | linter-9e-sass              | $- |
+| - SCSS      | atom-lint, linter-scss-lint | $- |
+| ColdFusion  | -                           | $- |
+| HTML        | -                           | $- |
+|  - Jade     | -                           | $- |
+|  - Haml     | linter-haml                 | $- |
+|  - Jinja    | -                           | $- |
+| Java        | linter-javac                | $- |
+| JavaScript  | atom-lint                   | $- |
+|  - Coffee   | atom-lint, coffee-lint      | $- |
 | PHP         | linter-php                  |   $12 |
 | Python      | atom-lint                   |    $1 |
 | Ruby        | atom-lint                   |    $1 |
