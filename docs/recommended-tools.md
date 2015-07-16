@@ -100,7 +100,7 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 ##### Revision
 
 | vers./IDE | Atom                                  | Sublime Text | IntelliJ |
-|:---------:|:--------------------------------------| :----------: | :------: |
+| :-------: | :------------------------------------ | :----------: | :------: |
 | git       | git-control, git-plus, git-tab-status | -            |  native  |
 | svn       | svn                                   | -            |  native  |
 
