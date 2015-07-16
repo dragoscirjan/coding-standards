@@ -53,11 +53,6 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 
 ##### Linters
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
 | Language/IDE | Atom                        | Sublime Text | IntelliJ |
 | ------------ | :-------------------------- | :----------: | :------: |
 | **Ansible**  | linter-ansible-lint         | -            | -        |
@@ -81,33 +76,33 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 
 ##### Languages
 
-| Language/IDE | Atom                       | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
-|--------------|:---------------------------|:--------:|
-| **Ansible** | linter-ansible-lint         | $- |
-| C/C++/Obj-C | atom-lint                   | $- |
-| CSS         | atom-lint, linter-ccslint   | $- |
-| - LESS      | linter-less                 | $- |
-| - SASS      | linter-9e-sass              | $- |
-| - SCSS      | atom-lint, linter-scss-lint | $- |
-| ColdFusion  | -                           | $- |
-| HTML        | -                           | $- |
-|  - Jade     | -                           | $- |
-|  - Haml     | linter-haml                 | $- |
-|  - Jinja    | -                           | $- |
-| Java        | linter-javac                | $- |
-| JavaScript  | atom-lint                   | $- |
-|  - Coffee   | atom-lint, coffee-lint      | $- |
-| PHP         | linter-php                  |   $12 |
-| Python      | atom-lint                   |    $1 |
-| Ruby        | atom-lint                   |    $1 |
-| XML         | linter-xmllint              |    $1 |
+| Language/IDE | Atom                       | Sublime Text | IntelliJ |
+| ------------ | :------------------------- | :----------: | :------: |
+| **Ansible** | linter-ansible-lint         | -            | -        |
+| C/C++/Obj-C | atom-lint                   | -            | -        |
+| CSS         | atom-lint, linter-ccslint   | -            | -        |
+| - LESS      | linter-less                 | -            | -        |
+| - SASS      | linter-9e-sass              | -            | -        |
+| - SCSS      | atom-lint, linter-scss-lint | -            | -        |
+| ColdFusion  | -                           | -            | -        |
+| HTML        | -                           | -            | -        |
+|  - Jade     | -                           | -            | -        |
+|  - Haml     | linter-haml                 | -            | -        |
+|  - Jinja    | -                           | -            | -        |
+| Java        | linter-javac                | -            | -        |
+| JavaScript  | atom-lint                   | -            | -        |
+|  - Coffee   | atom-lint, coffee-lint      | -            | -        |
+| PHP         | linter-php                  | -            | -        |
+| Python      | atom-lint                   | -            | -        |
+| Ruby        | atom-lint                   | -            | -        |
+| XML         | linter-xmllint              | -            | -        |
 
 ##### Revision
 
-| vers./IDE | Atom                                  | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
-|:---------:|:--------------------------------------|:--------:|
-| git       | git-control, git-plus, git-tab-status |  native  |
-| svn       | svn                                   |  native  |
+| vers./IDE | Atom                                  | Sublime Text | IntelliJ |
+|:---------:|:--------------------------------------| :----------: | :------: |
+| git       | git-control, git-plus, git-tab-status | -            |  native  |
+| svn       | svn                                   | -            |  native  |
 
 
 
