@@ -53,6 +53,11 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 
 ##### Linters
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 | Language/IDE | Atom                       | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
 | ------------ | : ------------------------ | :------: | - | - | - | - | - |
 | **Ansible** | linter-ansible-lint         | - | - | - | - | - | - |
