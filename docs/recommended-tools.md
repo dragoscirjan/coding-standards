@@ -49,6 +49,63 @@ It is a feature-full, plugin extensible IDE for C/C++ and other programming lang
 
 It is based on KDevPlatform, and the KDE and Qt libraries and is under development since 1998.
 
+#### Plugins
+
+##### Linters
+
+| Language/IDE | Atom                       | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
+|--------------|:---------------------------|:--------:|
+| **Ansible** | linter-ansible-lint         | $1600 |
+| C/C++/Obj-C | atom-lint                   | $1600 |
+| CSS         | atom-lint, linter-ccslint   | $1600 |
+| - LESS      | linter-less                 | $1600 |
+| - SASS      | linter-9e-sass              | $1600 |
+| - SCSS      | atom-lint, linter-scss-lint | $1600 |
+| ColdFusion  | -                           | $1600 |
+| HTML        | -                           | $1600 |
+|  - Jade     | -                           | $1600 |
+|  - Haml     | linter-haml                 | $1600 |
+|  - Jinja    | -                           | $1600 |
+| Java        | linter-javac                | $1600 |
+| JavaScript  | atom-lint                   | $1600 |
+|  - Coffee   | atom-lint, coffee-lint      | $1600 |
+| PHP         | linter-php                  |   $12 |
+| Python      | atom-lint                   |    $1 |
+| Ruby        | atom-lint                   |    $1 |
+| XML         | linter-xmllint              |    $1 |
+
+##### Languages
+
+| Language/IDE | Atom                       | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
+|--------------|:---------------------------|:--------:|
+| **Ansible** | linter-ansible-lint         | $1600 |
+| C/C++/Obj-C | atom-lint                   | $1600 |
+| CSS         | atom-lint, linter-ccslint   | $1600 |
+| - LESS      | linter-less                 | $1600 |
+| - SASS      | linter-9e-sass              | $1600 |
+| - SCSS      | atom-lint, linter-scss-lint | $1600 |
+| ColdFusion  | -                           | $1600 |
+| HTML        | -                           | $1600 |
+|  - Jade     | -                           | $1600 |
+|  - Haml     | linter-haml                 | $1600 |
+|  - Jinja    | -                           | $1600 |
+| Java        | linter-javac                | $1600 |
+| JavaScript  | atom-lint                   | $1600 |
+|  - Coffee   | atom-lint, coffee-lint      | $1600 |
+| PHP         | linter-php                  |   $12 |
+| Python      | atom-lint                   |    $1 |
+| Ruby        | atom-lint                   |    $1 |
+| XML         | linter-xmllint              |    $1 |
+
+##### Revision
+
+| vers./IDE | Atom                                  | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
+|:---------:|:--------------------------------------|:--------:|
+| git       | git-control, git-plus, git-tab-status |  native  |
+| svn       | svn                                   |  native  |
+
+
+
 ### Zend Studio
 
 ## Frameworks

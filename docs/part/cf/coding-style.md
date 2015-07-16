@@ -122,9 +122,11 @@ var sampleArray = (
 
 Associative arrays are not present in Cold Fusion.
 
-##Classes
+##Components
 
-###Class Declaration
+###Components Declaration
+
+In ColdFusion components (classes) are take the naming from the file naming, so
 
 Classes must be named according to project's naming conventions (decided by developing team).
 
