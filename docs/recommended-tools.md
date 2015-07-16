@@ -59,7 +59,7 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 | Content Cell  | Content Cell  |
 
 | Language/IDE | Atom                       | IntelliJ | Sublime Text |
-| ------------ | : ------------------------ | :------: | ------------ |
+| ------------ | :------------------------- | :------: | ------------ |
 | **Ansible**  | linter-ansible-lint        | -        | -            |
 | C/C++/Obj-C  | atom-lint                  | -        | -            |
 
