@@ -54,7 +54,7 @@ It is based on KDevPlatform, and the KDE and Qt libraries and is under developme
 ##### Linters
 
 | Language/IDE | Atom                       | IntelliJ | Sublime Text | KDevelop | Zend Studio | Eclipse | Netbeans |
-|--------------|:---------------------------|:--------:|
+| ------------ | : ------------------------ | :------: |
 | **Ansible** | linter-ansible-lint         | $1600 |
 | C/C++/Obj-C | atom-lint                   | $1600 |
 | CSS         | atom-lint, linter-ccslint   | $1600 |
