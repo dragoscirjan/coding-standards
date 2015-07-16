@@ -2,7 +2,7 @@
 
 ## IDE
 
-See [here](recommended-tool-ide-plugins.md) a list of plugins we use along with the following IDEs.
+See [here](recommended-tools-ide-plugins.md) a list of plugins we use along with the following IDEs.
 
 ### JetBrains PhpStorm
 
