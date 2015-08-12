@@ -21,7 +21,10 @@
 | PHP          | linter-php                  | -            | -        |
 | Python       | atom-lint                   | -            | -        |
 | Ruby         | atom-lint                   | -            | -        |
-| XML          | linter-xmllint              | -            | -        |
+| XML          | linter-xmllint              | [xmllint](https://packagecontrol.io/packages/SublimeLinter-xmllint) | -        |
+| YAML         | linter,linter-js-yaml       | -            | -        |
+
+* linter-js-yaml depens on [yaml-js](https://github.com/connec/yaml-js)
 
 ## Languages
 
@@ -45,6 +48,7 @@
 | Python       | atom-lint                   | -            | -        |
 | Ruby         | atom-lint                   | -            | -        |
 | XML          | linter-xmllint              | -            | -        |
+| YAML         | language-yaml               | -            | -        |
 
 ## Revision
 
