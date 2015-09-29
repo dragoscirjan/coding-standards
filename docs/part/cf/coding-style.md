@@ -27,6 +27,7 @@ When a string is literal (contains no variable substitutions), the apostrophe or
 ```cfml
 <!--- CFML --->
 <cfset var a = 'Example String' />
+
 <!--- CFScript --->
 <cfscript>
 var a = 'Example String';
@@ -53,6 +54,7 @@ ColdFusion does not have an in-string variable substitution syntax, everything b
 ```cfml
 <!--- CFML --->
 <cfset var greeting = replace("Hello {name}, welcome back!", '{name}', name) />
+
 <!--- CFScript --->
 <cfscript>
 var greeting = replace("Hello {name}, welcome back!", '{name}', name)
@@ -64,6 +66,7 @@ or
 ```cfml
 <!--- CFML --->
 <cfset var greeting = "Hello " & name & ", welcome back!" />
+
 <!--- CFScript --->
 <cfscript>
 var greeting = "Hello " & name & ", welcome back!";
@@ -79,7 +82,8 @@ When concatenating strings with the "&" operator, it is encouraged to break the 
 <cfset var sqlcmd = "SELECT `id`, `name` FROM `people` "
                   & "WHERE `name` = 'Susan' "
                   & "ORDER BY `name` ASC " />
- <!--- CFScript --->
+
+<!--- CFScript --->
 <cfscript>
 var sqlcmd = "SELECT `id`, `name` FROM `people` "
            & "WHERE `name` = 'Susan' "
@@ -98,7 +102,8 @@ When declaring arrays with the, a trailing space must be added after each comma 
 ```cfml
 <!--- CFML --->
 <cfset var sampleArray = (1, 2, 3, 'Zend', 'Studio') />
- <!--- CFScript --->
+
+<!--- CFScript --->
 <cfscript>
 var sampleArray = (1, 2, 3, 'Zend', 'Studio');
 </cfscript>
@@ -113,6 +118,7 @@ It is permitted to declare multi-line indexed arrays using the "array" construct
     a, b, c,
     56.44, $d, 500
 ) />
+
 <!--- CFScript --->
 <cfscript>
 var sampleArray = (
@@ -155,6 +161,7 @@ The following is an example of an acceptable class declaration:
 <cfcomponent displayname="Customer" hint="ColdFusion Component for Customers">
     body contents
 </cfcomponent>
+
 <!--- CFScript --->
 <cfscript>
 /**
@@ -180,6 +187,7 @@ Components that extend other components or which implement interfaces should dec
 <cfcomponent implements="CartInteface">
     body contents
 </cfcomponent>
+
 <!--- CFScript --->
 <cfscript>
 /* i.e CartInterface.cfc */
