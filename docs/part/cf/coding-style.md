@@ -184,6 +184,7 @@ Components that extend other components or which implement interfaces should dec
         <cfargument name="product" type="struct" required="yes">
     </cffunction>
 </cfinterface>
+<!--- i.e Cart.cfc --->
 <cfcomponent implements="CartInteface">
     body contents
 </cfcomponent>
@@ -195,6 +196,7 @@ interface
 {
     public function add(struct product);
 }
+/* i.e Cart.cfc */
 component implements="CartInterface"
 {
     body contents
@@ -204,25 +206,27 @@ component implements="CartInterface"
 
 If as a result of such declarations, the line length exceeds the maximum line length, break the line before the "extends" and/or "implements" keywords, and pad those lines by one indentation level.
 
-```php
-class SampleClass
-```php    extends FooAbstract
-    implements BarInterface
+```cfml
+<!--- CFML --->
+<cfcomponent displayName="Cart"
+    extends="lib.com.shop.CartAbstract"
+    implements="lib.com.shop.CartInterface">
+
+    body contents
+</cfcomponent>
+
+<!--- CFScript --->
+<cfscript>
+component displayName="Cart"
+    extends="lib.com.shop.CartAbstract"
+    implements="lib.com.shop.CartInterface"
 {
+    body contents
 }
+</cfscript>
 ```
 
-If the class implements multiple interfaces and the declaration exceeds the maximum line length, break after each comma separating the interfaces, and indent the interface names such that they align.
-
-```php
-class SampleClass
-    implements BarInterface,
-               BazInterface
-{
-}
-```
-
-###Class Member Variables
+###Component Member Variables
 
 Member variables must be named according to project's variable naming conventions. If no other convention is chosen, naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
