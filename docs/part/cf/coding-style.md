@@ -2,6 +2,13 @@
 
 **Note**: This file in inspired from [Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.coding-style.html)
 
+* @TODO: http://www.scribd.com/doc/17091861/Cold-Fusion-Coding-Standards
+* @TODO: http://www.slideshare.net/ddspringle1/coldfusion-coding-guidelines
+* @TODO: http://wiki.coldbox.org/wiki/DevelopmentBestPractices.cfm
+* @TODO: http://dnr.alaska.gov/webmasters/ColdfusionStandards2010.pdf
+* @TODO: http://web.archive.org/web/20090330013324/http://livedocs.adobe.com/wtg/public/coding_standards/contents.html
+
+
 ## CFScript Code Demarcation
 CFSript code must always be delimited by the full-form, standard `<cfscript>` tags:
 
@@ -63,20 +70,20 @@ var greeting = "Hello " & name & ", welcome back!";
 </cfscript>
 ```
 
-Strings must be concatenated using the "&" operator. A space must always be added before and after the "." operator to improve readability.
+Strings must be concatenated using the "&" operator. A space must always be added before and after the "&" operator to improve readability.
 
-When concatenating strings with the "&" operator, it is encouraged to break the statement into multiple lines to improve readability. In these cases, each successive line should be padded with white space such that the "."; operator is aligned under the "=" operator:
+When concatenating strings with the "&" operator, it is encouraged to break the statement into multiple lines to improve readability. In these cases, each successive line should be padded with white space such that the "&"; operator is aligned under the "=" operator:
 
 ```cfml
 <!--- CFML --->
 <cfset var sqlcmd = "SELECT `id`, `name` FROM `people` "
-    & "WHERE `name` = 'Susan' "
-    & "ORDER BY `name` ASC " />
+                  & "WHERE `name` = 'Susan' "
+                  & "ORDER BY `name` ASC " />
  <!--- CFScript --->
 <cfscript>
 var sqlcmd = "SELECT `id`, `name` FROM `people` "
-    & "WHERE `name` = 'Susan' "
-    & "ORDER BY `name` ASC ";
+           & "WHERE `name` = 'Susan' "
+           & "ORDER BY `name` ASC ";
 </cfscript>
 ```
 
@@ -84,9 +91,7 @@ var sqlcmd = "SELECT `id`, `name` FROM `people` "
 
 ###Numerically Indexed Arrays
 
-Negative numbers are not permitted as indices. Also **zero** is not permitted as indice.
-
-An indexed array may start with any non-negative number, however all base indices besides 0 are discouraged.
+Negative numbers are not permitted as indices. Also **zero** is not permitted as indice. An indexed array may start with 1.
 
 When declaring arrays with the, a trailing space must be added after each comma delimiter to improve readability:
 
@@ -108,7 +113,7 @@ It is permitted to declare multi-line indexed arrays using the "array" construct
     a, b, c,
     56.44, $d, 500
 ) />
- <!--- CFScript --->
+<!--- CFScript --->
 <cfscript>
 var sampleArray = (
     1, 2, 3, 'Zend', 'Studio',
@@ -126,39 +131,67 @@ Associative arrays are not present in Cold Fusion.
 
 ###Components Declaration
 
-In ColdFusion components (classes) are take the naming from the file naming, so
+In ColdFusion components (classes) are taking their naming from the file naming, so
 
 Classes must be named according to project's naming conventions (decided by developing team).
 
-The brace should always be written on the line underneath the class name.
+For CFScript case, the brace should always be written on the line underneath the class name.
 
-Every class must have a documentation block that conforms to the [PHPDocumentor](http://www.phpdoc.org/) standard.
+Every class must have a documentation block that simila with Java/PHP documentation blocks. We sugest [PHPDocumentor](http://www.phpdoc.org/) standard.
 
 All code in a class must be indented (see [Overview](overview.md)).
 
-Only one class is permitted in each PHP file.
+Only one class is permitted in each **cfc** file.
 
 Placing additional code in class files is **not** permitted and discouraged.
 
 The following is an example of an acceptable class declaration:
 
-```php
+```cfml
+<!--- CFML --->
+<!---
+ Documentation Block Here
+--->
+<cfcomponent displayname="Customer" hint="ColdFusion Component for Customers">
+    body contents
+</cfcomponent>
+<!--- CFScript --->
+<cfscript>
 /**
  * Documentation Block Here
  */
-class SampleClass
+component displayname="Customer" hint="ColdFusion Component for Customers"
 {
-    // all contents of class
-    // must be indented
+     body contents
 }
+ </cfscript>
 ```
 
-Classes that extend other classes or which implement interfaces should declare their dependencies on the same line when possible.
+Components that extend other components or which implement interfaces should declare their dependencies on the same line when possible.
 
-```php
-class SampleClass extends FooAbstract implements BarInterface
+```cfml
+<!--- CFML --->
+<!--- i.e CartInterface.cfc --->
+<cfinterface>
+    <cffunction name=add returntype = "numeric" ...>
+        <cfargument name="product" type="struct" required="yes">
+    </cffunction>
+</cfinterface>
+<cfcomponent implements="CartInteface">
+    body contents
+</cfcomponent>
+<!--- CFScript --->
+<cfscript>
+/* i.e CartInterface.cfc */
+interface
 {
+    public function add(struct product);
 }
+component implements="CartInterface"
+{
+    body contents
+}
+ </cfscript>
 ```
 
 If as a result of such declarations, the line length exceeds the maximum line length, break the line before the "extends" and/or "implements" keywords, and pad those lines by one indentation level.
