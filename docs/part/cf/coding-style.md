@@ -382,10 +382,9 @@ Function arguments should be separated by a single trailing space after the comm
 <cfscript>
 threeArguments(1, 2, 3);
 </cfscript>
-
 ```
 
-Call-time pass-by-reference is strictly prohibited. See the function declarations section for the proper way to pass function arguments by-reference.
+<!--Call-time pass-by-reference is strictly prohibited. See the function declarations section for the proper way to pass function arguments by-reference.
 
 In passing arrays as arguments to a function, the function call may include the "array" hint and may be split into multiple lines to improve readability. In such cases, the normal guidelines for writing arrays still apply:
 
@@ -399,33 +398,29 @@ threeArguments(array(
     $a, $b, $c,
     56.44, $d, 500
 ), 2, 3);
-```
+```-->
 
 If function/method usage exceeds recommended per line length, breaking the statement into multiple lines is recommended. The initial argument must begin on the following line. If so, it should be padded at one indentation level greater than the line containing the array declaration, and all successive lines should have the same indentation; the closing parent should be on a line by itself at the same indentation level as the line containing the function/method declaration.
 
-```php
-threeLongArguments(
-    $someVeryLongArgument1,
-    $someVeryLongArgument2,
-    $someVeryLongArgument3
+```cfml
+<!--- CFML --->
+<cfset threeArguments(
+    someVeryLongArgument1,
+    someVeryLongArgument2,
+    someVeryLongArgument3
+); />
+
+<!--- CFScript --->
+<cfscript>
+threeArguments(
+    someVeryLongArgument1,
+    someVeryLongArgument2,
+    someVeryLongArgument3
 );
+</cfscript>
 ```
 
 ##Control Statements & Loops
-
-Any control statement or loop using syntax inspired from BASIC programming language, are strongly un-adviced, but not forbidden.
-
-```php
-if ($a == 1): // recommended not to use this syntax
-    // your code here
-endif
-
-// should be replaced with
-
-if ($a == 1) {
-    // your code here  
-}
-```
 
 ###If/Else/Elseif
 
@@ -433,59 +428,109 @@ Control statements based on the if and elseif constructs must have a single spac
 
 Within the conditional statements between the parentheses, operators must be separated by spaces for readability. Inner parentheses are encouraged to improve logical grouping for larger conditional expressions.
 
-The opening brace is written on the same line as the conditional statement. The closing brace is always written on its own line. Any content within the braces must be indented using four spaces.
+For CFScript the opening brace is written on the same line as the conditional statement. The closing brace is always written on its own line. Any content within the braces must be indented using four spaces.
 
-```php
-if ($a != 2) {
-    $a = 2;
+```cfml
+<!--- CFML --->
+<cfif ($a != 2) >
+    <cfset a = 2 />
+</cfif>
+
+<!--- CFScript --->
+<cfscript>
+if (a != 2) {
+    a = 2;
 }
+</cfscript>
 ```
 
 If the conditional statement causes the line length to exceed the maximum line length and has several clauses, you may break the conditional into multiple lines. In such a case, break the line prior to a logic operator, and pad the line such that it aligns under the first character of the conditional clause. The closing parent in the conditional will then be placed on a line with the opening brace, with one space separating the two, at an indentation level equivalent to the opening control statement.
 
-```php
-if (($a == $b)
-    && ($b == $c)
-    || (Foo::CONST == $d)
+```cfml
+<!--- CFML --->
+<cfif ((a == b)
+    && (b == c)
+    || ('Foo::CONST' == d)
+) >
+    <cfset a = d />
+</cfif>
+
+<!--- CFScript --->
+<cfscript>
+if ((a == b)
+    && (b == c)
+    || ('Foo::CONST' == d)
 ) {
-    $a = $d;
+    a = d;
 }
+</cfscript>
 ```
 
 The intention of this latter declaration format is to prevent issues when adding or removing clauses from the conditional during later revisions.
 
 For "if" statements that include "elseif" or "else", the formatting conventions are similar to the "if" construct. The following examples demonstrate proper formatting for "if" statements with "else" and/or "elseif" constructs:
 
-```php
-if ($a != 2) {
-    $a = 2;
+```cfml
+<!--- CFML --->
+<cfif (a != 2) >
+    <cfset a = 2 />
+<cfelse >
+    <cfset a = 7 />
+</cfif>
+
+<cfif  (a != 2) >
+    <cfset a = 2 />
+<cfelseif (a == 3) >
+    <cfset a = 4 />
+<cfelse >
+    <cfset a = 7 />
+</cfif>
+
+<cfif ((a == b)
+    && (b == c)
+    || ('Foo::CONST' == $d)
+) >
+    <cfset a = d />
+<cfelseif ((a != b)
+          || (b != c)
+) >
+    <cfset a = c />
+<cfelse >
+    <cfset a = b />
+</cfif>
+
+<!--- CFScript --->
+<cfscript>
+if (a != 2) {
+    a = 2;
 } else {
-    $a = 7;
+    a = 7;
 }
 
-if ($a != 2) {
-    $a = 2;
-} elseif ($a == 3) {
-    $a = 4;
+if (a != 2) {
+    a = 2;
+} elseif (a == 3) {
+    a = 4;
 } else {
-    $a = 7;
+    a = 7;
 }
 
-if (($a == $b)
-    && ($b == $c)
-    || (Foo::CONST == $d)
+if ((a == b)
+    && (b == c)
+    || ('Foo::CONST' == $d)
 ) {
-    $a = $d;
-} elseif (($a != $b)
-          || ($b != $c)
+    a = d;
+} elseif ((a != b)
+          || (b != c)
 ) {
-    $a = $c;
+    a = c;
 } else {
-    $a = $b;
+    a = b;
 }
+</cfscript>
 ```
 
-PHP allows statements to be written without braces in some circumstances. This coding standard makes no differentiation all "if", "elseif" or "else" statements must use braces.
+<!--ColdFusion allows statements to be written without braces in some circumstances. This coding standard makes no differentiation all "if", "elseif" or "else" statements must use braces.
 
 Furthermore, if STRICT mode is chosen, no "if" statement cannot be defined without having it's else statement even if empty.
 
@@ -494,7 +539,7 @@ if ($a == 1) {
   $a = 2;
 } else {
 
-}
+}-->
 
 ###Switch
 
