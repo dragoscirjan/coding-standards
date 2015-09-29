@@ -175,7 +175,7 @@ Giving access to member variables directly by declaring them as public is permit
 
 ###Function and Method Declaration
 
-*Functions* must be named according to project's function naming conventions. If no other convention is chosen, function naming will be done according with sFunctionserpent case naming convention (serpent_case_naming_convention).
+*Functions* must be named according to project's function naming conventions. If no other convention is chosen, function naming will be done according with serpent case naming convention (serpent_case_naming_convention).
 
 *Methods* inside classes must always declare their visibility by using one of the private, protected, or public modifiers.
 
@@ -200,8 +200,8 @@ class Foo
      */
     public function bar()
     {
-        // all contents of function
-        // must be indented four spaces
+        // all contents of function must be
+        // indented one additional level
     }
 }
 ```
@@ -219,8 +219,8 @@ class Foo
     public function bar($arg1, $arg2, $arg3,
         $arg4, $arg5, $arg6
     ) {
-        // all contents of function
-        // must be indented four spaces
+        // all contents of function must be
+        // indented one additional level
     }
 }
 ```

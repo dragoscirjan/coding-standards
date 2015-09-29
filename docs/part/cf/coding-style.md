@@ -226,7 +226,7 @@ component displayName="Cart"
 </cfscript>
 ```
 
-###Component Member Variables
+###Component Member Variables @TODO
 
 Member variables must be named according to project's variable naming conventions. If no other convention is chosen, naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
@@ -242,7 +242,7 @@ Giving access to member variables directly by declaring them as public is permit
 
 ###Function and Method Declaration
 
-*Functions* must be named according to project's function naming conventions. If no other convention is chosen, function naming will be done according with sFunctionserpent case naming convention (serpent_case_naming_convention).
+*Functions* must be named according to project's function naming conventions. If no other convention is chosen, function naming will be done according with serpent case naming convention (serpent_case_naming_convention).
 
 *Methods* inside classes must always declare their visibility by using one of the private, protected, or public modifiers.
 
@@ -256,44 +256,77 @@ As with classes, the brace should always be written on the line underneath the f
 
 The following is an example of an acceptable function declaration in a class:
 
-```php
+```cfml
+<!--- CFML --->
+<!---
+ Documentation Block Here
+--->
+<cfcomponent displayname="Customer" hint="ColdFusion Component for Customers">
+    <cffunction name="bar" return="int">
+        <!--- all contents of function must be indented --->
+    </cffunction>
+</cfcomponent>
+
+<!--- CFScript --->
+<cfscript>
 /**
  * Documentation Block Here
  */
-class Foo
+component displayname="Customer" hint="ColdFusion Component for Customers"
 {
-    /**
-     * Documentation Block Here
-     */
-    public function bar()
-    {
-        // all contents of function
-        // must be indented four spaces
-    }
+     public function bar()
+     {
+         // all contents of function must be
+         // indented one additional level
+     }
 }
+ </cfscript>
 ```
-In cases where the argument list exceeds the maximum line length, you may introduce line breaks. Additional arguments to the function or method must be indented one additional level beyond the function or method declaration. A line break should then occur before the closing argument parent, which should then be placed on the same line as the opening brace of the function or method with one space separating the two, and at the same indentation level as the function or method declaration. The following is an example of one such situation:
 
-```php
+For CFML arcuments will always be indented with an additional level beyond the function declaration. If argument declaration exceeds the maximum line length, the argument declaration can be split to multiple lines, with the condition that the additional lines will be indented one more level beyond the argument declaration.
+
+For CFScript, in cases where the argument list exceeds the maximum line length, you may introduce line breaks. Additional arguments to the function or method must be indented one additional level beyond the function or method declaration. A line break should then occur before the closing argument parent, which should then be placed on the same line as the opening brace of the function or method with one space separating the two, and at the same indentation level as the function or method declaration. The following is an example of one such situation:
+
+
+```cfml
+<!--- CFML --->
+<!---
+ Documentation Block Here
+--->
+<cfcomponent displayname="Customer" hint="ColdFusion Component for Customers">
+    <cffunction name="bar" return="int">
+        <cfargument name="arg1" type="int" />
+        <cfargument name="arg2" type="int" />
+        <cfargument name="arg3" type="int" />
+        <cfargument name="arg4" type="int" default="0" />
+        <cfargument name="arg5" type="int" default="0" />
+        <cfargument name="arg6" type="int" default="this is a test"
+            hint="this is a hint for your argument" />
+
+        <!--- all contents of function must be indented one additional level --->
+    </cffunction>
+</cfcomponent>
+
+<!--- CFScript --->
+<cfscript>
 /**
  * Documentation Block Here
  */
-class Foo
+component displayname="Customer" hint="ColdFusion Component for Customers"
 {
-    /**
-     * Documentation Block Here
-     */
-    public function bar($arg1, $arg2, $arg3,
-        $arg4, $arg5, $arg6
-    ) {
-        // all contents of function
-        // must be indented four spaces
-    }
+     public function bar(int arg1, int arg2, int arg3,
+        int arg4 = 0, int arg5 = 0, string arg6 = "this i a test"
+     ) {
+         // all contents of function must be
+         // indented one additional level
+     }
 }
+ </cfscript>
 ```
-*Note*: It is recommended a function should not have more than five (5) arguments. If a function must have more than 5 arguments, it is recommended masking the arguments in an array.
 
-*Note*: Pass-by-reference is the only parameter passing mechanism permitted in a method declaration.
+*Note*: It is recommended a function should not have more than five (5) arguments. If a function must have more than 5 arguments, it is recommended masking the arguments in an addition object.
+
+<!--*Note*: Pass-by-reference is the only parameter passing mechanism permitted in a method declaration.
 
 ```php
 /**
@@ -335,14 +368,21 @@ class Foo
         return $this->bar;
     }
 }
-```
+``` -->
 
 ###Function and Method Usage
 
 Function arguments should be separated by a single trailing space after the comma delimiter. The following is an example of an acceptable invocation of a function that takes three arguments:
 
-```php
+```cfml
+<!--- CFML --->
+<cfset threeArguments(1, 2, 3); />
+
+<!--- CFScript --->
+<cfscript>
 threeArguments(1, 2, 3);
+</cfscript>
+
 ```
 
 Call-time pass-by-reference is strictly prohibited. See the function declarations section for the proper way to pass function arguments by-reference.
