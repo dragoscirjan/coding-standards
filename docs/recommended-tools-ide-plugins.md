@@ -17,7 +17,7 @@
 |  - Jinja     | -                           | -                     | -        |
 | Java         | linter-javac                | -                     | -        |
 | JavaScript   | atom-lint                   | -                     | -        |
-|  - Coffee    | atom-lint, coffee-lint      | -                     | -        |
+|  - Coffee    | atom-lint, coffee-lint      | SublimeLinter-coffeelint | -        |
 | PHP          | linter-php                  | -                     | -        |
 | Python       | atom-lint                   | -                     | -        |
 | Ruby         | atom-lint                   | -                     | -        |
