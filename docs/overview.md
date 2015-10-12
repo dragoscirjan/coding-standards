@@ -2,22 +2,22 @@
 
 ## Scope
 
-This document provides guidelines for code formatting and documentation to individuals and teams contributing to [IT Media Connect](http://itmediaconnect.ro/) products. Many developers using [IT Media Connect](http://itmediaconnect.ro/) products have also found these coding standards useful because their code's style remains consistent with all [IT Media Connect](http://itmediaconnect.ro/) products code. It is also worth noting that it requires significant effort to fully specify coding standards.
+This document provides guidelines for code formatting and documentation to individuals and teams contributing to [__COMPANY_NAME__](http://__COMPANY_URL__/) products. Many developers using [__COMPANY_NAME__](http://__COMPANY_URL__/) products have also found these coding standards useful because their code's style remains consistent with all [__COMPANY_NAME__](http://__COMPANY_URL__/) products code. It is also worth noting that it requires significant effort to fully specify coding standards.
 
-**Note**: Sometimes developers consider the establishment of a standard more important than what that standard actually suggests at the most detailed level of design. The guidelines in [IT Media Connect](http://itmediaconnect.ro/) products' coding standards capture practices that have worked well on the [IT Media Connect](http://itmediaconnect.ro/) products project. You may modify these standards or use them as is in accordance with the terms of our [» license](https://github.com/itmc/docs-license/new-bsd.md).
+**Note**: Sometimes developers consider the establishment of a standard more important than what that standard actually suggests at the most detailed level of design. The guidelines in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards capture practices that have worked well on the [__COMPANY_NAME__](http://__COMPANY_URL__/) products project. You may modify these standards or use them as is in accordance with the terms of our [» license](https://github.com/itmc/docs-license/new-bsd.md).
 
-Topics covered in [IT Media Connect](http://itmediaconnect.ro/) products' coding standards include:
+Topics covered in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards include:
 
 * [File Formatting](file-formating.md)
 * [Naming Conventions](naming-conventions.md)
 * [Coding Style](coding-style.md)
 * [Recommended Tools](recommended-tools.md)
 
-**Note**: Mainly [IT Media Connect](http://itmediaconnect.ro/) is a [PHP](http://php.net/) company, thus all documentation written further will be developed over [PHP](http://php.net/) coding language.
+**Note**: Mainly [__COMPANY_NAME__](http://__COMPANY_URL__/) is a [PHP](http://php.net/) company, thus all documentation written further will be developed over [PHP](http://php.net/) coding language.
 
 However, [PHP](http://php.net/) is not the only language we are using, so we tried extending and adapting coding standards to all coding languages used in our company. Also, with each adopted coding language, we engage in adding and adapting our coding standards to that specific language as well.
 
-Languages included in [IT Media Connect](http://itmediaconnect.ro/) products' coding standards include:
+Languages included in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards include:
 
 * [Adobe](http://www.adobe.com/products/coldfusion-family.html)<sup>&copy;</sup> [ColdFusion](part/cf/overview.md)
 * *Following languages are still in our TODO list*

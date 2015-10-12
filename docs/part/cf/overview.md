@@ -1,8 +1,8 @@
 # Overview
 
-**Note**: This document is an adaptation of the [PHP](../../overview.md) coding standards written by [IT Media Connect](http://itmediaconnect.ro/), for [Adobe](http://www.adobe.com/products/coldfusion-family.html)<sup>&copy;</sup> [ColdFusion](overview.md) programming language.
+**Note**: This document is an adaptation of the [PHP](../../overview.md) coding standards written by [__COMPANY_NAME__](http://__COMPANY_URL__/), for [Adobe](http://www.adobe.com/products/coldfusion-family.html)<sup>&copy;</sup> [ColdFusion](overview.md) programming language.
 
-Topics covered in [IT Media Connect](http://itmediaconnect.ro/) products' coding standards include:
+Topics covered in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards include:
 
 * [File Formatting](file-formating.md)
 * [Naming Conventions](naming-conventions.md)
@@ -13,7 +13,7 @@ Topics covered in [IT Media Connect](http://itmediaconnect.ro/) products' coding
 
 ## Other Languages
 
-Languages included in [IT Media Connect](http://itmediaconnect.ro/) products' coding standards include:
+Languages included in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards include:
 
 * [Adobe](http://www.adobe.com/products/coldfusion-family.html)<sup>&copy;</sup> [ColdFusion](overview.md)
 * [Zend](http://zend.com)<sup>&copy;</sup> [PHP](../../overview.md)

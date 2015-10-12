@@ -37,7 +37,8 @@
 2. For Sublime, all linters seem to start with 'SublimeLinter'
 3. For more about Babel Sublime, read here: https://github.com/babel/babel-sublime
 4. linter-js-yaml depens on [yaml-js](https://github.com/connec/yaml-js) ``
-5. [linter-eslint](https://atom.io/packages/linter-eslint) depends on [eslint](https://www.npmjs.com/package/eslint) `npm install -g eslint && apm install linter-eslint`
+5. [linter-eslint](https://atom.io/packages/linter-eslint) depends on [eslint](https://www.npmjs.com/package/eslint) `npm install -g eslint && apm install linter-eslint`. 
+Also, in order for your prject benefit eslint, we suggest downloading [.eslintrc](../../../raw/master/.eslintrc) and extend it according to your needs.
 
 
 ### Notes: (Documentation) ###

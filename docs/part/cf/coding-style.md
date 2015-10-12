@@ -606,7 +606,7 @@ Every file that contains CMLF/CFScript code must have a docblock at the top of t
 
  LICENSE: Some license information
 
- @copyright  Copyright (c) 2007-2015 IT Media Connect S.R.L. (http://www.itmediaconnect.ro)
+ @copyright  Copyright (c) 2007-2015 __COMPANY_NAME__ S.R.L. (http://www.__COMPANY_URL__)
  @license    https://github.com/ITMCdev/{PROJECT-NAME}/blob/master/LICENSE License Type
  @version    $Id:$
  @link       https://github.com/ITMCdev/{PROJECT-NAME}
