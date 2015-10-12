@@ -7,6 +7,7 @@
 * [Naming Conventions](docs/naming-conventions.md)
 * [Coding Style](docs/coding-style.md)
 * [Recommended Tools](docs/recommended-tools.md)
+* [Recommended Tools / IDE Plugins](docs/recommended-tools-ide-plugins.md)
 
 
 This documentation has been written using [Daring Fireball](http://daringfireball.net/)'s [Markdoc](http://daringfireball.net/projects/markdown/syntax) langauge.
