@@ -455,19 +455,19 @@ Every file that contains PHP code must have a docblock at the top of the file th
  * LICENSE: Some license information
  *
  * @copyright  Copyright (c) 2007-2015 __COMPANY_NAME__ S.R.L. (http://www.__COMPANY_URL__)
- * @license    https://github.com/ITMCdev/{PROJECT-NAME}/blob/master/LICENSE License Type
+ * @license    https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/blob/master/LICENSE License Type
  * @version    $Id:$
- * @link       https://github.com/ITMCdev/{PROJECT-NAME}
- * @link       https://github.com/ITMCdev/{PROJECT-NAME}/issues
+ * @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}
+ * @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/issues
  * @since      File available since Release 1.5.0
  */
 ```
 
-The @category annotation must have a value of "Itmc" or project's name abbreviation (i.e. "Athem").
+The @category annotation must be a project's name abbreviation (i.e. "Athem").
 
-The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the "Itmc" prefix, and the component name.
+The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the @category prefix, and the component name (i.e. Athem_Soap).
 
-The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Itmc_Soap_Client", or uses that classname as part of its prefix.
+The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Athem_Soap_Client", or uses that classname as part of its prefix (i.e. Client).
 
 ### Classes
 
@@ -479,8 +479,8 @@ Every class must have a docblock that contains these phpDocumentor tags at a min
  *
  * Long description for class (if any)...
  *
- * @category   Itmc
- * @package    Itmc_Soap
+ * @category   Athem
+ * @package    Athem_Soap
  * @subpackage Client
  * @version    Release: @package_version@
  * @since      Class available since Release 1.5.0
@@ -488,11 +488,11 @@ Every class must have a docblock that contains these phpDocumentor tags at a min
  */
 ```
 
-The @category annotation must have a value of "Itmc" or project's name abbreviation (i.e. "Athem").
+The @category annotation must be a project's name abbreviation (i.e. "Athem").
 
-The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the "Itmc" prefix, and the component name.
+The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the @category prefix, and the component name (i.e. Athem_Soap).
 
-The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Itmc_Soap_Client", or uses that classname as part of its prefix.
+The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Athem_Soap_Client", or uses that classname as part of its prefix (i.e. Client).
 
 ###Functions
 

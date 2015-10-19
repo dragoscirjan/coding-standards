@@ -582,6 +582,7 @@ switch(Trim(Department)) {
         phrase='#FirstName# #LastName# is not in Sales, Accounting, or Administration.'
 }
 WriteOutput(phrase);
+</cfscript>
 ```
 
 The construct default should never be omitted from a switch statement.
@@ -592,22 +593,27 @@ Note: It is sometimes useful to write a case statement which falls through to th
 
 No loop statement will be used without opening and closing brackets.
 
-```php
-for ($i = 0; $i < 10; $i++) {
+```cfml
+<!--- CFML --->
+<cfloop index="parameter name" from="beginning value"
+    to="ending value" step="increment">
+        <!--- HTML or CFML code ... --->
+</cfloop>
+
+<!--- CFScript --->
+<cfscript>
+for (i = 0; i LT 10; i++) {
     // your code here
 }
 
-foreach ($array as $key => $value) {
-    // your code here
-}
-
-while ($i > 0) {
+while (i GT 0) {
     // your code here
 }
 
 do {
     // your code here
-} while ($i > 0);
+} while (i GT 0);
+</cfscript>
 ```
 
 ##Inline Documentation
@@ -623,6 +629,7 @@ All class files must contain a "file-level" docblock at the top of each file and
 Every file that contains CMLF/CFScript code must have a docblock at the top of the file that contains these phpDocumentor tags at a minimum (we are aware phpDocumentor will not function for ColdFusion, yet we consider it a point of reference):
 
 ```cfml
+<!--- CFML --->
 <!---
  Short description for file
 
@@ -631,44 +638,79 @@ Every file that contains CMLF/CFScript code must have a docblock at the top of t
  LICENSE: Some license information
 
  @copyright  Copyright (c) 2007-2015 __COMPANY_NAME__ S.R.L. (http://www.__COMPANY_URL__)
- @license    https://github.com/ITMCdev/{PROJECT-NAME}/blob/master/LICENSE License Type
+ @license    https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/blob/master/LICENSE License Type
  @version    $Id:$
- @link       https://github.com/ITMCdev/{PROJECT-NAME}
- @link       https://github.com/ITMCdev/{PROJECT-NAME}/issues
+ @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}
+ @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/issues
  @since      File available since Release 1.5.0
 --->
+
+<!--- CFScript --->
+<cfscript>
+/**
+ * Short description for file
+ *
+ * Long description for file (if any)...
+ *
+ * LICENSE: Some license information
+ *
+ * @copyright  Copyright (c) 2007-2015 __COMPANY_NAME__ S.R.L. (http://www.__COMPANY_URL__)
+ * @license    https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/blob/master/LICENSE License Type
+ * @version    $Id:$
+ * @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}
+ * @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/issues
+ * @since      File available since Release 1.5.0
+ */
+</cfscript>
 ```
 
-The @category annotation must have a value of "Itmc" or project's name abbreviation (i.e. "Athem").
+The @category annotation must be a project's name abbreviation (i.e. "Athem").
 
-The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the "Itmc" prefix, and the component name.
+The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the @category prefix, and the component name (i.e. Athem_Soap).
 
-The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Itmc_Soap_Client", or uses that classname as part of its prefix.
+The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Athem_Soap_Client", or uses that classname as part of its prefix (i.e. Client).
 
 ### Classes
 
 Every class must have a docblock that contains these phpDocumentor tags at a minimum:
 
 ```cfml
+<!--- CFML --->
 <!---
  Short description for class
 
  Long description for class (if any)...
 
- @category   Itmc
- @package    Itmc_Soap
+ @category   Athem
+ @package    Athem_Soap
  @subpackage Client
  @version    Release: @package_version@
  @since      Class available since Release 1.5.0
  @deprecated Class deprecated in Release 2.0.0
 --->
+
+<!--- CFScript --->
+<cfscript>
+/**
+ * Short description for class
+ *
+ * Long description for class (if any)...
+ *
+ * @category   Athem
+ * @package    Athem_Soap
+ * @subpackage Client
+ * @version    Release: @package_version@
+ * @since      Class available since Release 1.5.0
+ * @deprecated Class deprecated in Release 2.0.0
+ */
+</cfscript>
 ```
 
-The @category annotation must have a value of "Itmc" or project's name abbreviation (i.e. "Athem").
+The @category annotation must be a project's name abbreviation (i.e. "Athem").
 
-The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the "Itmc" prefix, and the component name.
+The @package annotation must be assigned, and should be equivalent to the component name of the class contained in the file; typically, this will only have two segments, the @category prefix, and the component name (i.e. Athem_Soap).
 
-The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Itmc_Soap_Client", or uses that classname as part of its prefix.
+The @subpackage annotation is optional. If provided, it should be the subcomponent name, minus the class prefix. In the example above, the assumption is that the class in the file is either "Athem_Soap_Client", or uses that classname as part of its prefix (i.e. Client).
 
 ###Functions
 
@@ -680,28 +722,42 @@ All of the arguments
 
 All of the possible return values
 
-It is not necessary to use the "@access" tag because the access level is already known from the "public", "private", or "protected" modifier used to declare the function.
-
 If a function or method may throw an exception, use @throws for all known exception classes:
 
-```php
+```cfml
+<!--- CFML --->
+<!---
+ @throws exceptionclass [description]
+--->
+
+<!--- CFScript --->
+<cfscript>
 /**
  * @throws exceptionclass [description]
  */
+</cfscript>
 ```
 
 ### In-line Comments
 
-Single line comments should be made using the "//" syntax. Using "#" is not recommended, but not forbidden.
+Single line comments should be made using the "//" syntax.
 
 Multi line comments should always be wrapped between "/*" and "*/" characters.
 
 If comment is of stronger importance, comments should follow the example bellow:
 
-```php
+```cfml
+<!--- CFML --->
+<!------------------------------------------------
+ This is a comment
+------------------------------------------------->
+
+<!--- CFScript --->
+<cfscript>
 /*************************************************
  * This is a comment
  *************************************************/
+ </cfscript>
 
  Such comments should not exceed more than 5 lines of text, underlining the most important part of documentation.
 
@@ -709,22 +765,42 @@ If comment is of stronger importance, comments should follow the example bellow:
 
 Following the phpDocumentor documentation, code examples must have the following syntax:
 
-```php
+```cfml
+<!--- CFML --->
+<!------------------------------------------------
+ This is a comment
+------------------------------------------------->
+<!---
+ My function
+
+ Here is an inline example:
+ <code>
+ WriteOutput(mine());
+ </code>
+ @example /path/to/example.cfc How to use this function
+ @example anotherexample.inc This example is in the "examples" subdirectory
+--->
+<cffunction name="mine" ... >
+<!--- ... --->
+</cffunction>
+
+
+<!--- CFScript --->
+<cfscript>
 /**
  * My function
  *
  * Here is an inline example:
  * <code>
- * <?php
- * echo strlen('6');
- * ?>
+ * WriteOutput(mine());
  * </code>
- * @example /path/to/example.php How to use this function
+ * @example /path/to/example.cfc How to use this function
  * @example anotherexample.inc This example is in the "examples" subdirectory
  */
 function mine()
 {
 }
+</cfscript>
 ```
 
 <hr />
