@@ -183,7 +183,9 @@ NOTE: This is a document proposal. None of this CI tools have been tested yet.
 * [Jenkins CI](https://jenkins-ci.org)
 * [Team City](https://www.jetbrains.com/teamcity)
 * [Bamboo](https://www.atlassian.com/software/bamboo)
+* [CircleCi](https://circleci.com)
 
+<!-- http://shields.io/ -->
 
 ## Code Quality
 

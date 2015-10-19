@@ -547,17 +547,41 @@ Control statements written with the "switch" statement must have a single space 
 
 All content within the "switch" statement must be indented using four spaces. Content under each "case" statement must be indented using an additional four spaces.
 
-```php
-switch ($numPeople) {
-    case 1:
-        break;
+```cfml
+<!--- CFML --->
+<cfswitch expression="#Trim(Department)#">  
+    <cfcase value="Sales">
+        <cfset phrase='#FirstName# #LastName# is in <b>sales</b>' />
+    </cfcase>  
+    <cfcase value="Accounting">  
+        <cfset phrase='#FirstName# #LastName# is in <b>accounting</b>' />
+    </cfcase>
+    <cfcase value="Administration">  
+        <cfset phrase='#FirstName# #LastName# is in <b>administration</b>' />
+    </cfcase>  
+    <cfdefaultcase>  
+        <cfset phrase='#FirstName# #LastName# is not in Sales, Accounting, or Administration.' />
+    </cfdefaultcase>  
+</cfswitch>
+#phrase#
 
-    case 2:
-        break;
-
+<!--- CFScript --->
+<cfscript>
+switch(Trim(Department)) {
+    case "Sales":
+         phrase='#FirstName# #LastName# is in <b>sales</b>'
+         break;
+    case "Accounting":
+         phrase='#FirstName# #LastName# is in <b>accounting</b>'
+         break;
+         break;
+    case "Administration":
+         phrase='#FirstName# #LastName# is in <b>administration</b>'
+         break;
     default:
-        break;
+        phrase='#FirstName# #LastName# is not in Sales, Accounting, or Administration.'
 }
+WriteOutput(phrase);
 ```
 
 The construct default should never be omitted from a switch statement.
