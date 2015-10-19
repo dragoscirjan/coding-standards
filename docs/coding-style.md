@@ -167,7 +167,7 @@ If decided by developer team, private variable naming may contain the underscore
 
 Any variables declared in a class must be listed at the top of the class, above the declaration of any methods.
 
-The var construct is not permitted. Member variables always declare their visibility by using one of the *private*, *protected*, or *public* modifiers.
+The var construct is not permitted. Member variables always declare their visibility by using one of the `private`, `protected`, or `public` modifiers.
 
 Giving access to member variables directly by declaring them as public is permitted but discouraged in favor of accessor methods (set & get).
 
@@ -177,7 +177,7 @@ Giving access to member variables directly by declaring them as public is permit
 
 *Functions* must be named according to project's function naming conventions. If no other convention is chosen, function naming will be done according with serpent case naming convention (serpent_case_naming_convention).
 
-*Methods* inside classes must always declare their visibility by using one of the private, protected, or public modifiers.
+*Methods* inside classes must always declare their visibility by using one of the `private`, `protected`, or `public` modifiers.
 
 If no other convention is chosen, method naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
@@ -410,7 +410,7 @@ switch ($numPeople) {
 
 The construct default should never be omitted from a switch statement.
 
-Note: It is sometimes useful to write a case statement which falls through to the next case by not including a break or return within that case. To distinguish these cases from bugs, any case statement where break or return are omitted should contain a comment indicating that the break was intentionally omitted.
+**Note:** It is sometimes useful to write a case statement which falls through to the next case by not including a break or return within that case. To distinguish these cases from bugs, any case statement where break or return are omitted should contain a comment indicating that the break was intentionally omitted.
 
 ###Loops (for / foreach / while)
 
@@ -438,7 +438,7 @@ do {
 
 ###Documentation Format
 
-All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit: [» http://phpdoc.org/](http://phpdoc.org/1)
+All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit: [» http://phpdoc.org/](http://www.phpdoc.org/docs/latest/index.html)
 
 All class files must contain a "file-level" docblock at the top of each file and a "class-level" docblock immediately above each class. Examples of such docblocks can be found below.
 

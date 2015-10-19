@@ -43,13 +43,27 @@ When a literal string itself contains apostrophes, it is permitted to demarcate 
     SELECT `id`, `name` from `people`
     WHERE `name`='Fred' OR `name`='Susan'
 </cfquery>
+<!--- or --->
+<cfset sql="SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'" />
+<cfquery>#sql#</cfquery>
 ```
 
 This syntax is preferred over escaping apostrophes as it is much easier to read.
 
 ###Variable Substitution & String Concatenation
 
-ColdFusion does not have an in-string variable substitution syntax, everything being done using the [Replace](http://cfdocs.org/replace) functions, or using concatenation syntax.
+Variable substitution is permitted using either of these form:
+
+```cfml
+<!--- CFML --->
+<cfset var greeting = "Hello #name#, welcome back!" />
+
+<!--- CFScript --->
+<cfscript>
+var greeting = "Hello #name#, welcome back!";
+</cfscript>
+```
+However we recommend also using the [Replace](http://cfdocs.org/replace) functions, or using concatenation syntax.
 
 ```cfml
 <!--- CFML --->
@@ -131,19 +145,32 @@ var sampleArray = (
 
 ###Associative Arrays
 
-Associative arrays are not present in Cold Fusion.
+Associative arrays are not present in Cold Fusion. However, you can always partially emulate an associative array using a structure. i.e.:
+
+```cfml
+<cfscript>
+myStruct = DeserializeJSON('{
+    "x": 10,
+    "y": 20
+}');
+myStructKeys = StructKeyArray(myStruct);
+for (i = 1; i LTE ArrayLen(myStructKeys); i++) {
+    writeDump(myStruct[myStructKeys[i]]);
+}
+</cfscript>
+```
 
 ##Components
 
 ###Components Declaration
 
-In ColdFusion components (classes) are taking their naming from the file naming, so
+In ColdFusion components (classes) are taking their naming from the file naming, so please name your files according to class naming rules.
 
 Classes must be named according to project's naming conventions (decided by developing team).
 
 For CFScript case, the brace should always be written on the line underneath the class name.
 
-Every class must have a documentation block that simila with Java/PHP documentation blocks. We sugest [PHPDocumentor](http://www.phpdoc.org/) standard.
+Every class must have a documentation block that's similar with Java/PHP documentation blocks. We sugest [PHPDocumentor](http://www.phpdoc.org/) standard.
 
 All code in a class must be indented (see [Overview](overview.md)).
 
@@ -226,17 +253,17 @@ component displayName="Cart"
 </cfscript>
 ```
 
-###Component Member Variables @TODO
+###Component Member Variables
 
 Member variables must be named according to project's variable naming conventions. If no other convention is chosen, naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
-If decided by developer team, private variable naming may contain the underscore "\_" character as a prefix (i.e. \_camelCaseNamingConvention).
+<!-- If decided by developer team, private variable naming may contain the underscore "\_" character as a prefix (i.e. \_camelCaseNamingConvention). -->
 
 Any variables declared in a class must be listed at the top of the class, above the declaration of any methods.
 
-The var construct is not permitted. Member variables always declare their visibility by using one of the *private*, *protected*, or *public* modifiers.
+<!-- The var construct is not permitted. Member variables always declare their visibility by using one of the *private*, *protected*, or *public* modifiers. -->
 
-Giving access to member variables directly by declaring them as public is permitted but discouraged in favor of accessor methods (set & get).
+<!-- Giving access to member variables directly by declaring them as public is permitted but discouraged in favor of accessor methods (set & get). -->
 
 ##Functions and Methods
 
@@ -244,11 +271,11 @@ Giving access to member variables directly by declaring them as public is permit
 
 *Functions* must be named according to project's function naming conventions. If no other convention is chosen, function naming will be done according with serpent case naming convention (serpent_case_naming_convention).
 
-*Methods* inside classes must always declare their visibility by using one of the private, protected, or public modifiers.
+*Methods* inside classes must always declare their visibility by using one of the `private`, [`package`](https://helpx.adobe.com/coldfusion/cfml-reference/coldfusion-tags/tags-f/cffunction.html), `remote`, or `public` modifiers.
 
 If no other convention is chosen, method naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
-If decided by developer team, private method naming may contain the underscore "\_" character as a prefix (i.e. \_camelCaseNamingConvention).
+<!-- If decided by developer team, private method naming may contain the underscore "\_" character as a prefix (i.e. \_camelCaseNamingConvention). -->
 
 As with classes, the brace should always be written on the line underneath the function name. Space between the function name and the opening parenthesis for the arguments is not permitted.
 
@@ -283,9 +310,9 @@ component displayname="Customer" hint="ColdFusion Component for Customers"
  </cfscript>
 ```
 
-For CFML arcuments will always be indented with an additional level beyond the function declaration. If argument declaration exceeds the maximum line length, the argument declaration can be split to multiple lines, with the condition that the additional lines will be indented one more level beyond the argument declaration.
+For `CFML` arguments will always be indented with an additional level beyond the function declaration. If argument declaration exceeds the maximum line length, the argument declaration can be split to multiple lines, with the condition that the additional lines will be indented one more level beyond the argument declaration.
 
-For CFScript, in cases where the argument list exceeds the maximum line length, you may introduce line breaks. Additional arguments to the function or method must be indented one additional level beyond the function or method declaration. A line break should then occur before the closing argument parent, which should then be placed on the same line as the opening brace of the function or method with one space separating the two, and at the same indentation level as the function or method declaration. The following is an example of one such situation:
+For `CFScript`, in cases where the argument list exceeds the maximum line length, you may introduce line breaks. Additional arguments to the function or method must be indented one additional level beyond the function or method declaration. A line break should then occur before the closing argument parent, which should then be placed on the same line as the opening brace of the function or method with one space separating the two, and at the same indentation level as the function or method declaration. The following is an example of one such situation:
 
 
 ```cfml
@@ -324,7 +351,7 @@ component displayname="Customer" hint="ColdFusion Component for Customers"
  </cfscript>
 ```
 
-*Note*: It is recommended a function should not have more than five (5) arguments. If a function must have more than 5 arguments, it is recommended masking the arguments in an addition object.
+*Note*: It is recommended a function should not have more than five (5) arguments. If a function must have more than 5 arguments, it is recommended masking the arguments in an additional structure.
 
 <!--*Note*: Pass-by-reference is the only parameter passing mechanism permitted in a method declaration.
 
@@ -432,13 +459,13 @@ For CFScript the opening brace is written on the same line as the conditional st
 
 ```cfml
 <!--- CFML --->
-<cfif ($a != 2) >
+<cfif ($a NEQ 2) >
     <cfset a = 2 />
 </cfif>
 
 <!--- CFScript --->
 <cfscript>
-if (a != 2) {
+if (a NEQ 2) {
     a = 2;
 }
 </cfscript>
@@ -448,18 +475,18 @@ If the conditional statement causes the line length to exceed the maximum line l
 
 ```cfml
 <!--- CFML --->
-<cfif ((a == b)
-    && (b == c)
-    || ('Foo::CONST' == d)
+<cfif ((a EQ b)
+    AND (b EQ c)
+    OR ('Foo::CONST' EQ d)
 ) >
     <cfset a = d />
 </cfif>
 
 <!--- CFScript --->
 <cfscript>
-if ((a == b)
-    && (b == c)
-    || ('Foo::CONST' == d)
+if ((a EQ b)
+    AND (b EQ c)
+    OR ('Foo::CONST' EQ d)
 ) {
     a = d;
 }
@@ -472,28 +499,26 @@ For "if" statements that include "elseif" or "else", the formatting conventions 
 
 ```cfml
 <!--- CFML --->
-<cfif (a != 2) >
+<cfif (a NEQ 2) >
     <cfset a = 2 />
 <cfelse >
     <cfset a = 7 />
 </cfif>
 
-<cfif  (a != 2) >
+<cfif  (a NEQ 2) >
     <cfset a = 2 />
-<cfelseif (a == 3) >
+<cfelseif (a EQ 3) >
     <cfset a = 4 />
 <cfelse >
     <cfset a = 7 />
 </cfif>
 
-<cfif ((a == b)
-    && (b == c)
-    || ('Foo::CONST' == $d)
-) >
+<cfif ((a EQ b)
+    AND (b EQ c)
+    OR ('Foo::CONST' EQ $d)) >
     <cfset a = d />
-<cfelseif ((a != b)
-          || (b != c)
-) >
+<cfelseif ((a NEQ b)
+          OR (b NEQ c)) >
     <cfset a = c />
 <cfelse >
     <cfset a = b />
@@ -501,27 +526,27 @@ For "if" statements that include "elseif" or "else", the formatting conventions 
 
 <!--- CFScript --->
 <cfscript>
-if (a != 2) {
+if (a NEQ 2) {
     a = 2;
 } else {
     a = 7;
 }
 
-if (a != 2) {
+if (a NEQ 2) {
     a = 2;
-} elseif (a == 3) {
+} elseif (a EQ 3) {
     a = 4;
 } else {
     a = 7;
 }
 
-if ((a == b)
-    && (b == c)
-    || ('Foo::CONST' == $d)
+if ((a EQ b)
+    AND (b EQ c)
+    OR ('Foo::CONST' EQ $d)
 ) {
     a = d;
-} elseif ((a != b)
-          || (b != c)
+} elseif ((a NEQ b)
+          OR (b NEQ c)
 ) {
     a = c;
 } else {
@@ -549,45 +574,37 @@ All content within the "switch" statement must be indented using four spaces. Co
 
 ```cfml
 <!--- CFML --->
-<cfswitch expression="#Trim(Department)#">  
-    <cfcase value="Sales">
-        <cfset phrase='#FirstName# #LastName# is in <b>sales</b>' />
+<cfswitch expression="#numPeople#">  
+    <cfcase value="1">
+
     </cfcase>  
-    <cfcase value="Accounting">  
-        <cfset phrase='#FirstName# #LastName# is in <b>accounting</b>' />
+    <cfcase value="2">  
+
     </cfcase>
-    <cfcase value="Administration">  
-        <cfset phrase='#FirstName# #LastName# is in <b>administration</b>' />
-    </cfcase>  
     <cfdefaultcase>  
-        <cfset phrase='#FirstName# #LastName# is not in Sales, Accounting, or Administration.' />
+
     </cfdefaultcase>  
 </cfswitch>
 #phrase#
 
 <!--- CFScript --->
 <cfscript>
-switch(Trim(Department)) {
-    case "Sales":
-         phrase='#FirstName# #LastName# is in <b>sales</b>'
-         break;
-    case "Accounting":
-         phrase='#FirstName# #LastName# is in <b>accounting</b>'
-         break;
-         break;
-    case "Administration":
-         phrase='#FirstName# #LastName# is in <b>administration</b>'
-         break;
+switch (numPeople) {
+    case 1:
+        break;
+
+    case 2:
+        break;
+
     default:
-        phrase='#FirstName# #LastName# is not in Sales, Accounting, or Administration.'
+        break;
 }
-WriteOutput(phrase);
 </cfscript>
 ```
 
 The construct default should never be omitted from a switch statement.
 
-Note: It is sometimes useful to write a case statement which falls through to the next case by not including a break or return within that case. To distinguish these cases from bugs, any case statement where break or return are omitted should contain a comment indicating that the break was intentionally omitted.
+**Note:** It is sometimes useful to write a case statement which falls through to the next case by not including a break or return within that case. To distinguish these cases from bugs, any case statement where break or return are omitted should contain a comment indicating that the break was intentionally omitted.
 
 ###Loops (for / foreach / while)
 
@@ -620,7 +637,7 @@ do {
 
 ###Documentation Format
 
-All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit: [» http://phpdoc.org/](http://phpdoc.org/1)
+All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit: [» http://phpdoc.org/](http://www.phpdoc.org/docs/latest/index.html)
 
 All class files must contain a "file-level" docblock at the top of each file and a "class-level" docblock immediately above each class. Examples of such docblocks can be found below.
 
