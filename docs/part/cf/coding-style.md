@@ -740,9 +740,29 @@ If a function or method may throw an exception, use @throws for all known except
 
 ### In-line Comments
 
-Single line comments should be made using the "//" syntax.
+In case of `CFScript`:
+* Single line comments should be made using the "//" syntax.
+* Multi line comments should always be wrapped between "/\*" and "\*/" characters.
+* Do not use the double "\*" multiline comment for content comments.
 
-Multi line comments should always be wrapped between "/*" and "*/" characters.
+```cfml
+<!--- CFML --->
+<!--- This is a single line comment --->
+<!---
+ This is a
+ multi line
+ comment
+--->
+
+<!--- CFScript --->
+<cfscript>
+// This is a single line comment
+/*
+  This is a
+  multi line
+  comment
+ */
+ </cfscript>
 
 If comment is of stronger importance, comments should follow the example bellow:
 
