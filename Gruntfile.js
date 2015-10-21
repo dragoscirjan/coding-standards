@@ -1,6 +1,10 @@
 
 module.exports = function(grunt) {
 
+    /**
+     * @link https://github.com/treasonx/grunt-markdown
+     */
+
     grunt.initConfig({
         markdown: {
             all: {
@@ -13,9 +17,9 @@ module.exports = function(grunt) {
                     src: 'README.md',
                     dest: 'html/index.html'
                 }],
-                /*options: {
-                    template: 'myTemplate.jst',
-                    preCompile: function(src, context) {},
+                options: {
+                    template: 'template.jst',
+                    /*preCompile: function(src, context) {},
                     postCompile: function(src, context) {},
                     templateContext: {},
                     contextBinder: false,
@@ -29,8 +33,8 @@ module.exports = function(grunt) {
                             before: '<span>',
                             after: '</span>'
                         }
-                    }
-                }/**/
+                    }/**/
+                }
             }
         }
     });
