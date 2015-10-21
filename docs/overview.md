@@ -19,15 +19,31 @@ However, [PHP](http://php.net/) is not the only language we are using, so we tri
 
 Languages included in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards include:
 
-* [Adobe](http://www.adobe.com/products/coldfusion-family.html)<sup>&copy;</sup> [ColdFusion](part/cf/overview.md)
-* *Following languages are still in our TODO list*
-* [CoffeeScript](part/coffee/overview.md)
-* [Google](http://code.google.com/p/dart/) [ColdFusion](part/dart/overview.md) (not completed)
+* [C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages) (syntax) based
+  * [C++](http://todo)
+  * [Adobe](http://www.adobe.com/products/coldfusion-family.html)<sup>&copy;</sup> [CFScript](https://github.com/adamcameron/cfscript/blob/master/cfscript.md)
+  * [JavaScript](part/js/overview.md) (not completed), [EcmaScript 6](https://github.com/lukehoban/es6features) (not completed), [TypeScript](http://todo) (not completed)
+  * [Google](http://code.google.com/p/dart/) [Dart](part/dart/overview.md) (not completed)
+  * [Oracle](https://www.oracle.com/java/index.html) [Java](part/java/overview.md) (not completed)
+  * [Perl](http://todo)
+  * [PHP](http://php.net)
+  * [Ruby](http://ruby.com)
+* [Python](part/py/overview.md) (not completed)
+* [CoffeeScript](part/coffee/overview.md) (not completed)
 * [Css (Less, S(a|c)ss)](part/css/overview.md) (not completed)
 * [Html (Jade, Haml, Twig)](part/html/overview.md) (not completed)
-* [JavaScript](part/js/overview.md) (not completed) [EcmaScript 6](https://github.com/lukehoban/es6features)
-* [Oracle](https://www.oracle.com/java/index.html) [Java](part/java/overview.md) (not completed)
-* [Python](part/py/overview.md) (not completed)
+
+<dl>
+    <dt>C <i>&r<span>C++, C#, Java</i></dt>
+    <dt>ColdFusion <i>CFScript</i></dt>
+    <dt>PHP</dt>
+    <dt>Python</dt>
+    <dt>Ruby</dt>
+    <dt>ES6 (JavaScript) <i>Dart, TypeScript, Coffee</i></dt>
+    <dt>HTML <i>Jade</i></dt>
+    <dt>CSS <i>Less, Scss, Stylus</i></dt>
+</dl>
+
 
 ## Goals
 Coding standards are important in any development project, but they are particularly important when many developers are working on the same project. Coding standards help ensure that the code is high quality, has fewer bugs, and can be easily maintained.

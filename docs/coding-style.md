@@ -1,28 +1,58 @@
 #Coding Style
 
-**Note**: This file in inspired from [Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.coding-style.html)
+**Note**: This file in inspired from
+* [Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.coding-style.html)
 
-## PHP Code Demarcation
+## Code Demarcation (and context)
+
+##### C based
+
+As stand alone coding, none of these languages have code demarcation.
+
+##### C# (ASP) (@TODO)
+```asp
+response.write("Hello World!")
+```
+
+##### Java (@TODO)
+
+```java
+<%= "Hello World!" %>
+<!-- or -->
+<%= new String("Hello World!"); %>
+```
+
+##### PHP
 PHP code must always be delimited by the full-form, standard PHP tags:
-
 ```php
 <?php
 // your code here
 ?>
 ```
-Short tags are never allowed. For files containing only PHP code, the closing tag must always be omitted (See General standards).
+Short tags are never allowed (due to possible server misconifguration). For files containing only PHP code, the closing tag must always be omitted (See General standards).
 
-##Strings
+## Strings
 
-###String Literals
+### String Literals
 
-When a string is literal (contains no variable substitutions), the apostrophe or "single quote" should always be used to demarcate the string:
+When a string is literal (contains no variable substitutions) and also programming language allows it, the apostrophe or "single quote" should always be used to demarcate the string:
 
+##### CFScript
+```cfml
+<cfscript>var a = 'Example String'; </cfscript>
+```
+
+##### CFML
+```cfml
+<cfset var a = 'Example String' />
+```
+
+##### PHP
 ```php
 $a = 'Example String';
 ```
 
-###String Literals Containing Apostrophes
+### String Literals Containing Apostrophes
 
 When a literal string itself contains apostrophes, it is permitted to demarcate the string with quotation marks or "double quotes". This is especially useful for SQL statements:
 
@@ -33,7 +63,7 @@ $sql = "SELECT `id`, `name` from `people` "
 
 This syntax is preferred over escaping apostrophes as it is much easier to read.
 
-###Variable Substitution
+### Variable Substitution
 
 Variable substitution is permitted using either of these forms:
 
@@ -47,7 +77,7 @@ For consistency, this form is *not* permitted:
 ```php
 $greeting = "Hello ${name}, welcome back!";
 ```
-###String Concatenation
+### String Concatenation
 
 Strings must be concatenated using the "." operator. A space must always be added before and after the "." operator to improve readability:
 
@@ -63,9 +93,9 @@ $sql = "SELECT `id`, `name` FROM `people` "
      . "ORDER BY `name` ASC ";
 ```
 
-##Arrays
+## Arrays
 
-###Numerically Indexed Arrays
+### Numerically Indexed Arrays
 
 Negative numbers are not permitted as indices.
 
@@ -89,7 +119,7 @@ $sampleArray = array(
 
 When using this latter declaration, we encourage using a trailing comma for the last item in the array; this minimizes the impact of adding new items on successive lines, and helps to ensure no parse errors occur due to a missing comma.
 
-###Associative Arrays
+### Associative Arrays
 
 When declaring associative arrays with the Array construct, breaking the statement into multiple lines is mandatory. The initial array item must begin on the following line. If so, it should be padded at one indentation level greater than the line containing the array declaration, and all successive lines should have the same indentation; the closing parent should be on a line by itself at the same indentation level as the line containing the array declaration. For readability, the various "=>" assignment operators should be padded such that they align.
 
@@ -102,9 +132,9 @@ $sampleArray = array(
 
 When using this latter declaration, we encourage using a trailing comma for the last item in the array; this minimizes the impact of adding new items on successive lines, and helps to ensure no parse errors occur due to a missing comma.
 
-##Classes
+## Classes
 
-###Class Declaration
+### Class Declaration
 
 Classes must be named according to project's naming conventions (decided by developing team).
 
@@ -159,7 +189,7 @@ class SampleClass
 }
 ```
 
-###Class Member Variables
+### Class Member Variables
 
 Member variables must be named according to project's variable naming conventions. If no other convention is chosen, naming will be done according with camel case naming convention (camelCaseNamingConvention).
 
@@ -171,9 +201,9 @@ The var construct is not permitted. Member variables always declare their visibi
 
 Giving access to member variables directly by declaring them as public is permitted but discouraged in favor of accessor methods (set & get).
 
-##Functions and Methods
+## Functions and Methods
 
-###Function and Method Declaration
+### Function and Method Declaration
 
 *Functions* must be named according to project's function naming conventions. If no other convention is chosen, function naming will be done according with serpent case naming convention (serpent_case_naming_convention).
 
@@ -270,7 +300,7 @@ class Foo
 }
 ```
 
-###Function and Method Usage
+### Function and Method Usage
 
 Function arguments should be separated by a single trailing space after the comma delimiter. The following is an example of an acceptable invocation of a function that takes three arguments:
 
@@ -304,7 +334,7 @@ threeLongArguments(
 );
 ```
 
-##Control Statements & Loops
+## Control Statements & Loops
 
 Any control statement or loop using syntax inspired from BASIC programming language, are strongly un-adviced, but not forbidden.
 
@@ -320,7 +350,7 @@ if ($a == 1) {
 }
 ```
 
-###If/Else/Elseif
+### If/Else/Elseif
 
 Control statements based on the if and elseif constructs must have a single space before the opening parenthesis of the conditional and a single space after the closing parenthesis.
 
@@ -412,7 +442,7 @@ The construct default should never be omitted from a switch statement.
 
 **Note:** It is sometimes useful to write a case statement which falls through to the next case by not including a break or return within that case. To distinguish these cases from bugs, any case statement where break or return are omitted should contain a comment indicating that the break was intentionally omitted.
 
-###Loops (for / foreach / while)
+### Loops (for / foreach / while)
 
 No loop statement will be used without opening and closing brackets.
 
@@ -434,9 +464,9 @@ do {
 } while ($i > 0);
 ```
 
-##Inline Documentation
+## Inline Documentation
 
-###Documentation Format
+### Documentation Format
 
 All documentation blocks ("docblocks") must be compatible with the phpDocumentor format. Describing the phpDocumentor format is beyond the scope of this document. For more information, visit: [» http://phpdoc.org/](http://www.phpdoc.org/docs/latest/index.html)
 
