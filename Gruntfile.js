@@ -15,14 +15,24 @@ module.exports = function(grunt) {
                     ext: '.html'
                 }, {
                     src: 'README.md',
-                    dest: 'html/index.html'
+                    dest: 'html/docs/index.html'
                 }],
                 options: {
                     template: 'template.jst',
-                    /*preCompile: function(src, context) {},
-                    postCompile: function(src, context) {},
+                    preCompile: function(src, context) {},
+                    postCompile: function(src, context) {
+                        src = src
+                            .replace(/[a-z\-]+\.md/gi, function($1) { return $1.replace(/.md$/i, '') + '.html' })
+                            .replace(/<!\-\- \-\-lang\-ex \-\->/gi, '<div class="lang-ex">')
+                            .replace(/<!\-\- \-\-lang\-ex-end \-\->/gi, '</div>')
+                            .replace(/<p><strong>Note<\/strong>/gi, '<p class="note"><strong>Note</strong>');
+
+
+                        return src;
+//                        console.log(context);
+                    },
                     templateContext: {},
-                    contextBinder: false,
+                    contextBinder: true,
                     contextBinderMark: '@@@',
                     autoTemplate: true,
                     autoTemplateFormat: 'jst',

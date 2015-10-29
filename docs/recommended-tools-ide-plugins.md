@@ -2,31 +2,31 @@
 
 ## Language &amp; Linters
 
-| Language/IDE | Atom                        | Sublime Text          | Jetbrains     | Eclipse |
-| ------------ | :-------------------------- | :-------------------- | :------------ | :------ |
-| **Ansible**  | *-ansible-lint[101]         | -                     | -             |         |
-| C/C++/Obj-C  | atom-lint[101]              | -                     | -             |         |
-| CSS          | atom-lint, *-ccslint        | -                     | -             |         |
-| - LESS       | *-less                      | -                     | WebStorm      |         |
-| - SASS       | *-9e-sass                   | -                     | WebStorm      |         |
-| - SCSS       | atom-lint, *-scss-lint      | -                     | WebStorm      |         |
-| ColdFusion   | -                           | -                     | -             |         |
-| HTML         | -                           | -                     | -             |         |
-|  - Jade      | -                           | -                     | -             |         |
-|  - Haml      | *-haml                      | -                     | -             |         |
-|  - Jinja     | -                           | -                     | -             |         |
-| Java         | *-javac                     | -                     | IntelliJ IDEA |         |
-| JavaScript   | atom-lint                   | -                     | native        |         |
-|  - ES6[901]  | *-eslint[102]               | *-jshint[2], babel[3] | [301]         |         |
-|  - Coffee    | atom-lint, coffee-lint      | *-coffeelint          | -             |         |
-| PHP          | *-php                       | -                     | PhpStorm      |         |
-| Python       | atom-lint                   | -                     | PyCharm       |         |
-| Ruby         | atom-lint                   | -                     | RubyMine      |         |
-| XML          |                             |                       |               |         |
-|              | language-xml                | native                | native        |         |
-|              | *-xmllint                   | *-xmllint | native    |               |         |
-| YAML         | *-js-yaml[104]              | -                     | native        |         |
-| Comments     | *-js-yaml                   | docblockr             | native        |         |
+| Language/IDE | Atom                        | Sublime Text          | Jetbrains     | Eclipse | Netbeans | Vim |
+| :----------- | :-------------------------- | :-------------------- | :------------ | :------ | :------- | :-- |
+| **Ansible**  | *-ansible-lint[101]         | -                     | -             |         |          |     |
+| C/C++/Obj-C  | atom-lint[101]              | -                     | -             |         |          |     |
+| CSS          | atom-lint, *-ccslint        | -                     | -             |         |          |     |
+| - LESS       | *-less                      | -                     | WebStorm      |         |          |     |
+| - SASS       | *-9e-sass                   | -                     | WebStorm      |         |          |     |
+| - SCSS       | atom-lint, *-scss-lint      | -                     | WebStorm      |         |          |     |
+| ColdFusion   | -                           | -                     | -             |         |          |     |
+| HTML         | -                           | -                     | -             |         |          |     |
+|  - Jade      | -                           | -                     | -             |         |          |     |
+|  - Haml      | *-haml                      | -                     | -             |         |          |     |
+|  - Jinja     | -                           | -                     | -             |         |          |     |
+| Java         | *-javac                     | -                     | IntelliJ IDEA |         |          |     |
+| JavaScript   | atom-lint                   | -                     | native        |         |          |     |
+|  - ES6[901]  | *-eslint[102]               | *-jshint[2], babel[3] | [301]         |         |          |     |
+|  - Coffee    | atom-lint, coffee-lint      | *-coffeelint          | -             |         |          |     |
+| PHP          | *-php                       | -                     | PhpStorm      |         |          |     |
+| Python       | atom-lint                   | -                     | PyCharm       |         |          |     |
+| Ruby         | atom-lint                   | -                     | RubyMine      |         |          |     |
+| XML          |                             |                       |               |         |          |     |
+|              | language-xml                | native                | native        |         |          |     |
+|              | *-xmllint                   | *-xmllint | native    |               |         |          |     |
+| YAML         | *-js-yaml[104]              | -                     | native        |         |          |     |
+| Comments     | *-js-yaml                   | docblockr             | native        |         |          |     |
 
 ### Notes: (Plugins) ###
 
@@ -49,9 +49,11 @@ There is also [JavaScript.next Support](https://plugins.jetbrains.com/plugin/764
 
 901. [901] Best documentation for EcmaScript 6 can be found at https://github.com/lukehoban/es6features or http://www.ecma-international.org/ecma-262/6.0/
 
-## Revision
+## Other
 
-| vers./IDE | Atom                                  | Sublime Text | IntelliJ |
-| :-------: | :------------------------------------ | :----------: | :------: |
-| git       | git-control, git-plus, git-tab-status | -            |  native  |
-| svn       | svn                                   | -            |  native  |
+| vers./IDE    | Atom                                  | Sublime Text        | IntelliJ | Eclipse | Netbeans | Vim |
+| :----------: | :-----------------------------------: | :-----------------: | :------: | :-----: | :------- | :-- |
+| git          | git-control, git-plus, git-tab-status | -                   |  native  |         |          |     |
+| svn          | svn                                   | -                   |  native  |         |          |     |
+| copy/paste   | native                                | SideBarEnhancements |  native  |         |          |     |
+| editorconfig | ?                                     | EditorConfig        |  native  |         |          |     |

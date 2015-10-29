@@ -1,10 +1,21 @@
-#Naming Conventions
+# Naming Conventions
 
-**Note**: This file in inspired from [Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.naming-conventions.html)
+**Note** This document is a draft and it will remain so. It is your duty as a developer to continuously
+improve this document and your knowledge of this document.
 
-##Classes
+**Note** This document in inspired from
+[Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.naming-conventions.html).
+If you have any other suggestion, please comment in our issue section.
 
-For project that were developed under PHP-5.2 and lower and were not refactored as PHP5.3+ project, we standardize on a class naming convention whereby the names of the classes directly map to the directories in which they are stored.
+## Classes
+
+For class naming, it is mandatory to use [CamelCase](https://en.wikipedia.org/wiki/CamelCase) naming
+style unless programming language impose otherwise, or project manager / system architect decided
+otherwise.
+
+For project that were developed under PHP-5.2 and lower and were not refactored as PHP5.3+ project,
+we standardize on a class naming convention whereby the names of the classes directly map to the
+directories in which they are stored.
 
 =========
 

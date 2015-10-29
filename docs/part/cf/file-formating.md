@@ -9,7 +9,7 @@
 Indentation should consist of 4 spaces. Tabs are not allowed.
 
 ### Maximum Line Length
-The target line length is 80 characters. That is to say, [__COMPANY_NAME__](http://__COMPANY_URL__/) developers should strive keep each line of their code under 80 characters where possible and practical. However, longer lines are acceptable in some circumstances. The maximum length of any line of [PHP](http://php.net/) code is 120 characters.
+The target line length is 80 characters. That is to say, [Foo Company LTD](http://company.foo/) developers should strive keep each line of their code under 80 characters where possible and practical. However, longer lines are acceptable in some circumstances. The maximum length of any line of [PHP](http://php.net/) code is 120 characters.
 
 ### Line Termination
 Line termination follows the Unix text file convention. Lines must end with a single linefeed (LF) character. Linefeed characters are represented as ordinal 10, or hexadecimal 0x0A.

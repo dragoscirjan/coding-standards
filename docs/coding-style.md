@@ -1,9 +1,11 @@
-#Coding Style
+# Coding Style
 
 **Note**: This file in inspired from
 * [Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.coding-style.html)
 
 ## Code Demarcation (and context)
+
+<!-- --lang-ex -->
 
 ##### C based
 
@@ -31,11 +33,15 @@ PHP code must always be delimited by the full-form, standard PHP tags:
 ```
 Short tags are never allowed (due to possible server misconifguration). For files containing only PHP code, the closing tag must always be omitted (See General standards).
 
+<!-- --lang-ex-end -->
+
 ## Strings
 
 ### String Literals
 
 When a string is literal (contains no variable substitutions) and also programming language allows it, the apostrophe or "single quote" should always be used to demarcate the string:
+
+<!-- --lang-ex -->
 
 ##### CFScript
 ```cfml
@@ -51,6 +57,7 @@ When a string is literal (contains no variable substitutions) and also programmi
 ```php
 $a = 'Example String';
 ```
+<!-- --lang-ex-end -->
 
 ### String Literals Containing Apostrophes
 
@@ -484,7 +491,7 @@ Every file that contains PHP code must have a docblock at the top of the file th
  *
  * LICENSE: Some license information
  *
- * @copyright  Copyright (c) 2007-2015 __COMPANY_NAME__ S.R.L. (http://www.__COMPANY_URL__)
+ * @copyright  Copyright (c) 2007-2015 Foo Company LTD S.R.L. (http://www.company.foo)
  * @license    https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/blob/master/LICENSE License Type
  * @version    $Id:$
  * @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}

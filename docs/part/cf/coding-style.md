@@ -654,7 +654,7 @@ Every file that contains CMLF/CFScript code must have a docblock at the top of t
 
  LICENSE: Some license information
 
- @copyright  Copyright (c) 2007-2015 __COMPANY_NAME__ S.R.L. (http://www.__COMPANY_URL__)
+ @copyright  Copyright (c) 2007-2015 Foo Company LTD S.R.L. (http://www.company.foo)
  @license    https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/blob/master/LICENSE License Type
  @version    $Id:$
  @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}
@@ -671,7 +671,7 @@ Every file that contains CMLF/CFScript code must have a docblock at the top of t
  *
  * LICENSE: Some license information
  *
- * @copyright  Copyright (c) 2007-2015 __COMPANY_NAME__ S.R.L. (http://www.__COMPANY_URL__)
+ * @copyright  Copyright (c) 2007-2015 Foo Company LTD S.R.L. (http://www.company.foo)
  * @license    https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}/blob/master/LICENSE License Type
  * @version    $Id:$
  * @link       https://github.com/{ACCOUNT/GROUP}/{PROJECT-NAME}

@@ -2,22 +2,22 @@
 
 ## Scope
 
-This document provides guidelines for code formatting and documentation to individuals and teams contributing to [__COMPANY_NAME__](http://__COMPANY_URL__/) products. Many developers using [__COMPANY_NAME__](http://__COMPANY_URL__/) products have also found these coding standards useful because their code's style remains consistent with all [__COMPANY_NAME__](http://__COMPANY_URL__/) products code. It is also worth noting that it requires significant effort to fully specify coding standards.
+This document provides guidelines for code formatting and documentation to individuals and teams contributing to [Foo Company LTD](http://company.foo/) products. Many developers using [Foo Company LTD](http://company.foo/) products have also found these coding standards useful because their code's style remains consistent with all [Foo Company LTD](http://company.foo/) products code. It is also worth noting that it requires significant effort to fully specify coding standards.
 
-**Note**: Sometimes developers consider the establishment of a standard more important than what that standard actually suggests at the most detailed level of design. The guidelines in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards capture practices that have worked well on the [__COMPANY_NAME__](http://__COMPANY_URL__/) products project. You may modify these standards or use them as is in accordance with the terms of our [» license](https://github.com/itmc/docs-license/new-bsd.md).
+**Note**: Sometimes developers consider the establishment of a standard more important than what that standard actually suggests at the most detailed level of design. The guidelines in [Foo Company LTD](http://company.foo/) products' coding standards capture practices that have worked well on the [Foo Company LTD](http://company.foo/) products project. You may modify these standards or use them as is in accordance with the terms of our [» license](https://github.com/itmc/docs-license/new-bsd.md).
 
-Topics covered in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards include:
+Topics covered in [Foo Company LTD](http://company.foo/) products' coding standards include:
 
 * [File Formatting](file-formating.md)
 * [Naming Conventions](naming-conventions.md)
 * [Coding Style](coding-style.md)
 * [Recommended Tools](recommended-tools.md)
 
-**Note**: Mainly [__COMPANY_NAME__](http://__COMPANY_URL__/) is a [PHP](http://php.net/) company, thus all documentation written further will be developed over [PHP](http://php.net/) coding language.
+**Note**: Mainly [Foo Company LTD](http://company.foo/) is a [PHP](http://php.net/) company, thus all documentation written further will be developed over [PHP](http://php.net/) coding language.
 
 However, [PHP](http://php.net/) is not the only language we are using, so we tried extending and adapting coding standards to all coding languages used in our company. Also, with each adopted coding language, we engage in adding and adapting our coding standards to that specific language as well.
 
-Languages included in [__COMPANY_NAME__](http://__COMPANY_URL__/) products' coding standards include:
+Languages included in [Foo Company LTD](http://company.foo/) products' coding standards include:
 
 * [C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages) (syntax) based
   * [C++](http://todo)
