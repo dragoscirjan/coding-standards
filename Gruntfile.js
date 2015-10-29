@@ -10,12 +10,12 @@ module.exports = function(grunt) {
             all: {
                 files: [{
                     expand: true,
-                    src: 'docs/*.md',
-                    dest: 'html/',
+                    src: 'src/*.md',
+                    dest: 'docs/',
                     ext: '.html'
                 }, {
                     src: 'README.md',
-                    dest: 'html/docs/index.html'
+                    dest: 'docs/src/index.html'
                 }],
                 options: {
                     template: 'template.jst',
