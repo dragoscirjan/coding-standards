@@ -59,3 +59,8 @@ http://fuelphp.com/docs/general/coding_standards.html
 
 <hr />
 [&laquo; Home](../README.md) / [File Formating &raquo;](file-formating.md)
+
+
+https://github.com/isagalaev/highlight.js/tree/master/src/languages
+
+http://www.learnpython.org/

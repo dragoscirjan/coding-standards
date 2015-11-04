@@ -11,23 +11,89 @@ If you have any other suggestion, please comment in our issue section.
 
 <!-- --lang-ex -->
 
-##### CFScript
+##### C/C++/C&#35;
 
-While using CFScript (as a component of CFML), no matter the file type, whether code is embeded within
-HTML templates, or as a standalone class code, code must always be embeded in the `<cfscript>` tag.
+Neither **C** nor **C++** have code demarcation. This is also valid for C#, unless (ASP) code is embed
+in HTML templates.
+
+```asp
+<%
+    response.write("Hello World!");
+%>
+```
+
+##### CFML
+
+While using CFScript (as a component of CFML), no matter the file type, whether code is embed within
+HTML templates, or as a standalone class code, code must always be embed in the `<cfscript>` tag.
 
 ```cfml
 <cfscript>
-    // your code here
+    writeOutput('Hello World!');
 </cfscript>
 ```
+
+#####  Dart
+Language has no code demarcation unless used within HTML files, where code is marked by `<script type="text/dart">` tag.
+
+```html
+<script type="text/dart">
+    main() async {
+        print('Hello World!');
+    }
+</script>
+```
+
+Please take in consideration that **ONLY** [Google Chrome](https://google.com/chrome) **supports** dart language.
+
+##### JavaScript
+Language (nor substitutes) do not have code demarcation, unless usest within HTML files when code is marked by `<script>` tag.
+
+```html
+<!-- JavaScript -->
+<script type="text/javascript">
+    document.write("Hello World!");
+</script>
+
+<!-- CoffeeScript -->
+<script type=”text/coffeescript”>
+    document.write "Hello World!"
+</script>
+<!-- last script in body -->
+<script type=”text/javascript” src=”http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js&#8221;> </script>
+
+<!-- TypeScript -->
+@TODO
+```
+
+For [CofeeScript](http://coffeescript.org/) please read more on their [github repository](https://github.com/jashkenas/coffeescript).
+
+
+##### Java
+
+Language does not have code demarcation unless code is embed in HTML content, when it is wrapped
+by the following marks `<% /* code here */ %>`.
+
+Also, for printing the demarcation turns to `<%= "Hello World!" %>` where the `=` equals mark is
+equivalent to `System.out.println()` call.
+
+```java
+    <p>
+        <% String hello = new String("Hello World!"); %>
+        <%= hello %>
+    </p>
+```
+
+#####  Perl
+Perl has no code demarcation. Please read this [article](http://www.redantigua.com/html-template2.html)
+to understand how perl is used with HTML templates.
 
 ##### PHP
 PHP code must always be delimited by the full-form, standard PHP tags:
 
 ```php
 <?php
-// your code here
+    echo "Hello World!"
 ?>
 ```
 Short tags are never allowed (due to possible server misconifguration).
@@ -37,8 +103,37 @@ by PHP, and omitting it´ prevents the accidental injection of trailing white sp
 
 ```php
 <?php
-// your code here
+    echo "Hello World!"
 ```
+
+##### Ruby
+
+Ruby has no code demarcation, unless used within [html templates](http://www.arubystory.com/2013/11/tutorial-saying-hello-world-with-ruby.html)
+when it uses the same demarcation as **Java**.
+
+```ruby
+    def home
+        @greeting = "Hello world!"
+    end
+```
+
+```html
+    <%= @greeting %>
+```
+
+##### Python
+
+Python has no code demarcation.
+
+##### CSS
+
+CSS has no code demarcation, unless CSS code is embed within HTML code, when CSS must be wrapped
+by `<style>` tag.
+
+##### HTML
+
+HTML has no code demarcation, unless you consider `<!DOCTYPE>` as a code demarcation, or the fact
+that all a standard HTML code must be placed within `<html>` tag.
 
 <!-- --lang-ex-end -->
 
@@ -51,7 +146,7 @@ the apostrophe or "single quote" should always be used to demarcate the string:
 
 <!-- --lang-ex -->
 
-##### C
+##### C/C++/C&#35;
 ```c
 //c
 char a[] = "Example String";
@@ -62,23 +157,61 @@ std::string s0 ("Example String");
 // C#
 string a = @"Example String";
 System.String a = "Example String";
+// For more info, please read:
 // @link https://msdn.microsoft.com/en-us/library/ms228362.aspx
-```
-
-##### CFScript
-```cfml
-<cfscript>var a = 'Example String'; </cfscript>
 ```
 
 ##### CFML
 ```cfml
+<!--- CFSCript --->
+<cfscript>var a = 'Example String'; </cfscript>
+<!--- CFML --->
 <cfset var a = 'Example String' />
+```
+
+#####  Dart
+```dart
+    // your code here
+```
+##### JavaScript
+```javascript
+    // your code here
+```
+##### Java
+```java
+    // your code here
+```
+
+#####  Perl
+```perl
+    // your code here
 ```
 
 ##### PHP
 ```php
 $a = 'Example String';
 ```
+
+##### Ruby
+```ruby
+    // your code here
+```
+
+##### Python
+```python
+    # your code here
+```
+
+##### CSS
+```css
+    /* your code here */
+```
+
+##### HTML
+```html
+    <!-- your code here -->
+```
+
 <!-- --lang-ex-end -->
 
 ### String Literals Containing Apostrophes
@@ -87,6 +220,44 @@ When a literal string itself contains apostrophes, it is permitted to demarcate 
 marks or "double quotes". This is especially useful for SQL statements:
 
 <!-- --lang-ex -->
+
+##### C/C++/C&#35;
+```c
+//c
+char a[] = "Example String";
+
+// c++
+std::string s0 ("Example String");
+
+// C#
+string a = @"Example String";
+System.String a = "Example String";
+// For more info, please read:
+// @link https://msdn.microsoft.com/en-us/library/ms228362.aspx
+```
+
+##### CFML
+```cfml
+    // your code here
+```
+
+#####  Dart
+```dart
+    // your code here
+```
+##### JavaScript
+```javascript
+    // your code here
+```
+##### Java
+```java
+    // your code here
+```
+
+#####  Perl
+```perl
+    // your code here
+```
 
 ##### PHP
 ```php
@@ -98,6 +269,27 @@ $sql = <<<SQL_COMMAND
 SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'
 SQL_COMMAND;
 ```
+
+##### Ruby
+```ruby
+    // your code here
+```
+
+##### Python
+```python
+    # your code here
+```
+
+##### CSS
+```css
+    /* your code here */
+```
+
+##### HTML
+```html
+    <!-- your code here -->
+```
+
 <!-- --lang-ex-end -->
 
 This syntax is preferred over escaping apostrophes as it is much easier to read.
@@ -108,7 +300,12 @@ Variable substitution is permitted using either of these forms:
 
 <!-- --lang-ex -->
 
-##### CFML & CFScript
+##### C/C++/C&#35;
+```c
+    // your code here
+```
+
+##### CFML
 ```cfml
 <!--- CFML --->
 <cfset var greeting = "Hello #name#, welcome back!" />
@@ -116,6 +313,11 @@ Variable substitution is permitted using either of these forms:
 <cfscript>
     var greeting = "Hello #name#, welcome back!"
 </cfscript>
+```
+
+#####  Dart
+```dart
+    // your code here
 ```
 
 ##### JavaScript
@@ -130,6 +332,16 @@ greeting = `Hello ${name}, welcome back!`;
 greeting = "Hello ${name}, welcome back!";
 ```
 
+##### Java
+```java
+    // your code here
+```
+
+#####  Perl
+```perl
+    // your code here
+```
+
 ##### PHP
 ```php
 $greeting = "Hello {$name}, welcome back!";
@@ -141,6 +353,27 @@ For consistency, this form is *not* permitted:
 ```php
 $greeting = "Hello ${name}, welcome back!";
 ```
+
+##### Ruby
+```ruby
+    // your code here
+```
+
+##### Python
+```python
+    # your code here
+```
+
+##### CSS
+```css
+    /* your code here */
+```
+
+##### HTML
+```html
+    <!-- your code here -->
+```
+
 <!-- --lang-ex-end -->
 
 ### String Concatenation
