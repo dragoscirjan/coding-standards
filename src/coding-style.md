@@ -49,19 +49,25 @@ Please take in consideration that **ONLY** [Google Chrome](https://google.com/ch
 ##### JavaScript
 Language (nor substitutes) do not have code demarcation, unless usest within HTML files when code is marked by `<script>` tag.
 
+##### ECMAScript
 ```html
 <!-- JavaScript -->
 <script type="text/javascript">
     document.write("Hello World!");
 </script>
+```
 
-<!-- CoffeeScript -->
+###### CoffeeScript
+```html
 <script type=”text/coffeescript”>
     document.write "Hello World!"
 </script>
 <!-- last script in body -->
 <script type=”text/javascript” src=”http://github.com/jashkenas/coffee-script/raw/master/extras/coffee-script.js&#8221;> </script>
+```
 
+###### TypeScript
+```htmls
 <!-- TypeScript -->
 @TODO
 ```
@@ -147,16 +153,21 @@ the apostrophe or "single quote" should always be used to demarcate the string:
 <!-- --lang-ex -->
 
 ##### C/C++/C&#35;
+
+###### C
 ```c
-//c
-char a[] = "Example String";
+char myString[] = "Example String";
+```
 
-// c++
-std::string s0 ("Example String");
+###### C++
+```c
+std::string myString ("Example String");
+```
 
-// C#
-string a = @"Example String";
-System.String a = "Example String";
+###### C&#35;
+```csharp
+string myString = @"Example String";
+System.String myString = "Example String";
 // For more info, please read:
 // @link https://msdn.microsoft.com/en-us/library/ms228362.aspx
 ```
@@ -164,52 +175,61 @@ System.String a = "Example String";
 ##### CFML
 ```cfml
 <!--- CFSCript --->
-<cfscript>var a = 'Example String'; </cfscript>
+<cfscript>var myString = 'Example String'; </cfscript>
 <!--- CFML --->
-<cfset var a = 'Example String' />
+<cfset var myString = 'Example String' />
 ```
 
 #####  Dart
 ```dart
-    // your code here
+var myString = 'Example String';
 ```
 ##### JavaScript
+
+###### ECMAScript
 ```javascript
-    // your code here
+var myString = 'Example String';
+```
+
+###### CoffeeScript
+```coffeescript
+myString = 'Example String'
 ```
 ##### Java
+Java follows the C model, so strings can't be marked with single quotes.
 ```java
-    // your code here
+String myString = "Example String";
 ```
 
 #####  Perl
 ```perl
-    // your code here
+my $myString = 'Example String';
 ```
 
 ##### PHP
 ```php
-$a = 'Example String';
+$myString = 'Example String';
 ```
 
 ##### Ruby
 ```ruby
-    // your code here
+myString = 'Example String';
 ```
 
 ##### Python
 ```python
-    # your code here
+myString = 'Example String'
 ```
 
 ##### CSS
 ```css
-    /* your code here */
+@import('http://url/to/file.css');
 ```
 
 ##### HTML
+HTML strings (standard text) does not have any demarcation type.
 ```html
-    <!-- your code here -->
+<p>Example String</p>
 ```
 
 <!-- --lang-ex-end -->
