@@ -49,7 +49,7 @@ Please take in consideration that **ONLY** [Google Chrome](https://google.com/ch
 ##### JavaScript
 Language (nor substitutes) do not have code demarcation, unless usest within HTML files when code is marked by `<script>` tag.
 
-##### ECMAScript
+###### ECMAScript
 ```html
 <!-- JavaScript -->
 <script type="text/javascript">
