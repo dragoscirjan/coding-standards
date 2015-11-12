@@ -242,41 +242,58 @@ marks or "double quotes". This is especially useful for SQL statements:
 <!-- --lang-ex -->
 
 ##### C/C++/C&#35;
+###### C
 ```c
-//c
-char a[] = "Example String";
+char sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
+```
 
-// c++
-std::string s0 ("Example String");
+###### C++
+```c
+std::string sql ("SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'");
+```
 
-// C#
-string a = @"Example String";
-System.String a = "Example String";
-// For more info, please read:
-// @link https://msdn.microsoft.com/en-us/library/ms228362.aspx
+###### C&#35;
+```csharp
+string sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 
 ##### CFML
 ```cfml
-    // your code here
+<!--- CFSCript --->
+<cfscript>var sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"; </cfscript>
+<!--- CFML --->
+<cfset sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'" />
 ```
 
 #####  Dart
 ```dart
-    // your code here
+var sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 ##### JavaScript
+
+###### ECMAScript*
 ```javascript
-    // your code here
+var sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
+
+###### ECMAScript6
+```javascript
+var sql = `SELECT \`id\`, \`name\` from \`people\` WHERE \`name\`='Fred' OR \`name\`='Susan'`;
+```
+
+###### CoffeeScript
+```coffeescript
+sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"
+```
+
 ##### Java
 ```java
-    // your code here
+String sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 
 #####  Perl
 ```perl
-    // your code here
+my $sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 
 ##### PHP
@@ -292,22 +309,12 @@ SQL_COMMAND;
 
 ##### Ruby
 ```ruby
-    // your code here
+sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 
 ##### Python
 ```python
-    # your code here
-```
-
-##### CSS
-```css
-    /* your code here */
-```
-
-##### HTML
-```html
-    <!-- your code here -->
+sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"
 ```
 
 <!-- --lang-ex-end -->
