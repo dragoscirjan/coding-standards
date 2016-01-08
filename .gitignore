@@ -1,3 +1,4 @@
+.vagrant
 coding-standards.sublime-*
+docs
 node_modules
-docs/src

@@ -22,6 +22,7 @@
 
     <!-- Hightlight js -->
     <link href="https://highlightjs.org/static/demo/styles/default.css" rel="stylesheet">
+    <link rel="alternate stylesheet" href="https://highlightjs.org/static/demo/styles/github.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -46,6 +47,14 @@
 
         .note strong {
             display: none;
+        }
+
+        .tooltip {
+            width: 150px;
+        }
+
+        .nav-tabs[role=tablist]  a.disabled {
+            color: #CCC;
         }
     </style>
 
@@ -95,9 +104,8 @@
 
       <div class="row">
         <div class="col-md-9" role="main">
-<%=content%>
 
-
+<!-- content -->
 
         </div>
 
@@ -141,11 +149,13 @@ Preview theme
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<script src="../scripts.js"></script>
-
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
+<!--  Considering on switching to ace: https://ace.c9.io -->
+
 <script src="https://highlightjs.org/static/highlight.pack.js"></script>
+
+<script src="scripts.js"></script>
 
 </body>
 </html>

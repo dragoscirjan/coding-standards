@@ -11,12 +11,12 @@ If you have any other suggestion, please comment in our issue section.
 
 <!-- --lang-ex -->
 
-##### C/C++/C&#35;
+##### C/C++/C&#35; TODO
 
 Neither **C** nor **C++** have code demarcation. This is also valid for C#, unless (ASP) code is embed
 in HTML templates.
 
-```asp
+```csharp
 <%
     response.write("Hello World!");
 %>
@@ -25,7 +25,8 @@ in HTML templates.
 ##### CFML
 
 While using CFScript (as a component of CFML), no matter the file type, whether code is embed within
-HTML templates, or as a standalone class code, code must always be embed in the `<cfscript>` tag.
+HTML templates (e.g **cfml** file), or as a standalone class code (e.g. **cfc** file), code must always be
+embed in the `<cfscript>` tag.
 
 ```cfml
 <cfscript>
@@ -33,7 +34,7 @@ HTML templates, or as a standalone class code, code must always be embed in the 
 </cfscript>
 ```
 
-#####  Dart
+#####  Dart TODO
 Language has no code demarcation unless used within HTML files, where code is marked by `<script type="text/dart">` tag.
 
 ```html
@@ -90,7 +91,7 @@ equivalent to `System.out.println()` call.
     </p>
 ```
 
-#####  Perl
+#####  Perl TODO
 Perl has no code demarcation. Please read this [article](http://www.redantigua.com/html-template2.html)
 to understand how perl is used with HTML templates.
 
@@ -112,7 +113,7 @@ by PHP, and omitting it´ prevents the accidental injection of trailing white sp
     echo "Hello World!"
 ```
 
-##### Ruby
+##### Ruby TODO
 
 Ruby has no code demarcation, unless used within [html templates](http://www.arubystory.com/2013/11/tutorial-saying-hello-world-with-ruby.html)
 when it uses the same demarcation as **Java**.
@@ -127,7 +128,7 @@ when it uses the same demarcation as **Java**.
     <%= @greeting %>
 ```
 
-##### Python
+##### Python TODO
 
 Python has no code demarcation.
 
@@ -148,11 +149,11 @@ that all a standard HTML code must be placed within `<html>` tag.
 ### String Literals
 
 When a string is literal (contains no variable substitutions) and also programming language allows it,
-the apostrophe or "single quote" should always be used to demarcate the string:
+the **apostrophe** or **single quote** should always be used to demarcate the string:
 
 <!-- --lang-ex -->
 
-##### C/C++/C&#35;
+##### C/C++/C&#35; TODO
 
 ###### C
 ```c
@@ -173,17 +174,21 @@ System.String myString = "Example String";
 ```
 
 ##### CFML
+
 ```cfml
 <!--- CFSCript --->
 <cfscript>var myString = 'Example String'; </cfscript>
+
 <!--- CFML --->
 <cfset var myString = 'Example String' />
 ```
 
-#####  Dart
+#####  Dart TODO
+
 ```dart
 var myString = 'Example String';
 ```
+
 ##### JavaScript
 
 ###### ECMAScript
@@ -195,39 +200,49 @@ var myString = 'Example String';
 ```coffeescript
 myString = 'Example String'
 ```
+
 ##### Java
-Java follows the C model, so strings can't be marked with single quotes.
+
+Java follows the C model, so strings **can't** be marked with **single quotes**. Thus they will be always marked with
+**double quotes**.
+
 ```java
 String myString = "Example String";
 ```
 
-#####  Perl
+#####  Perl TODO
 ```perl
 my $myString = 'Example String';
 ```
 
 ##### PHP
+
 ```php
 $myString = 'Example String';
 ```
 
-##### Ruby
+##### Ruby TODO
+
 ```ruby
 myString = 'Example String';
 ```
 
-##### Python
+##### Python TODO
+
 ```python
 myString = 'Example String'
 ```
 
 ##### CSS
+
 ```css
 @import('http://url/to/file.css');
 ```
 
 ##### HTML
-HTML strings (standard text) does not have any demarcation type.
+
+HTML strings (standard text) does not have any demarcation type. However, they can always be embeded in different HTML tags.
+
 ```html
 <p>Example String</p>
 ```
@@ -236,12 +251,13 @@ HTML strings (standard text) does not have any demarcation type.
 
 ### String Literals Containing Apostrophes
 
-When a literal string itself contains apostrophes, it is permitted to demarcate the string with quotation
-marks or "double quotes". This is especially useful for SQL statements:
+When a literal string itself contains apostrophes, it is permitted to demarcate the string with **quotation
+marks** or **double quotes**. This is especially useful for SQL statements:
 
 <!-- --lang-ex -->
 
-##### C/C++/C&#35;
+##### C/C++/C&#35; TODO
+
 ###### C
 ```c
 char sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
@@ -258,45 +274,49 @@ string sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='S
 ```
 
 ##### CFML
+
 ```cfml
 <!--- CFSCript --->
 <cfscript>var sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"; </cfscript>
+
 <!--- CFML --->
 <cfset sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'" />
 ```
 
-#####  Dart
+#####  Dart TODO
+
 ```dart
 var sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
+
 ##### JavaScript
 
 ###### ECMAScript*
+
 ```javascript
 var sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 
-###### ECMAScript6
-```javascript
-var sql = `SELECT \`id\`, \`name\` from \`people\` WHERE \`name\`='Fred' OR \`name\`='Susan'`;
-```
-
 ###### CoffeeScript
+
 ```coffeescript
 sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"
 ```
 
 ##### Java
+
 ```java
 String sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 
-#####  Perl
+#####  Perl TODO
+
 ```perl
 my $sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 
 ##### PHP
+
 ```php
 // double quotes
 $sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
@@ -307,12 +327,14 @@ SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'
 SQL_COMMAND;
 ```
 
-##### Ruby
+##### Ruby TODO
+
 ```ruby
 sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'";
 ```
 
-##### Python
+##### Python TODO
+
 ```python
 sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"
 ```
@@ -323,46 +345,49 @@ This syntax is preferred over escaping apostrophes as it is much easier to read.
 
 ### Variable Substitution / String interpolation
 
-http://rosettacode.org/wiki/String_interpolation_(included)
-https://msdn.microsoft.com/en-us/library/dn961160.aspx
 
 Variable substitution is permitted using either of these forms:
 
 <!-- --lang-ex -->
 
-##### C/C++/C&#35;
+##### C/C++/C&#35; TODO
 
-Using `stdio.h`
+<!-- http://rosettacode.org/wiki/String_interpolation_(included) -->
+<!-- https://msdn.microsoft.com/en-us/library/dn961160.aspx -->
 
 ```c
+  // Using `stdio.h`
   const char \*name = "John Doe";
   printf("Hello %s\n", name);
   char hello[100];
   sprintf(hello, "Hello %s", name)
+
+  // ...
 ```
 
-```c
-
+```cpp
+xx
 ```
 
 ```csharp
-
+xx
 ```
 
 ##### CFML
 
-ColdFusion variablie substitution is done by wrapping the variable name within '#' character.
+ColdFusion variablie substitution is done by wrapping the variable name within **#** character.
 
 ```cfml
 <!--- CFML --->
 <cfset var greeting = "Hello #name#, welcome back!" />
+
 <!--- CFScript --->
 <cfscript>
     var greeting = "Hello #name#, welcome back!"
 </cfscript>
 ```
 
-#####  Dart
+#####  Dart TODO
 
 Dart variable substitution looks more like 'string interpolation'. Any other non string variable needs
 to be converted to String to work. Furthermore, between the `${}` syntax expressions can be used. See
@@ -381,12 +406,14 @@ to be converted to String to work. Furthermore, between the `${}` syntax express
 JavasScript (ECMAScript 5 and below) does not have variable substitution, however ECMAScript6 and
 preprocessors do:
 
-###### ECMAScript*
+###### ECMAScript5 and lower
+
 ```javascript
 var hello = "Hello " + name;
 ```
 
 ###### ECMAScript6
+
 ```javascript
 var hello = `Hello ${name}`;
 ```
@@ -400,7 +427,8 @@ Also, both ES6 and Coffee support expressions within their string interpolation 
 
 ##### Java
 
-One of the default string interpolation methods in Java is [`java.lang.String.format()`](http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#format-java.lang.String-java.lang.Object...-) function. We recommend this one.
+One of the default string interpolation methods in Java is [`java.lang.String.format()`](http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#format-java.lang.String-java.lang.Object...-)
+function. We recommend this one.
 
 ```java
     String name = "John Doe";
@@ -422,31 +450,35 @@ PHP follows the same rule as Perl, however, it is recommended to wrap the variab
 
 ```php
 $greeting = "Hello {$name}, welcome back!";
-// or - a more simple form
+// or - a more simple form which does not support complex expressions
 $greeting = "Hello $name, welcome back!";
 ```
 For consistency, this form is *not* permitted:
 
 ```php
-$greeting = "Hello ${name}, welcome back!";
+$greeting = "Hello $name, welcome back!";
 ```
 
-##### Ruby
+##### Ruby TODO
+
 ```ruby
     // your code here
 ```
 
-##### Python
+##### Python TODO
+
 ```python
     # your code here
 ```
 
-##### CSS
+##### CSS TODO
+
 ```css
     /* your code here */
 ```
 
-##### HTML
+##### HTML TODO
+
 ```html
     <!-- your code here -->
 ```
@@ -455,13 +487,146 @@ $greeting = "Hello ${name}, welcome back!";
 
 ### String Concatenation
 
-Strings must be concatenated using the "." operator. A space must always be added before and after the "." operator to improve readability:
+<!-- --lang-ex -->
+
+##### C/C++/C&#35; TODO
+
+```c
+    // code here
+```
+
+```cpp
+    // code here
+```
+
+```csharp
+    // code here
+```
+
+##### CFML
+
+Strings must be concatenated using the **&** operator. A space must always be added before and after the **&** operator
+to improve readability:
+
+```cfml
+<!--- CFML --->
+<cfset var company = 'Code' & ' ' & 'Styling' />
+
+<!--- CFScript --->
+<cfscript>
+    var company = 'Code' & ' ' & 'Styling';
+</cfscript>
+```
+
+When concatenating strings with the **&** operator, it is encouraged to break the statement into multiple lines to improve
+readability. In these cases, each successive line should be padded with white space such that the **&**; operator is aligned
+under the **=** operator:
+
+```cfml
+<!--- CFML --->
+<cfset var sql = "SELECT `id`, `name` FROM `people` "
+             . "WHERE `name` = 'Susan' "
+             . "ORDER BY `name` ASC "; />
+
+<!--- CFScript --->
+<cfscript>
+    var sql = "SELECT `id`, `name` FROM `people` "
+         . "WHERE `name` = 'Susan' "
+         . "ORDER BY `name` ASC ";
+</cfscript>
+```
+
+#####  Dart TODO
+
+Dart variable substitution looks more like 'string interpolation'. Any other non string variable needs
+to be converted to String to work. Furthermore, between the `${}` syntax expressions can be used. See
+[Dart String Interpolation](http://shailen.github.io/blog/2012/11/14/dart-string-interpolation/) article.
+
+```dart
+    // code here
+```
+
+##### JavaScript
+
+Strings must be concatenated using the "+" operator. A space must always be added before and after the "+" operator to
+improve readability:
 
 ```php
 $company = 'Code' . ' ' . 'Styling';
 ```
 
-When concatenating strings with the "." operator, it is encouraged to break the statement into multiple lines to improve readability. In these cases, each successive line should be padded with white space such that the "."; operator is aligned under the "=" operator:
+###### ECMAScript
+
+```javascript
+var company = 'Code' + ' ' + 'Styling';
+```
+
+###### CoffeeScript
+
+```coffeescript
+company = 'Code' + ' ' + 'Styling'
+```
+
+When concatenating strings with the "+" operator, it is encouraged to break the statement into multiple lines to improve
+readability. In these cases, each successive line should be padded with white space such that the "+"; operator is aligned
+under the "=" operator:
+
+###### ECMAScript
+
+```javascript
+var sql = "SELECT `id`, `name` FROM `people` "
+     + "WHERE `name` = 'Susan' "
+     + "ORDER BY `name` ASC ";
+```
+
+###### CoffeeScript
+
+```coffeescript
+sql = "SELECT `id`, `name` FROM `people` "
+     + "WHERE `name` = 'Susan' "
+     + "ORDER BY `name` ASC ";
+```
+
+##### Java
+
+Strings must be concatenated using the "+" operator. A space must always be added before and after the "+" operator to
+improve readability:
+
+```java
+String company = "Code" + " " + "Styling";
+```
+
+When concatenating strings with the "+" operator, it is encouraged to break the statement into multiple lines to improve
+readability. In these cases, each successive line should be padded with white space such that the "+"; operator is aligned
+under the "=" operator:
+
+```java
+String sql = "SELECT `id`, `name` FROM `people` "
+     + "WHERE `name` = 'Susan' "
+     + "ORDER BY `name` ASC ";
+```
+
+Please do not forget either [`String.concat`](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
+function.
+
+#####  Perl TODO
+
+```perl
+    # code here
+```
+
+##### PHP
+
+Strings must be concatenated using the "." operator. A space must always be added before and after the "." operator to
+improve readability:
+
+```php
+$company = 'Code' . ' ' . 'Styling';
+```
+
+When concatenating strings with the "." operator, it is encouraged to break the statement into multiple lines to improve
+readability. In these cases, each successive line should be padded with white space such that the "."; operator is aligned
+under the "=" operator:
 
 ```php
 $sql = "SELECT `id`, `name` FROM `people` "
@@ -469,11 +634,146 @@ $sql = "SELECT `id`, `name` FROM `people` "
      . "ORDER BY `name` ASC ";
 ```
 
+##### Ruby TODO
+
+```ruby
+    // your code here
+```
+
+##### Python TODO
+
+```python
+    # your code here
+```
+
+##### CSS TODO
+
+```css
+    /* your code here */
+```
+
+##### HTML TODO
+
+```html
+    <!-- your code here -->
+```
+
+<!-- --lang-ex-end -->
+
 ## Arrays
 
 ### Numerically Indexed Arrays
 
-Negative numbers are not permitted as indices.
+Negative numbers are not permitted as indices in any of the languages presented bellow. Most of the languages bellow
+start their index with 0.
+
+<!-- --lang-ex -->
+
+##### C/C++/C&#35; TODO
+
+```c
+    // code here
+```
+
+```cpp
+    // code here
+```
+
+```csharp
+    // code here
+```
+
+##### CFML
+
+Coldfusion arrays have their index starting from 1 and not from 0.
+
+```cfml
+<!--- CFML --->
+<cfset sampleArray=ArrayNew(1) >
+<cfset firstname[1]=1 >
+<cfset firstname[2]=2 >
+<cfset firstname[3]=3 >
+<cfset firstname[4]='Cold' >
+<cfset firstname[5]='Fusion' >
+
+<!-- or -->
+<cfset sampleArray = [1, 2, 3, 'Cold', 'Fusion'] >
+
+<!--- CFScript --->
+<cfscript>
+    var sampleArray=ArrayNew(1) >
+    firstname[1]=1;
+    firstname[2]=2;
+    firstname[3]=3;
+    firstname[4]='Cold';
+    firstname[5]='Fusion';
+
+    // or
+    var sampleArray = [1, 2, 3, 'Cold', 'Fusion'];
+</cfscript>
+```
+
+#####  Dart TODO
+
+Dart variable substitution looks more like 'string interpolation'. Any other non string variable needs
+to be converted to String to work. Furthermore, between the `${}` syntax expressions can be used. See
+[Dart String Interpolation](http://shailen.github.io/blog/2012/11/14/dart-string-interpolation/) article.
+
+```dart
+    // code here
+```
+
+##### JavaScript
+
+###### ECMAScript
+
+```javascript
+var sampleArray = new Array();
+sampleArray.push(1);
+sampleArray.push(2);
+// ...
+sampleArray.push('Script');
+
+// or
+var sampleArray = [1, 2, 3, 'ECMA', 'Script'];
+```
+
+###### CoffeeScript
+```coffeescript
+sampleArray = new Array
+sampleArray.push 1
+sampleArray.push 2
+# ...
+sampleArray.push 'Script'
+
+# or
+sampleArray = [1, 2, 3, 'ECMA', 'Script']
+```
+
+##### Java
+
+Java arrays are usually single type. You cannot have arrays containing variables of multiple types.
+
+```java
+int[] num = new int[5];
+num[0] = 1;
+// ...
+num[4] = 5;
+
+// or
+int[] num = {1, 2, 3, 4, 5};
+```
+
+Please do not forget Java is a more complex object oriented class. As a **TODO** we should treat also `java.lang.reflect.Array`
+and `java.utils.Arrays` classes at least.
+
+#####  Perl TODO
+
+```perl
+    # code here
+```
+
+##### PHP
 
 An indexed array may start with any non-negative number, however all base indices besides 0 are discouraged.
 
@@ -483,7 +783,124 @@ When declaring indexed arrays with the Array function, a trailing space must be 
 $sampleArray = array(1, 2, 3, 'Zend', 'Studio');
 ```
 
-It is permitted to declare multi-line indexed arrays using the "array" construct. The initial array item may begin on the following line. If so, it should be padded at one indentation level greater than the line containing the array declaration, and all successive lines should have the same indentation; the closing paren should be on a line by itself at the same indentation level as the line containing the array declaration:
+##### Ruby TODO
+
+```ruby
+    // your code here
+```
+
+##### Python TODO
+
+```python
+    # your code here
+```
+
+##### CSS TODO
+
+```css
+    /* your code here */
+```
+
+##### HTML TODO
+
+```html
+    <!-- your code here -->
+```
+
+<!-- --lang-ex-end -->
+
+It is permitted to declare multi-line indexed arrays using the "array" construct. The initial array item may begin on the
+following line. If so, it should be padded at one indentation level greater than the line containing the array declaration,
+and all successive lines should have the same indentation; the closing parent should be on a line by itself at the same
+indentation level as the line containing the array declaration:
+
+<!-- --lang-ex -->
+
+##### C/C++/C&#35; TODO
+
+```c
+    // code here
+```
+
+```cpp
+    // code here
+```
+
+```csharp
+    // code here
+```
+
+##### CFML
+
+ColdFusion variablie substitution is done by wrapping the variable name within **#** character.
+
+```cfml
+<!--- CFML --->
+<cfset var sampleArray = [
+                1, 2, 3, 'Zend', 'Studio',
+                $a, $b, $c,
+                56.44, $d, 500,
+            ] />
+
+<!--- CFScript --->
+<cfscript>
+    var sampleArray = [
+        1, 2, 3, 'Zend', 'Studio',
+        $a, $b, $c,
+        56.44, $d, 500
+    ];
+</cfscript>
+```
+
+#####  Dart TODO
+
+Dart variable substitution looks more like 'string interpolation'. Any other non string variable needs
+to be converted to String to work. Furthermore, between the `${}` syntax expressions can be used. See
+[Dart String Interpolation](http://shailen.github.io/blog/2012/11/14/dart-string-interpolation/) article.
+
+```dart
+    // code here
+```
+
+##### JavaScript
+
+JavasScript (ECMAScript 5 and below) does not have variable substitution, however ECMAScript6 and
+preprocessors do:
+
+###### ECMAScript*
+
+```javascript
+var sampleArray = [
+    1, 2, 3, 'Zend', 'Studio',
+    $a, $b, $c,
+    56.44, $d, 500
+];
+```
+
+###### CoffeeScript
+
+Since it is an indentation based syntax, CoffeeScript will not allow multi-line array declaration.
+
+##### Java
+
+One of the default string interpolation methods in Java is [`java.lang.String.format()`](http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#format-java.lang.String-java.lang.Object...-)
+function. We recommend this one.
+
+```java
+int sampleArray[] = {
+    1, 2, 3,
+    5, 6, 7,
+    56, 100, 500
+};
+```
+
+#####  Perl TODO
+
+```perl
+    # code here
+```
+
+##### PHP
 
 ```php
 $sampleArray = array(
@@ -493,11 +910,152 @@ $sampleArray = array(
 );
 ```
 
-When using this latter declaration, we encourage using a trailing comma for the last item in the array; this minimizes the impact of adding new items on successive lines, and helps to ensure no parse errors occur due to a missing comma.
+##### Ruby TODO
+
+```ruby
+    // your code here
+```
+
+##### Python TODO
+
+```python
+    # your code here
+```
+
+##### CSS TODO
+
+```css
+    /* your code here */
+```
+
+##### HTML TODO
+
+```html
+    <!-- your code here -->
+```
+
+<!-- --lang-ex-end -->
+
+When programming language allows (e.g php) and using this latter declaration, we encourage using a trailing comma for the
+last item in the array; this minimizes the impact of adding new items on successive lines, and helps to ensure no parse
+errors occur due to a missing comma.
 
 ### Associative Arrays
 
-When declaring associative arrays with the Array construct, breaking the statement into multiple lines is mandatory. The initial array item must begin on the following line. If so, it should be padded at one indentation level greater than the line containing the array declaration, and all successive lines should have the same indentation; the closing parent should be on a line by itself at the same indentation level as the line containing the array declaration. For readability, the various "=>" assignment operators should be padded such that they align.
+When programming language allows (e.g php, javascript) and declaring associative arrays with the Array construct, breaking
+the statement into multiple lines is mandatory. The initial array item must begin on the following line. If so, it should
+be padded at one indentation level greater than the line containing the array declaration, and all successive lines should
+have the same indentation; the closing parent should be on a line by itself at the same indentation level as the line
+containing the array declaration.
+
+<!-- --lang-ex -->
+
+##### C/C++/C&#35; TODO
+
+```c
+    // code here
+```
+
+```cpp
+    // code here
+```
+
+```csharp
+    // code here
+```
+
+##### CFML
+
+ColdFusion languages does not allow associative arrays. However, we can always emulate associative arrays through structures.
+
+```cfml
+<!--- CFML --->
+<cfset var sampleArray = StructNew() />
+<cfset sampleArray.firstKey = 'firstValue' /> <!--- both key declarations are valid --->
+<cfset sampleArray['secondKey'] = 'secondValue' />
+<!--- or --->
+<cfset var sampleArray = {
+    'firstKey'  = 'firstValue',
+    'secondKey' = 'secondValue'
+} />
+
+<!--- CFScript --->
+<cfscript>
+    var sampleArray = StructNew();
+    sampleArray.firstKey = 'firstValue'; // both key declarations are valid
+    sampleArray['secondKey'] = 'secondValue';
+
+    // or
+    var sampleArray = {
+        'firstKey'  = 'firstValue',
+        'secondKey' = 'secondValue'
+    };
+</cfscript>
+```
+
+ColdFusion structures can be looped/parsed through as any other associative array using `<cfloop>` tag for CFML and
+`for key in ...` for CFScript.
+
+#####  Dart TODO
+
+Dart variable substitution looks more like 'string interpolation'. Any other non string variable needs
+to be converted to String to work. Furthermore, between the `${}` syntax expressions can be used. See
+[Dart String Interpolation](http://shailen.github.io/blog/2012/11/14/dart-string-interpolation/) article.
+
+```dart
+    // code here
+```
+
+##### JavaScript
+
+JavaScript language does not allow associative arrays. However, we can always emulate associative arrays through Objects.
+
+###### ECMAScript5 and lower
+
+```javascript
+var sampleArray = {
+    'firstKey':  'firstValue',
+    'secondKey': 'secondValue'
+};
+```
+
+###### ECMAScript6
+
+```javascript
+var sampleArray = {
+    'firstKey':  'firstValue',
+    'secondKey': 'secondValue',
+};
+```
+
+###### CoffeeScript
+```coffeescript
+sampleArray =
+    'firstKey':  'firstValue',
+    'secondKey': 'secondValue'
+
+```
+
+##### Java
+
+Java does not have associative arrays, but has something better called maps (see
+[`java.lang.Map`](https://docs.oracle.com/javase/7/docs/api/java/util/Map.html)).
+The same as arrays, Java maps do not support multiple types regarding stored values. The only chance for multiple types
+storage could be when all stored types extend the same interface.
+
+```java
+Map<String, String> map = new HashMap<String, String>();
+map.put("firstKey", "firstValue");
+map.put("secondKey", "secondValue");
+```
+
+#####  Perl TODO
+
+```perl
+    # code here
+```
+
+##### PHP
 
 ```php
 $sampleArray = array(
@@ -506,7 +1064,35 @@ $sampleArray = array(
 );
 ```
 
-When using this latter declaration, we encourage using a trailing comma for the last item in the array; this minimizes the impact of adding new items on successive lines, and helps to ensure no parse errors occur due to a missing comma.
+##### Ruby TODO
+
+```ruby
+    // your code here
+```
+
+##### Python TODO
+
+```python
+    # your code here
+```
+
+##### CSS TODO
+
+```css
+    /* your code here */
+```
+
+##### HTML TODO
+
+```html
+    <!-- your code here -->
+```
+
+<!-- --lang-ex-end -->
+
+When language allows it (e.g. php, ECMAScript6) and using this latter declaration, we encourage using a trailing comma
+for the last item in the array; this minimizes the impact of adding new items on successive lines, and helps to ensure
+no parse errors occur due to a missing comma.
 
 ## Classes
 
