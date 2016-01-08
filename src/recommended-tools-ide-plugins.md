@@ -4,6 +4,8 @@
 
 | Language/IDE | Atom                        | Sublime Text          | Jetbrains     | Eclipse | Netbeans | Vim |
 | :----------- | :-------------------------- | :-------------------- | :------------ | :------ | :------- | :-- |
+| Project Manager | [atom-project-manager](https://github.com/danielbrodin/atom-project-manager) | [Project Manager](https://github.com/randy3k/Project-Manager), [Add Folder To Project](https://github.com/DavidGerva/AddFolderToProject-SublimePlugin) | native | native | native | :-- |
+| :----------- | :-------------------------- | :-------------------- | :------------ | :------ | :------- | :-- |
 | **Ansible**  | *-ansible-lint[101]         | -                     | -             |         |          |     |
 | C/C++/Obj-C  | atom-lint[101]              | -                     | -             |         |          |     |
 | CSS          | atom-lint, *-ccslint        | -                     | -             |         |          |     |
@@ -40,7 +42,7 @@
 
 #### ECMA Script 6 ####
 
-102. [102] [linter-eslint](https://atom.io/packages/linter-eslint) depends on [eslint](https://www.npmjs.com/package/eslint) `npm install -g eslint && apm install linter-eslint`. 
+102. [102] [linter-eslint](https://atom.io/packages/linter-eslint) depends on [eslint](https://www.npmjs.com/package/eslint) `npm install -g eslint && apm install linter-eslint`.
 Also, in order for your prject benefit eslint, we suggest downloading [.eslintrc](../../../raw/master/.eslintrc) and extend it according to your needs.
 301. [201] In order to use ES6 on JetBrains IDEs, please follow these [instructions](http://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/).
 There is also [JavaScript.next Support](https://plugins.jetbrains.com/plugin/7643?pr=) Plugin, however I could not make it work (yet).

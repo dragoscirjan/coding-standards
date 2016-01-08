@@ -321,18 +321,38 @@ sql = "SELECT `id`, `name` from `people` WHERE `name`='Fred' OR `name`='Susan'"
 
 This syntax is preferred over escaping apostrophes as it is much easier to read.
 
-### Variable Substitution
+### Variable Substitution / String interpolation
+
+http://rosettacode.org/wiki/String_interpolation_(included)
+https://msdn.microsoft.com/en-us/library/dn961160.aspx
 
 Variable substitution is permitted using either of these forms:
 
 <!-- --lang-ex -->
 
 ##### C/C++/C&#35;
+
+Using `stdio.h`
+
 ```c
-    // your code here
+  const char \*name = "John Doe";
+  printf("Hello %s\n", name);
+  char hello[100];
+  sprintf(hello, "Hello %s", name)
+```
+
+```c
+
+```
+
+```csharp
+
 ```
 
 ##### CFML
+
+ColdFusion variablie substitution is done by wrapping the variable name within '#' character.
+
 ```cfml
 <!--- CFML --->
 <cfset var greeting = "Hello #name#, welcome back!" />
@@ -343,8 +363,17 @@ Variable substitution is permitted using either of these forms:
 ```
 
 #####  Dart
+
+Dart variable substitution looks more like 'string interpolation'. Any other non string variable needs
+to be converted to String to work. Furthermore, between the `${}` syntax expressions can be used. See
+[Dart String Interpolation](http://shailen.github.io/blog/2012/11/14/dart-string-interpolation/) article.
+
 ```dart
-    // your code here
+    var name = 'John Doe';
+    var hello = "Hello ${name}";
+
+    var age = 15;
+    var hello "Hello ${name}. I'm ${age.toString()} years old."
 ```
 
 ##### JavaScript
@@ -352,24 +381,45 @@ Variable substitution is permitted using either of these forms:
 JavasScript (ECMAScript 5 and below) does not have variable substitution, however ECMAScript6 and
 preprocessors do:
 
+###### ECMAScript*
 ```javascript
-// ECMAScript6
-greeting = `Hello ${name}, welcome back!`;
-// CoffeeScript
-greeting = "Hello ${name}, welcome back!";
+var hello = "Hello " + name;
 ```
 
+###### ECMAScript6
+```javascript
+var hello = `Hello ${name}`;
+```
+
+###### CoffeeScript
+```coffeescript
+hello = "Hello #{name}"
+```
+
+Also, both ES6 and Coffee support expressions within their string interpolation wrappings.
+
 ##### Java
+
+One of the default string interpolation methods in Java is [`java.lang.String.format()`](http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#format-java.lang.String-java.lang.Object...-) function. We recommend this one.
+
 ```java
-    // your code here
+    String name = "John Doe";
+    String hello = String.format("Hello %s", name);
 ```
 
 #####  Perl
+
+Perl's string interpolation is done by adding variable's name within the string. Also, string containing interpolated variables must be wrapped in double quotes (perl rule).
+
 ```perl
-    // your code here
+    my $name = 'John Doe';
+    my $hello = "Hello $name";
 ```
 
 ##### PHP
+
+PHP follows the same rule as Perl, however, it is recommended to wrap the variables within {}
+
 ```php
 $greeting = "Hello {$name}, welcome back!";
 // or - a more simple form
