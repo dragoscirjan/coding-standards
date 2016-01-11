@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> dcfa662cc3e1a0f5a06028b7278b83e14ce4d9ae
 (function($){
 
     var liItemCount = 1;
@@ -19,7 +16,6 @@
                 $dv = $('<div role="tabpanel" class="tab-pane" id="li-item-' + (liItemCount++) + '"></div>'),
                 $d = null,
                 count = 0;
-<<<<<<< HEAD
 
             if (!this.innerHTML.match(/TODO/)) {
                 $li.find('a').html(this.innerHTML);
@@ -32,9 +28,6 @@
                     })
                     .html(this.innerHTML.replace(/\s*TODO\s*/, ''));
             }
-=======
-            $li.find('a').html(this.innerHTML);
->>>>>>> dcfa662cc3e1a0f5a06028b7278b83e14ce4d9ae
             while (count < 50) {
                 $d = ($d && $d.length) ? $d.next() : $(this).next();
                 if (!$d || $d.prop('tagName') == 'H5') {
@@ -53,7 +46,6 @@
 
         $ul.find('li:first').addClass('active');
         $div.find('div:first').addClass('active');
-<<<<<<< HEAD
     });
 
     $('pre > code').each(function(i, block) {
@@ -67,11 +59,6 @@
 
     $('.nav-tabs[role=tablist]').each(function(i, navtab) {
         $(navtab).find('a').not('.disabled').filter(':first').trigger('click');
-=======
-        // $ul.find('a').click(function(){
-        //     $(this).tab('show');
-        // }).filter(':first').tab('show');
->>>>>>> dcfa662cc3e1a0f5a06028b7278b83e14ce4d9ae
     });
 
 })(jQuery);

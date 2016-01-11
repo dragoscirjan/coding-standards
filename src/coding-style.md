@@ -1,4 +1,4 @@
-# Coding Style 
+# Coding Style
 
 **Note**: This file in inspired from
 * [Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.coding-style.html)
@@ -141,6 +141,114 @@ When using this latter declaration, we encourage using a trailing comma for the 
 
 ## Classes
 
+### Namespaces
+
+If programming language allows it namespaces should always start with `org.companyAbbr.` when project is open source and
+`com.companyAbbr.` when project is commercial. When namespaces are backed up by folders, the namespaces should also
+be found in the project folders (e.g. `org/companyAbbr` or `com/companyAbbr`).
+
+<!-- --lang-ex -->
+
+##### C/C++/C&#35; TODO
+
+```c
+    // code here
+```
+
+```cpp
+    // code here
+```
+
+```csharp
+    // code here
+```
+
+##### CFML
+
+ColdFusion does not have namespace syntax, however it can be emulated from folder paths.
+
+#####  Dart TODO
+
+Dart variable substitution looks more like 'string interpolation'. Any other non string variable needs
+to be converted to String to work. Furthermore, between the `${}` syntax expressions can be used. See
+[Dart String Interpolation](http://shailen.github.io/blog/2012/11/14/dart-string-interpolation/) article.
+
+```dart
+    // code here
+```
+
+##### JavaScript
+
+###### ECMAScript5
+
+```javascript
+var hello = "Hello " + name;
+```
+
+###### ECMAScript6
+
+```javascript
+var hello = `Hello ${name}`;
+```
+
+###### CoffeeScript
+```coffeescript
+hello = "Hello #{name}"
+```
+
+##### Java
+
+```java
+namespace org.company.pets;
+
+class Cat {
+    static void says() { System.println('meoow');}  
+}
+```
+
+#####  Perl TODO
+
+```perl
+    # code here
+```
+
+##### PHP
+
+```php
+namespace org\company\pets;
+
+class Cat {
+    static function says() {echo 'meoow';}  
+}
+```
+
+##### Ruby TODO
+
+```ruby
+    // your code here
+```
+
+##### Python TODO
+
+```python
+    # your code here
+```
+
+##### CSS TODO
+
+```css
+    /* your code here */
+```
+
+##### HTML TODO
+
+```html
+    <!-- your code here -->
+```
+
+<!-- --lang-ex-end -->
+
+
 ### Class Declaration
 
 Classes must be named according to project's naming conventions (decided by developing team).
@@ -239,9 +347,7 @@ class Foo
     {
         // all contents of function must be
         // indented one additional level
-    }
-}
-```
+    }https://waldendesign.com/web-services/toronto-web-hosting/
 In cases where the argument list exceeds the maximum line length, you may introduce line breaks. Additional arguments to the function or method must be indented one additional level beyond the function or method declaration. A line break should then occur before the closing argument parent, which should then be placed on the same line as the opening brace of the function or method with one space separating the two, and at the same indentation level as the function or method declaration. The following is an example of one such situation:
 
 ```php
