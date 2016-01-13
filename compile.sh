@@ -53,10 +53,16 @@ function compile_markdown(path) {
                             );
                         })
                     } else {
-                        fs.writeFile(path.replace(/^src/, 'docs').replace(/.md$/, '.html'), content, function(err) {
-                            if (err) throw err;
-                            resolve();
-                        });
+                        fs.writeFile(
+                            path.replace(/^src/, 'docs')
+                                .replace(/.md$/, '.html')
+                                .replace('README.md', 'docs/index.html'),
+                            content,
+                            function(err) {
+                                if (err) throw err;
+                                resolve();
+                            }
+                        );
                     }
                 });
 
@@ -66,7 +72,7 @@ function compile_markdown(path) {
 }
 
 // One-liner
-require('chokidar').watch(['README.md', 'src/**.md'], {ignored: /[\/\\]\./}).on('all', function(event, path) {
+    require('chokidar').watch(['README.md', 'src/**.md'], {ignored: /[\/\\]\./}).on('all', function(event, path) {
     if (event == 'change' || event == 'add') {
         compile_markdown(path).then(function() {
             console.log('File ' + path + ' has been succesfully compiled to ' + path.replace(/^src/, 'docs').replace(/.md$/, '.html'));

@@ -1,0 +1,2 @@
+
+node compile.sh

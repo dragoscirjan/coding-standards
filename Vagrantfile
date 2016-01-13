@@ -74,14 +74,14 @@ Vagrant.configure(2) do |config|
   config.vm.define :ubuntu do |ubuntu|
     # --provider lxc
     ubuntu.vm.provider :lxc do |lxc, override|
-      lxc.customize "network.ipv4", "10.0.3.10/24"
+      lxc.customize "network.ipv4", "10.0.3.180/24"
 
       override.vm.box = "dragosc/trusty64"
     end
 
     # --provider virtualbox
     ubuntu.vm.provider :virtualbox do |virtualbox, override|
-      override.vm.network "private_network", ip: "192.168.50.10"
+      override.vm.network "private_network", ip: "192.168.50.180"
 
       # override.vm.box = "ubuntu/xenial64" # 16.04 - NOT LAUNCHED
       # override.vm.box = "ubuntu/wily64" # 15.10

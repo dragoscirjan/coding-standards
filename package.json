@@ -9,11 +9,18 @@
     "url": "git://github.com/dragoscirjan/coding-standards.git"
   },
   "devDependencies": {
-    "chokidar": "*",
-    "marked": "*",
-    "promise": "*"
+    "babel-eslint": "latest",
+    "chokidar": "latest",
+    "finalhandler": "latest",
+    "live-reload": "latest",
+    "marked": "latest",
+    "promise": "latest",
+    "serve-static": "latest"
   },
-  "dependencies": {
-    "express": "*"
+  "scripts": {
+    "build": "bash compile.sh",
+    "express": "/usr/local/bin/node /vagrant/express.sh &",
+    "http": "npm run http && npm run lr",
+    "lr": "nohup live-reload --port 9091 docs/ &"
   }
 }
