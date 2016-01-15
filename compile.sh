@@ -11,14 +11,6 @@ fs.stat('docs', function(err, stats) {
 var marked = require('marked');
 // var log = require('dragosc-log')
 
-// Async highlighting with pygmentize-bundled
-// marked.setOptions({
-//   highlight: function (code, lang, callback) {
-//     require('pygmentize-bundled')({ lang: lang, format: 'html' }, code, function (err, result) {
-//       callback(err, result.toString());
-//     });
-//   }
-// });
 
 function compile_markdown(path) {
     return new Promise(function(resolve, reject) {
@@ -44,7 +36,9 @@ function compile_markdown(path) {
                         fs.readFile('template.html', function(err, template) {
                             if (err) throw err;
                             fs.writeFile(
-                                path.replace(/^src/, 'docs').replace(/.md$/, '.html'),
+                                path.replace(/^src/, 'docs')
+                                    .replace(/.md$/, '.html')
+                                    .replace('README.html', 'docs/index.html'),
                                 template.toString().replace('<!-- content -->', content),
                                 function(err) {
                                     if (err) throw err;
@@ -56,7 +50,7 @@ function compile_markdown(path) {
                         fs.writeFile(
                             path.replace(/^src/, 'docs')
                                 .replace(/.md$/, '.html')
-                                .replace('README.md', 'docs/index.html'),
+                                .replace('README.html', 'docs/index.html'),
                             content,
                             function(err) {
                                 if (err) throw err;
@@ -72,10 +66,10 @@ function compile_markdown(path) {
 }
 
 // One-liner
-    require('chokidar').watch(['README.md', 'src/**.md'], {ignored: /[\/\\]\./}).on('all', function(event, path) {
+require('chokidar').watch(['README.md', 'src/**.md'], {ignored: /[\/\\]\./}).on('all', function(event, path) {
     if (event == 'change' || event == 'add') {
         compile_markdown(path).then(function() {
-            console.log('File ' + path + ' has been succesfully compiled to ' + path.replace(/^src/, 'docs').replace(/.md$/, '.html'));
+            console.log('File ' + path + ' has been succesfully compiled to ' + path.replace(/^src/, 'docs').replace(/.md$/, '.html').replace('README.html', 'docs/index.html'));
         }).catch(function(err) {
             console.error(err);
         })

@@ -18,9 +18,33 @@
     "serve-static": "latest"
   },
   "scripts": {
-    "build": "bash compile.sh",
+    "build": "node compile.sh",
+
+    "build-once": "nohup node compile.sh &",
+    "postbuild-once": "sleep 2 && killall -9 node",
+
     "express": "/usr/local/bin/node /vagrant/express.sh &",
-    "http": "npm run http && npm run lr",
-    "lr": "nohup live-reload --port 9091 docs/ &"
+
+    "live-reload": "nohup live-reload --port 9091 docs/ &",
+
+    "server": "npm run express",
+    "preserver": "npm run live-reload",
+    "postserver": "npm run build",
+
+    "deploy": "cd ./deploy; git add coding-standards --force; git status; git commit -a -m \"coding standars build `date`\"; git push origin master",
+    "predeploy": "rm -rf deploy; npm run do-git-clone",
+    "postdeploy": "rm -rf deploy",
+
+
+    "do-git-clone": "git clone https://github.com/dragoscirjan/dragoscirjan.github.io.git deploy",
+    "predo-git-clone": "git config --global user.email \"dragos.cirjan@gmail.com\"; git config --global user.name \"Coding Standards Deploy Script\"",
+    "postdo-git-clone": "npm run do-deploy-clean",
+
+    "do-deploy-clean": "if [ -d 'deploy/coding-standards' ]; then rm -rf deploy/coding-standards; fi",
+    "postdo-deploy-clean": "npm run do-deploy-copy",
+
+    "do-deploy-copy": "cp -rdf docs deploy/coding-standards",
+    "predo-deploy-copy": "npm run build-once"
+
   }
 }

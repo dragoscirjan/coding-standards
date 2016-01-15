@@ -1,8 +1,8 @@
 #! /bin/bash
 
-apt-get update -qq && apt-get upgrade -y
+apt-get update -qq && apt-get upgrade -y -qq
 
-apt-get install -y npm
+apt-get install -y npm git
 
 npm install -g n && n latest
 

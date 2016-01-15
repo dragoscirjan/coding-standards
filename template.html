@@ -158,7 +158,14 @@ Preview theme
 <script src="scripts.js"></script>
 
 <!-- In your HTML file -->
-<script>document.write('<script src="\/\/' + window.location.hostname + ':9091"><\/script>')</script>
+<script>document.write('<script src="\/\/' + (window.location ? window.location.hostname : 'localhost') + ':9091"><\/script>')</script>
+<!--
+    Replace the following to  https://github.com/Raynos/live-reload/blob/master/browser.js
+uri = "http://localhost:" + uri
+becomes
+uri = "http://" + (window.location ? window.location.hostname : 'localhost') + ":" + uri
+
+-->
 
 </body>
 </html>
