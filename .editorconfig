@@ -1,5 +1,4 @@
-# Possible by: http://EditorConfig.org
-# Used by: https://ITMediaConnect.ro
+# EditorConfig is awesome: http://EditorConfig.org
 
 # top-most EditorConfig file
 root = true
@@ -8,22 +7,8 @@ root = true
 [*]
 end_of_line = lf
 insert_final_newline = true
-indent_style = space
-indent_size = 4
 
-# Matches multiple files with brace expansion notation
-# Set default charset
-[*.{js,py}]
-charset = utf-8
-
-# Tab indentation (no size specified)
-[Makefile]
-indent_style = tab
-
-[Vagrantfile]
-indent_size = 2
-
-# Matches the exact files either package.json or .travis.yml
-[*.{json,yml}]
+# 2 space indentation
+[**.*]
 indent_style = space
 indent_size = 2

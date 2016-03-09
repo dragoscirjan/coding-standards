@@ -1,7 +1,3 @@
 {
-    "parser": "babel-eslint",
-    "rules": {
-        "strict": [2, "never"],
-        "quotes": [2 , "single"]
-    }
+  "extends": "./node_modules/aurelia-tools/.eslintrc"
 }

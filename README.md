@@ -1,29 +1,15 @@
-# Foo Company LTD Coding Standards
+# aurelia-skeleton-navigation
 
-## Table of Contents
+[![ZenHub](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
+[![Join the chat at https://gitter.im/aurelia/discuss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aurelia/discuss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-* [Overview](docs/overview.md)
-* [File Formating](docs/file-formating.md)
-* [Naming Conventions](docs/naming-conventions.md)
-* [Coding Style](docs/coding-style.md)
-* [Recommended Tools](docs/recommended-tools.md)
-* [Recommended Tools / IDE Plugins](docs/recommended-tools-ide-plugins.md)
+This library is part of the [Aurelia](http://www.aurelia.io/) platform and provides production quality skeletons for people ready to build apps. There are various skeleton options available, depending on your platform and tooling choices.
 
+> To keep up to date on [Aurelia](http://www.aurelia.io/), please visit and subscribe to [the official blog](http://blog.durandal.io/). If you have questions, we invite you to [join us on Gitter](https://gitter.im/aurelia/discuss). If you would like to have deeper insight into our development process, please install the [ZenHub](https://zenhub.io) Chrome Extension and visit any of our repository's boards. You can get an overview of all Aurelia work by visiting [the framework board](https://github.com/aurelia/framework#boards).
 
-This documentation has been written using [Daring Fireball](http://daringfireball.net/)'s [Markdoc](http://daringfireball.net/projects/markdown/syntax) langauge.
+## Available skeletons
 
-## Disclaimer
-
-This documentation has been inspired by [Zend Framework 1.2* Coding Standard](http://framework.zend.com/manual/1.12/en/coding-standard.html), along with other coding and documentation mentioned for each coding language.
-
-The content of this documentation is a draft. It contains sets of standards and tools our company uses. (For the latest version please reffer to [Dragos Cirjan's coding standars page](https://github.com/dragoscirjan/coding-standards)).
-
-We reserve the right to
-* modify it at any time without giving any reason to any other entity but [Foo Company LTD](http://company.foo)
-* impose this standards and tools for the private and open projects [Foo Company LTD](http://company.foo) will initiate.
-
-By presenting this to you, the public, [Foo Company LTD](http://company.foo) does not intent to influence anyone in using any of the information compiled further.
-
-Thus said, we are NOT paid to recommend any tool, coding standard, or any other type of information presented in this document. We're simply presenting the information as is, as gathered and evaluated to fit our purposes.
-
-[Foo Company LTD](http://company.foo) does not feel obliged to give any reason or explain why we chose to use the compiled list of tools, coding styles, etc.
+* **skeleton-es2016** - This is a standard front-end project setup configured to use the Babel transpiler so that you can write your application in ES 2016 code. It should work well with any standard text editor.
+* **skeleton-typescript** - This is a standard front-end setup configured to use the TypeScript transpiler so that you can write your application using TypeScript. It should work well with any standard text editor, however it has been specially configured to work well with VSCode and Atom, including full TypeScript intellisense for app, unit test and e2e test code.
+* **skeleton-typescript-asp.net5** - This is an ASP.NET 5 web project pre-configured for building a .NET backend and an Aurelia front-end. It is configured for full TypeScript support, similar to the standard skeleton-typescript option.
+* **skeleton-es2016-asp.net5** - This is an ASP.NET 5 web project pre-configured for building a .NET backend and an Aurelia front-end. It is configured for full ES 2016 support with Babel, similar to the standard skeleton-es2016 option.
