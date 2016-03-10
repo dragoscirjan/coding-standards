@@ -20,7 +20,7 @@ However, [PHP](http://php.net/) is not the only language we are using, so we tri
 Languages included in [Foo Company LTD](http://company.foo/) products' coding standards include:
 
 * [C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages) (syntax) based
-  * [C++](http://todo)
+  * [C++](/#/coding-standars/c)
   * [Adobe](http://www.adobe.com/products/coldfusion-family.html)<sup>&copy;</sup> [CFScript](https://github.com/adamcameron/cfscript/blob/master/cfscript.md)
   * [JavaScript](part/js/overview.md) (not completed), [EcmaScript 6](https://github.com/lukehoban/es6features) (not completed), [TypeScript](http://todo) (not completed)
   * [Google](http://code.google.com/p/dart/) [Dart](part/dart/overview.md) (not completed)

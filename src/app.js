@@ -1,10 +1,10 @@
 export class App {
   configureRouter(config, router) {
-    config.title = 'Aurelia';
+    config.title = 'Coding Standars';
     config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users' },
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router' }
+      { route: ['', 'overview'],   name: 'overview',         moduleId: 'overview',         nav: true, title: 'Overview' },
+      { route: 'file-formating',   name: 'file-formating',   moduleId: 'file-formating',   nav: true, title: 'File Formating' },
+      { route: 'coding-style',     name: 'coding-style',     moduleId: 'coding-style',     nav: true, title: 'Coding Style' }
     ]);
 
     this.router = router;
