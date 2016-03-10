@@ -11,6 +11,7 @@ var notify = require('gulp-notify');
 var browserSync = require('browser-sync');
 var markdown = require('gulp-markdown');
 var wrap = require("gulp-wrap");
+var concat = require('gulp-concat');
 
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
@@ -37,10 +38,16 @@ gulp.task('build-html', function() {
 gulp.task('build-md', function() {
   return gulp.src(paths.md)
     .pipe(markdown())
-    .pipe(wrap('<template><%= contents %></template>'))
+    .pipe(wrap('<template><section class="au-animate"><div class="container bs-docs-container"><div class="row">' +
+      '<%= contents %>' +
+      '</div></div></section></template>'))
     .pipe(changed(paths.output, {extension: '.html'}))
     .pipe(gulp.dest(paths.output));
 });
+
+gulp.taks('build-md-merge', function() {
+
+})
 
 // copies changed css files to the output directory
 gulp.task('build-css', function() {
