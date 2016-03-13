@@ -1,4 +1,4 @@
-{
+  {
   "name": "aurelia-skeleton-navigation",
   "version": "1.0.0-beta.1.1.5",
   "description": "A starter kit for building a standard navigation-style app with Aurelia.",
@@ -34,10 +34,12 @@
     "gulp-babel": "^5.1.0",
     "gulp-bump": "^0.3.1",
     "gulp-changed": "^1.1.0",
+    "gulp-concat": "^2.6.0",
     "gulp-eslint": "^1.0.0",
     "gulp-markdown": "^1.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
+    "gulp-replace": "^0.5.4",
     "gulp-protractor": "1.0.0",
     "gulp-sourcemaps": "^1.3.0",
     "gulp-wrap": "0.11.0",

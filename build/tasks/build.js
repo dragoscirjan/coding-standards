@@ -10,8 +10,9 @@ var assign = Object.assign || require('object.assign');
 var notify = require('gulp-notify');
 var browserSync = require('browser-sync');
 var markdown = require('gulp-markdown');
-var wrap = require("gulp-wrap");
-var concat = require('gulp-concat');
+var wrap = require('gulp-wrap');
+var replace = require('gulp-replace');
+// var concat = require('gulp-concat');
 
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
@@ -45,9 +46,9 @@ gulp.task('build-md', function() {
     .pipe(gulp.dest(paths.output));
 });
 
-gulp.taks('build-md-merge', function() {
+gulp.task('build-md-merge', function() {
 
-})
+});
 
 // copies changed css files to the output directory
 gulp.task('build-css', function() {
