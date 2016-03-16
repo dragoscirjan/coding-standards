@@ -42,6 +42,9 @@ gulp.task('build-md', function() {
     .pipe(wrap('<template><section class="au-animate"><div class="container bs-docs-container"><div class="row">' +
       '<%= contents %>' +
       '</div></div></section></template>'))
+    .pipe(replace(/<!\-\- \-\-lang\-ex \-\->/gi, '<div class="lang-ex">'))
+    .pipe(replace(/<!\-\- \-\-lang\-ex-end \-\->/gi, '</div>'))
+    .pipe(replace(/<p><strong>Note<\/strong>/gi, '<p class="note"><strong>Note</strong>'))
     .pipe(changed(paths.output, {extension: '.html'}))
     .pipe(gulp.dest(paths.output));
 });
