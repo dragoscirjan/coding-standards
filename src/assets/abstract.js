@@ -1,5 +1,6 @@
 
-import 'isagalaev/highlight.js/src/highlight';
+import * as hljs from 'isagalaev/highlight.js/src/highlight';
+// import 'isagalaev/highlight.js/src/languages/javascript';
 
 export class Component {
 
@@ -13,7 +14,7 @@ export class Component {
       // let liFirstItem = liItemCount;
 
       $this.find('h5').each(function() {
-        let $li = $(`<li role="presentation"><a href="#li-item-$[liItemCount]" aria-controls="li-item-${liItemCount}" role="tab" data-toggle="tab"></a></li>`);
+        let $li = $(`<li role="presentation"><a href="#li-item-${liItemCount}" aria-controls="li-item-${liItemCount}" role="tab" data-toggle="tab"></a></li>`);
         let $dv = $(`<div role="tabpanel" class="tab-pane" id="li-item-${liItemCount++}"></div>`);
         let $d = null;
         let count = 0;
