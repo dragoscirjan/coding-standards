@@ -1,5 +1,6 @@
 
-import * as hljs from 'isagalaev/highlight.js/src/highlight';
+// import * as hljs from 'isagalaev/highlight.js/src/highlight';
+import * as hljs from 'highlight.js';
 // import 'isagalaev/highlight.js/src/languages/javascript';
 
 export class Component {
