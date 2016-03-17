@@ -2,6 +2,13 @@
 
 ## Control Statements & Loops
 
+### Initial Notes
+
+**NOTE**: Do not take in consideration if desired programming language is not present.
+
+<!-- --lang-ex -->
+
+##### PHP
 Any control statement or loop using syntax inspired from BASIC programming language, are strongly un-adviced, but not forbidden.
 
 ```php
@@ -16,6 +23,8 @@ if ($a == 1) {
 }
 ```
 
+<!-- --lang-ex-end -->
+
 ### If/Else/Elseif
 
 Control statements based on the if and elseif constructs must have a single space before the opening parenthesis of the conditional and a single space after the closing parenthesis.
@@ -24,13 +33,225 @@ Within the conditional statements between the parentheses, operators must be sep
 
 The opening brace is written on the same line as the conditional statement. The closing brace is always written on its own line. Any content within the braces must be indented using four spaces.
 
-```php
-if ($a != 2) {
-    $a = 2;
+<!-- --lang-ex -->
+
+##### C/C++/C&#35;
+
+```c
+if (a != 2) {
+  a = 2;
 }
 ```
 
-If the conditional statement causes the line length to exceed the maximum line length and has several clauses, you may break the conditional into multiple lines. In such a case, break the line prior to a logic operator, and pad the line such that it aligns under the first character of the conditional clause. The closing parent in the conditional will then be placed on a line with the opening brace, with one space separating the two, at an indentation level equivalent to the opening control statement.
+##### CFML
+
+```cfml
+<!--- CFML --->
+<cfif a NEQ 2>
+  <cfset a = 2 />
+</cfif>
+```
+
+```cfscript
+<!--- CFScript --->
+<cfscript>
+if (a != 2) {
+  a = 2;
+}
+</cfscript>
+```
+
+#####  Dart
+
+```dart
+if (a != 2) {
+  a = 2;
+}
+```
+
+##### JavaScript
+
+###### ECMAScript & TypeScript
+
+```javascript
+if (a != 2) {
+  a = 2;
+}
+```
+
+###### CoffeeScript
+
+CoffeeScript does not have brace delimiters, being a programming language based on indentation delimiters. The rest of
+the standard applies.
+
+```coffeescript
+if (a != 2)
+  a = 2
+```
+
+##### Java
+
+```java
+if (a != 2) {
+  a = 2;
+}
+```
+
+#####  Perl
+
+```perl
+if ($a != 2) {
+  $a = 2;
+}
+```
+
+##### PHP
+
+```php
+if ($a != 2) {
+  $a = 2;
+}
+```
+
+##### Ruby
+
+```ruby
+if (a != 2) {
+  a = 2;
+}
+```
+
+##### Python
+
+Python does not have brace delimiters, being a programming language based on indentation delimiters. The rest of
+the standard applies.
+
+```python
+if (a != 2)
+  a = 2
+```
+<!-- --lang-ex-end -->
+
+If the conditional statement causes the line length to exceed the maximum line length and has several clauses, you may
+break the conditional into multiple lines. In such a case, break the line prior to a logic operator, and pad the line
+such that it aligns under the first character of the conditional clause. The closing parent in the conditional will
+then be placed on a line with the opening brace, with one space separating the two, at an indentation level equivalent
+to the opening control statement.
+
+**NOTE**: Being programming languages based on indentation delimiters and not braces, CofeeScript and Python will not be
+affected by this standard. However, if the conditional statement is too large, it can always be broken in multiple inner
+conditions.
+
+<!-- --lang-ex -->
+
+##### C/C++/C&#35;
+
+###### C/C++
+
+```c
+if ((a == b)
+    && (b == c)
+    || (Foo::CONST == d)
+) {
+    a = d;
+}
+```
+
+###### C&#35;
+
+```csharp
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+##### CFML
+
+```cfml
+<!--- CFML --->
+<cfif ((a EQ b)
+    && (b EQ c)
+    || (Foo.CONST EQ d) >
+    <cfset a = d />
+</cfif>
+```
+
+```cfscript
+<!--- CFScript --->
+<cfscript>
+if ((a EQ b)
+    && (b EQ c)
+    || (Foo.CONST EQ d)
+) {
+    a = d;
+}
+</cfscript>
+```
+
+#####  Dart
+
+```dart
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+##### JavaScript
+
+###### ECMAScript & TypeScript
+
+```javascript
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+###### CoffeeScript
+
+```coffeescript
+if ((a == b) && (b == c) || (Foo.CONST == d))
+  a = d
+```
+
+<!-- ###### PureScript
+
+```purescript
+if ((a == b) && (b == c) || (Foo.CONST == d))
+  a = d
+``` -->
+
+##### Java
+
+```java
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+#####  Perl
+
+```perl
+if (($a == $b)
+    && ($b == $c)
+    || (Foo::CONST == $d)
+) {
+    $a = $d;
+}
+```
+
+##### PHP
 
 ```php
 if (($a == $b)
@@ -41,17 +262,132 @@ if (($a == $b)
 }
 ```
 
-The intention of this latter declaration format is to prevent issues when adding or removing clauses from the conditional during later revisions.
+##### Ruby
 
-For "if" statements that include "elseif" or "else", the formatting conventions are similar to the "if" construct. The following examples demonstrate proper formatting for "if" statements with "else" and/or "elseif" constructs:
-
-```php
-if ($a != 2) {
-    $a = 2;
-} else {
-    $a = 7;
+```ruby
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
 }
+```
 
+##### Python
+
+```python
+if ((a == b) && (b == c) || (Foo.CONST == d))
+  a = d
+```
+<!-- --lang-ex-end -->
+
+The intention of this latter declaration format is to prevent issues when adding or removing clauses from the
+conditional during later revisions.
+
+For "if" statements that include "elseif" or "else", the formatting conventions are similar to the "if" construct. The
+following examples demonstrate proper formatting for "if" statements with "else" and/or "elseif" constructs:
+
+<!-- --lang-ex -->
+
+##### C/C++/C&#35;
+
+###### C/C++
+
+```c
+if ((a == b)
+    && (b == c)
+    || (Foo::CONST == d)
+) {
+    a = d;
+}
+```
+
+###### C&#35;
+
+```csharp
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+##### CFML
+
+```cfml
+<!--- CFML --->
+<cfif ((a EQ b)
+    && (b EQ c)
+    || (Foo.CONST EQ d) >
+    <cfset a = d />
+</cfif>
+```
+
+```cfscript
+<!--- CFScript --->
+<cfscript>
+if ((a EQ b)
+    && (b EQ c)
+    || (Foo.CONST EQ d)
+) {
+    a = d;
+}
+</cfscript>
+```
+
+#####  Dart
+
+```dart
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+##### JavaScript
+
+###### ECMAScript & TypeScript
+
+```javascript
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+###### CoffeeScript
+
+```coffeescript
+if ((a == b) && (b == c) || (Foo.CONST == d))
+  a = d
+```
+
+<!-- ###### PureScript
+
+```purescript
+if ((a == b) && (b == c) || (Foo.CONST == d))
+  a = d
+``` -->
+
+##### Java
+
+```java
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+#####  Perl
+
+```perl
 if ($a != 2) {
     $a = 2;
 } elseif ($a == 3) {
@@ -73,6 +409,50 @@ if (($a == $b)
     $a = $b;
 }
 ```
+
+##### PHP
+
+```php
+if ($a != 2) {
+    $a = 2;
+} elseif ($a == 3) {
+    $a = 4;
+} else {
+    $a = 7;
+}
+
+if (($a == $b)
+    && ($b == $c)
+    || (Foo::CONST == $d)
+) {
+    $a = $d;
+} elseif (($a != $b)
+          || ($b != $c)
+) {
+    $a = $c;
+} else {
+    $a = $b;
+}
+```
+
+##### Ruby
+
+```ruby
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)
+) {
+    a = d;
+}
+```
+
+##### Python
+
+```python
+if ((a == b) && (b == c) || (Foo.CONST == d))
+  a = d
+```
+<!-- --lang-ex-end -->
 
 PHP allows statements to be written without braces in some circumstances. This coding standard makes no differentiation all "if", "elseif" or "else" statements must use braces.
 
