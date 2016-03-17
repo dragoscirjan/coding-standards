@@ -25,4 +25,4 @@
      this.router = router;
    }
  }
-// "isagalaev/highlight.js": "github:isagalaev/highlight.js@9.2.0",
+// "isagalaev/highlight.js": "github:isagalaev/highlight.js@9.2.0",\  \

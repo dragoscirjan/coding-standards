@@ -1,0 +1,41 @@
+
+// @theme: "";
+
+@import "bootswatch/darkly/variables.less";
+// @import "bootswatch/darkly/bootswatch.less";
+
+pre {
+  border: 0;
+  padding: 0;
+}
+
+
+.lang-ex {
+  .nav-tabs li {
+    & > a {
+      border: 0;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    & > a:hover, & > a:focus {
+      background: transparent;
+      border: 0;
+      color: @brand-success;
+    }
+  }
+
+  li.active {
+    & > a {
+      border: 0;
+    }
+    & > a:hover, & > a:focus {
+      background: transparent;
+      border: 0;
+      color: @brand-success;
+    }
+  }
+
+  .tab-pane {
+    padding-top: 20px;
+  }
+}

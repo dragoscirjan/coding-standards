@@ -12,6 +12,7 @@ var browserSync = require('browser-sync');
 var markdown = require('gulp-markdown');
 var wrap = require('gulp-wrap');
 var replace = require('gulp-replace');
+var less = require('gulp-less');
 // var concat = require('gulp-concat');
 
 // transpiles changed es6 files to SystemJS format
@@ -32,6 +33,14 @@ gulp.task('build-system', function() {
 gulp.task('build-html', function() {
   return gulp.src(paths.html)
     .pipe(changed(paths.output, {extension: '.html'}))
+    .pipe(gulp.dest(paths.output));
+});
+
+// copies changed html files to the output directory
+gulp.task('build-less', function() {
+  return gulp.src(paths.less)
+    .pipe(less())
+    .pipe(changed(paths.output, {extension: '.css'}))
     .pipe(gulp.dest(paths.output));
 });
 
@@ -68,7 +77,7 @@ gulp.task('build-css', function() {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html', 'build-md', 'build-css'],
+    ['build-system', 'build-html', 'build-less', 'build-md', 'build-css'],
     callback
   );
 });
