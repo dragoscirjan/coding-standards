@@ -27,11 +27,22 @@ if ($a == 1) {
 
 ### If/Else/Elseif
 
-Control statements based on the if and elseif constructs must have a single space before the opening parenthesis of the conditional and a single space after the closing parenthesis.
+Control statements based on the if and elseif (elsif/elif) constructs must have a single space before the opening
+parenthesis of the conditional and a single space after the closing parenthesis.
 
-Within the conditional statements between the parentheses, operators must be separated by spaces for readability. Inner parentheses are encouraged to improve logical grouping for larger conditional expressions.
+Within the conditional statements between the parentheses, operators must be separated by spaces for readability.
+Inner parentheses are encouraged to improve logical grouping for larger conditional expressions.
 
-The opening brace is written on the same line as the conditional statement. The closing brace is always written on its own line. Any content within the braces must be indented using four spaces.
+The opening brace is written on the same line as the conditional statement. The closing brace is always written on its
+own line. Any content within the braces must be indented using four spaces.
+
+**NOTE**: In case of CFML, which is a XML like programming language the braces standard will not apply.
+
+**NOTE**: Being programming languages based on indentation delimiters and not braces, **CofeeScript** and **Python**
+will not be affected by this standard. Indentation for both languages is 2 spaces, and this should suffice this section.
+
+**NOTE**: **Ruby** delimiters are not based on braces, but on **if ... then ... end** format. The parentheses standard
+will apply within this format as well.
 
 <!-- --lang-ex -->
 
@@ -39,26 +50,37 @@ The opening brace is written on the same line as the conditional statement. The 
 
 ```c
 if (a != 2) {
-  a = 2;
+    a = 2;
+}
+
+if (a != 2 && b != 3) {
+    a = 2;
 }
 ```
 
-##### CFML
+##### ColdFusion
 
-```cfml
+###### CFML
+```xml
 <!--- CFML --->
-<cfif a NEQ 2>
+<cfif a NEQ 2 >
+  <cfset a = 2 />
+</cfif>
+
+<cfif a NEQ 2 AND b NEQ 3 >
   <cfset a = 2 />
 </cfif>
 ```
 
-```cfscript
-<!--- CFScript --->
-<cfscript>
-if (a != 2) {
+###### CFScript
+```javascript
+if (a NEQ 2) {
   a = 2;
 }
-</cfscript>
+
+if (a NEQ 2 AND b NEQ 3) {
+  a = 2;
+}
 ```
 
 #####  Dart
@@ -66,6 +88,10 @@ if (a != 2) {
 ```dart
 if (a != 2) {
   a = 2;
+}
+
+if (a != 2 && b != 3) {
+    a = 2;
 }
 ```
 
@@ -77,15 +103,19 @@ if (a != 2) {
 if (a != 2) {
   a = 2;
 }
+
+if (a != 2 && b != 3) {
+    a = 2;
+}
 ```
 
 ###### CoffeeScript
 
-CoffeeScript does not have brace delimiters, being a programming language based on indentation delimiters. The rest of
-the standard applies.
-
 ```coffeescript
 if (a != 2)
+  a = 2
+
+if (a != 2 && b != 3)
   a = 2
 ```
 
@@ -95,6 +125,10 @@ if (a != 2)
 if (a != 2) {
   a = 2;
 }
+
+if (a != 2 && b != 3) {
+    a = 2;
+}
 ```
 
 #####  Perl
@@ -102,6 +136,10 @@ if (a != 2) {
 ```perl
 if ($a != 2) {
   $a = 2;
+}
+
+if ($a != 2 && $b != 3) {
+    $a = 2;
 }
 ```
 
@@ -111,6 +149,10 @@ if ($a != 2) {
 if ($a != 2) {
   $a = 2;
 }
+
+if ($a != 2 && $b != 3) {
+    $a = 2;
+}
 ```
 
 ##### Ruby
@@ -118,7 +160,11 @@ if ($a != 2) {
 ```ruby
 if (a != 2) then
   a = 2;
-}
+end
+
+if (a != 2 && b != 3) then
+    a = 2;
+end
 ```
 
 ##### Python
@@ -128,6 +174,9 @@ the standard applies.
 
 ```python
 if (a != 2):
+  a = 2
+
+if (a != 2 && b != 3):
   a = 2
 ```
 <!-- --lang-ex-end -->
