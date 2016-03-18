@@ -116,7 +116,7 @@ if ($a != 2) {
 ##### Ruby
 
 ```ruby
-if (a != 2) {
+if (a != 2) then
   a = 2;
 }
 ```
@@ -127,7 +127,7 @@ Python does not have brace delimiters, being a programming language based on ind
 the standard applies.
 
 ```python
-if (a != 2)
+if (a != 2):
   a = 2
 ```
 <!-- --lang-ex-end -->
@@ -294,22 +294,49 @@ following examples demonstrate proper formatting for "if" statements with "else"
 ###### C/C++
 
 ```c
+if (a != 2) {
+    a = 2;
+} else {
+    a = 7;
+}
+
 if ((a == b)
     && (b == c)
-    || (Foo::CONST == d)
-) {
+    || (Foo::CONST == d)) {
     a = d;
+} else {
+  if ((a != b)
+          || (b != c)
+  ) {
+      a = c;
+  } else {
+      a = b;
+  }
 }
 ```
 
 ###### C&#35;
 
 ```csharp
+if (a != 2) {
+    a = 2;
+} else {
+    a = 7;
+}
+
 if ((a == b)
     && (b == c)
     || (Foo.CONST == d)
 ) {
     a = d;
+} else {
+  if ((a != b)
+          || (b != c)
+  ) {
+      a = c;
+  } else {
+      a = b;
+  }
 }
 ```
 
@@ -317,21 +344,44 @@ if ((a == b)
 
 ```cfml
 <!--- CFML --->
-<cfif ((a EQ b)
-    && (b EQ c)
-    || (Foo.CONST EQ d) >
+<cfif a NEQ 2 >
+    <cfset a = 2 />
+<cfelse>
+    <cfset a = 7 />
+</cfif>
+
+<cfifif ((a EQ b)
+        && (b EQ c)
+        || (Foo.CONST EQ d) >
     <cfset a = d />
+<cfelseif ((a != b)
+          || (b != c) >
+    <cfset a = c />
+<cfelse
+    <cfset a = b />
 </cfif>
 ```
 
 ```cfscript
 <!--- CFScript --->
 <cfscript>
-if ((a EQ b)
-    && (b EQ c)
-    || (Foo.CONST EQ d)
-) {
+if (a != 2) {
+    a = 2;
+} else {
+    a = 7;
+}
+
+if ((a == b)
+    && (b == c)
+    || (Foo.CONST == d)) {
     a = d;
+} else {
+  if ((a != b)
+          || (b != c)) {
+      a = c;
+  } else {
+      a = b;
+  }
 }
 </cfscript>
 ```
@@ -339,11 +389,25 @@ if ((a EQ b)
 #####  Dart
 
 ```dart
+if (a != 2) {
+    a = 2;
+} else {
+    a = 7;
+}
+
 if ((a == b)
     && (b == c)
     || (Foo.CONST == d)
 ) {
     a = d;
+} else {
+  if ((a != b)
+          || (b != c)
+  ) {
+      a = c;
+  } else {
+      a = b;
+  }
 }
 ```
 
@@ -352,19 +416,43 @@ if ((a == b)
 ###### ECMAScript & TypeScript
 
 ```javascript
+if (a != 2) {
+    a = 2;
+} else {
+    a = 7;
+}
+
 if ((a == b)
     && (b == c)
     || (Foo.CONST == d)
 ) {
     a = d;
+} else {
+  if ((a != b)
+          || (b != c)
+  ) {
+      a = c;
+  } else {
+      a = b;
+  }
 }
 ```
 
 ###### CoffeeScript
 
 ```coffeescript
+if (a != 2)
+  a = 2
+else
+  a = 7
+
 if ((a == b) && (b == c) || (Foo.CONST == d))
   a = d
+else
+  if ((a != b) || (b != c)
+    a = c
+  else
+    a = b
 ```
 
 <!-- ###### PureScript
@@ -377,11 +465,25 @@ if ((a == b) && (b == c) || (Foo.CONST == d))
 ##### Java
 
 ```java
+if (a != 2) {
+    a = 2;
+} else {
+    a = 7;
+}
+
 if ((a == b)
     && (b == c)
     || (Foo.CONST == d)
 ) {
     a = d;
+} else {
+  if ((a != b)
+          || (b != c)
+  ) {
+      a = c;
+  } else {
+      a = b;
+  }
 }
 ```
 
@@ -401,7 +503,7 @@ if (($a == $b)
     || (Foo::CONST == $d)
 ) {
     $a = $d;
-} elseif (($a != $b)
+} elsif (($a != $b)
           || ($b != $c)
 ) {
     $a = $c;
@@ -438,19 +540,38 @@ if (($a == $b)
 ##### Ruby
 
 ```ruby
+if (a != 2) then
+    a = 2;
+else
+    a = 7;
+end
+
 if ((a == b)
     && (b == c)
-    || (Foo.CONST == d)
-) {
+    || (Foo.CONST == d) then
     a = d;
-}
+elsif ((a != b)
+          || (b != c) then
+    a = c;
+else
+    a = b;
+end
 ```
 
 ##### Python
 
 ```python
-if ((a == b) && (b == c) || (Foo.CONST == d))
+if (a != 2):
+  a = 2
+else:
+  a = 7
+
+if ((a == b) && (b == c) || (Foo.CONST == d)):
   a = d
+elif ((a != b) || (b != c):
+  a = c
+else:
+  a = b
 ```
 <!-- --lang-ex-end -->
 
