@@ -16,16 +16,14 @@
 
 ##### CFML
 
-```cfml
+```xml
 <!--- CFML --->
 <!--- code here --->
 ```
 
-```cfscript
-<!--- CFScript --->
-<cfscript>
+```javascript
+// CFScript 
 // code here
-</cfscript>
 ```
 
 #####  Dart
@@ -52,6 +50,12 @@
 ```coffeescript
 # code here
 ```
+
+<!-- ###### PureScript
+
+```purescript
+// code here
+``` -->
 
 ##### Java
 
