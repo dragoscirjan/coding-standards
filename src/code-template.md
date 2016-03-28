@@ -3,37 +3,33 @@
 ##### C/C++/C&#35; TODO
 
 ```c
-    // code here
+// code here
 ```
 
 ```cpp
-    // code here
+// code here
 ```
 
 ```csharp
-    // code here
+// code here
 ```
 
 ##### CFML
 
-```cfml
+```xml
 <!--- CFML --->
-<cfset var greeting = "Hello #name#, welcome back!" />
-
-<!--- CFScript --->
-<cfscript>
-    var greeting = "Hello #name#, welcome back!"
-</cfscript>
+<!--- code here --->
 ```
 
-#####  Dart TODO
+```javascript
+// CFScript
+// code here
+```
 
-Dart variable substitution looks more like 'string interpolation'. Any other non string variable needs
-to be converted to String to work. Furthermore, between the `${}` syntax expressions can be used. See
-[Dart String Interpolation](http://shailen.github.io/blog/2012/11/14/dart-string-interpolation/) article.
+#####  Dart
 
 ```dart
-    // code here
+// code here
 ```
 
 ##### JavaScript
@@ -41,61 +37,66 @@ to be converted to String to work. Furthermore, between the `${}` syntax express
 ###### ECMAScript5 and lower
 
 ```javascript
-var hello = "Hello " + name;
+// code here
 ```
 
 ###### ECMAScript6
 
 ```javascript
-var hello = `Hello ${name}`;
+// code here
 ```
 
 ###### CoffeeScript
 ```coffeescript
-hello = "Hello #{name}"
+# code here
 ```
+
+<!-- ###### PureScript
+
+```purescript
+// code here
+``` -->
 
 ##### Java
 
 ```java
-    String name = "John Doe";
-    String hello = String.format("Hello %s", name);
+// code here
 ```
 
-#####  Perl TODO
+#####  Perl
 
 ```perl
-    # code here
+# code here
 ```
 
 ##### PHP
 
 ```php
-$greeting = "Hello $name, welcome back!";
+// code here
 ```
 
-##### Ruby TODO
+##### Ruby
 
 ```ruby
-    // your code here
+// code here
 ```
 
-##### Python TODO
+##### Python
 
 ```python
-    # your code here
+# code here
 ```
 
-##### CSS TODO
+##### CSS
 
 ```css
-    /* your code here */
+/* your code here */
 ```
 
-##### HTML TODO
+##### HTML
 
 ```html
-    <!-- your code here -->
+<!-- your code here -->
 ```
 
 <!-- --lang-ex-end -->
