@@ -52,6 +52,7 @@ export class Component {
     });
 
     $('pre > code').each(function(i, block) {
+      console.log(block);
       let $code = $(block);
       if ($code.hasClass('lang-cfml')) {
         $code.addClass('lang-xml');
