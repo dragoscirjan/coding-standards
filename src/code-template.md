@@ -1,28 +1,35 @@
 <!-- --lang-ex -->
 
-##### C/C++/C&#35; TODO
+##### C/C++/C&#35;
+
+###### C
 
 ```c
 // code here
 ```
 
+###### C++
+
 ```cpp
 // code here
 ```
+
+###### C&#35;
 
 ```csharp
 // code here
 ```
 
-##### CFML
+##### ColdFusion
+
+###### CFML
 
 ```xml
-<!--- CFML --->
 <!--- code here --->
 ```
+###### CFScript
 
 ```javascript
-// CFScript
 // code here
 ```
 
@@ -51,11 +58,17 @@
 # code here
 ```
 
-<!-- ###### PureScript
+###### PureScript
 
 ```purescript
 // code here
-``` -->
+```
+
+###### TypeScript
+
+```typescript
+// code here
+```
 
 ##### Java
 

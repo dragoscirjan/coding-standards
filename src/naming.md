@@ -13,7 +13,8 @@ style unless programming language impose otherwise, or project manager / system 
 otherwise. First letter of the class name must also be upper case.
 
 ```java
-class MyCamelCaseName {
+class MyCamelCaseName
+{
   // your class code here
 }
 ```
@@ -27,13 +28,15 @@ otherwise. Oposed to class names, first letter of the method/function name must 
 ```php
 class MyCamelCaseName {
   
-  public function myCamelCaseMethod() {
+  public function myCamelCaseMethod()
+  {
     // your function code here
   }
 
 }
 
-function myCamelCaseFunction() {
+function myCamelCaseFunction()
+{
   // your function code here
 }
 
@@ -52,7 +55,8 @@ Given archiect or manger's choice, Project/Company name be skipped.
 ```java
 namespace org.company.project.package.subpackage;
 
-class MyCamelCaseName {
+class MyCamelCaseName
+{
 
 }
 ```
@@ -69,11 +73,14 @@ Before [C++ v17](http://en.cppreference.com/w/cpp/language/namespace) you could 
 
 ```cpp
 // before C++ v17
-namespace Company_Project_Package_Subpackage {
+namespace Company_Project_Package_Subpackage
+{
   // your code here
 }
+
 // after C++ v17
-namespace company::project::package::subpackage {
+namespace company::project::package::subpackage
+{
   // your code here
 }
 ```
