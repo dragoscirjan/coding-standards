@@ -64,3 +64,5 @@ easily maintained.
 * [Symfony Coding Standards](http://symfony.com/doc/current/contributing/code/standards.html)
 * [Code Conventions for the Java Programming Language](http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-139411.html#16711)
 * [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+* [CFML Standards & Best Practices](http://wiki.coldbox.org/wiki/DevelopmentBestPractices.cfm) by [coldbox.org](coldbox.org)
+* [•SBA ColdFusion Programming Standards](https://www.scribd.com/doc/17091861/Cold-Fusion-Coding-Standards)
