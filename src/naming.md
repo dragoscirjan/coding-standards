@@ -44,7 +44,7 @@ function myCamelCaseFunction()
 
 ## Namespaces
 
-As much as possible, namespaces will be defined wil lower case and be formed of simpler explanatory 
+As much as possible, namespaces will be defined wil lower case and be formed of simple explanatory 
 words. Namespace naming should always start with the following 3 components
 1. **com** or **org** to disociate commercial projects from open source once
 1. Project Name or company name followed by project name 
