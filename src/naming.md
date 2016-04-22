@@ -3,7 +3,7 @@
 **Note**: This document is a draft and it will remain so. It is your duty as a developer to continuously
 improve this document and your knowledge of this document.
 
-**Note**: When continuing/extending a 3rd party project, it is recommended to continue with the naming 
+**Note**: When continuing/extending a 3rd party project, it is recommended to continue with the naming
 convention imposed/used by that specific project.
 
 ## Classes
@@ -21,13 +21,13 @@ class MyCamelCaseName
 
 ## Functions/Methods
 
-For function/method naming, it is mandatory to use [camelCase](https://en.wikipedia.org/wiki/CamelCase) 
+For function/method naming, it is mandatory to use [camelCase](https://en.wikipedia.org/wiki/CamelCase)
 naming style unless programming language impose otherwise, or project manager / system architect decided
 otherwise. Oposed to class names, first letter of the method/function name must be lower case.
 
 ```php
 class MyCamelCaseName {
-  
+
   public function myCamelCaseMethod()
   {
     // your function code here
@@ -44,10 +44,10 @@ function myCamelCaseFunction()
 
 ## Namespaces
 
-As much as possible, namespaces will be defined wil lower case and be formed of simpler explanatory 
+As much as possible, namespaces will be defined wil lower case and be formed of simpler explanatory
 words. Namespace naming should always start with the following 3 components
 1. **com** or **org** to disociate commercial projects from open source once
-1. Project Name or company name followed by project name 
+1. Project Name or company name followed by project name
 1. Package name
 
 Given archiect or manger's choice, Project/Company name be skipped.
@@ -67,7 +67,7 @@ the commercial packages should always have the `com` prefix
 
 <!-- --lang-ex -->
 
-Before [C++ v17](http://en.cppreference.com/w/cpp/language/namespace) you could not use nested 
+Before [C++ v17](http://en.cppreference.com/w/cpp/language/namespace) you could not use nested
 
 ##### C/C++/C&#35;
 
@@ -91,18 +91,19 @@ namespace company::project::package::subpackage
 
 ##### CFML
 
-ColdFusion does not have 
+ColdFusion does not have
 
-`org/company/project/package/subpackage/ComponentName.cfc`
 ```xml
-<cfcomponent displayName="ComponentName" output="no"> 
+<!--- org/company/project/package/subpackage/ComponentName.cfc --->
+<cfcomponent displayName="ComponentName" output="no">
   <!-- your code here -->
 </cfcomponent>
 ```
 
 ```javascript
+// org/company/project/package/subpackage/ComponentName.cfc
 component displayName='ComponentName' output='no' {
-  
+
 }
 ```
 
@@ -111,8 +112,8 @@ component displayName='ComponentName' output='no' {
 Dart does not have namespaces, however, you can emulate it via folders. Dart language has the `import`
 protocol, for loading a library to another file.
 
-`org/company/project/package/subpackage/ClassName.dart`
 ```dart
+// org/company/project/package/subpackage/ClassName.dart
 class ClassName  {
   // your code here
 }
@@ -125,8 +126,8 @@ and file paths.
 
 ###### ECMAScript5 and lower
 
-`org/company/package/subpackage/ClassName.js`
 ```javascript
+// org/company/package/subpackage/ClassName.js
 window.org = org || {};
 org.company = org.company || {};
 org.company.package = org.company.package || {};
@@ -138,17 +139,17 @@ org.company.package.subpackage.ClassName = function() {
 
 ###### ECMAScript6
 
-`org/company/project/package/subpackage/ClassName.js`
 ```javascript
+// org/company/project/package/subpackage/ClassName.js
 expor class ClassName {
-  
+
 }
 ```
 
 ###### CoffeeScript
 
-`org/company/project/package/subpackage/ClassName.coffee`
 ```coffeescript
+# org/company/project/package/subpackage/ClassName.coffee
 window.org or= {}
 org.company or= {}
 org.company.package or= {}
@@ -157,16 +158,19 @@ org.company.package.subpackage.ClassName = class ClassName
   # your code here
 ```
 
-###### PureScript
+<!-- ###### PureScript
 
 ```javascript
 // @TODO
-```
+``` -->
 
 ###### TypeScript
 
 ```typescript
-// @TODO
+// org/company/project/package/subpackage/ClassName.js
+expor class ClassName {
+
+}
 ```
 
 ##### Java
@@ -195,7 +199,7 @@ directories in which they are stored.
 // for php under v5.2
 
 class Company_Project_Package_Subpackage_ClassName {
-  
+
 }
 
 // for php v5.2 and more
@@ -222,7 +226,7 @@ class ClassName {
 
 <!-- --lang-ex-end -->
 
-## Folders
+<!-- ## Folders
 
 @TODO
 
@@ -233,4 +237,4 @@ The root level directory of Zend Framework's standard library is the "Zend/" dir
 
 ### Applications
 
-@TODO
+@TODO -->
