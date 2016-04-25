@@ -15,6 +15,7 @@ gulp.task('watch', ['serve'], function() {
   gulp.watch(paths.source, ['build-system', browserSync.reload]).on('change', reportChange);
   gulp.watch(paths.html, ['build-html', browserSync.reload]).on('change', reportChange);
   gulp.watch(paths.md, ['build-md', browserSync.reload]).on('change', reportChange);
+  gulp.watch(paths.md, ['build-md-merge-simple', browserSync.reload]).on('change', reportChange);
   gulp.watch(paths.css, ['build-css']).on('change', reportChange);
   gulp.watch(paths.less, ['build-less']).on('change', reportChange);
   gulp.watch(paths.style, function() {

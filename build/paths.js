@@ -8,6 +8,7 @@ module.exports = {
   html: appRoot + '**/*.html',
   less: appRoot + '**/*.less',
   md: appRoot + '**/*.md',
+  md_merge: appRoot + '*.md',
   css: appRoot + '**/*.css',
   style: 'styles/**/*.css',
   output: outputRoot,

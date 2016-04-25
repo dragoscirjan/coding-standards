@@ -58,8 +58,10 @@ gulp.task('build-md', function() {
     .pipe(gulp.dest(paths.output));
 });
 
-gulp.task('build-md-merge', function() {
-
+gulp.task('build-md-merge-simple', function() {
+  return gulp.src(paths.md_merge)
+    .pipe(changed(paths.output, {extension: '.md'}))
+    .pipe(gulp.dest(paths.output + '/../doc'));
 });
 
 // copies changed css files to the output directory
@@ -78,6 +80,7 @@ gulp.task('build', function(callback) {
   return runSequence(
     'clean',
     ['build-system', 'build-html', 'build-less', 'build-md', 'build-css'],
+    ['build-md-merge-simple'],
     callback
   );
 });
