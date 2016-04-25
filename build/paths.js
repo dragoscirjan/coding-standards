@@ -8,12 +8,16 @@ module.exports = {
   html: appRoot + '**/*.html',
   less: appRoot + '**/*.less',
   md: appRoot + '**/*.md',
-  md_merge: appRoot + '*.md',
   css: appRoot + '**/*.css',
   style: 'styles/**/*.css',
   output: outputRoot,
   exportSrv: exportSrvRoot,
   doc: './doc',
   e2eSpecsSrc: 'test/e2e/src/**/*.js',
-  e2eSpecsDist: 'test/e2e/dist/'
+  e2eSpecsDist: 'test/e2e/dist/',
+  md_merge: {
+    home: appRoot + '*.md',
+    recommend: appRoot + 'recommend/*.md',
+    style: appRoot + 'style/*.md'
+  }
 };

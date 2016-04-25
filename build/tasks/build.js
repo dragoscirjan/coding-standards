@@ -13,7 +13,7 @@ var markdown = require('gulp-markdown');
 var wrap = require('gulp-wrap');
 var replace = require('gulp-replace');
 var less = require('gulp-less');
-// var concat = require('gulp-concat');
+var concat = require('gulp-concat');
 
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
@@ -58,9 +58,21 @@ gulp.task('build-md', function() {
     .pipe(gulp.dest(paths.output));
 });
 
-gulp.task('build-md-merge-simple', function() {
-  return gulp.src(paths.md_merge)
+gulp.task('build-md-merge-home', function() {
+  return gulp.src(paths.md_merge.home)
     .pipe(changed(paths.output, {extension: '.md'}))
+    .pipe(gulp.dest(paths.output + '/../doc'));
+});
+
+gulp.task('build-md-merge-recommend', function() {
+  return gulp.src(paths.md_merge.recommend)
+    .pipe(concat('recommend.md'))
+    .pipe(gulp.dest(paths.output + '/../doc'));
+});
+
+gulp.task('build-md-merge-style', function() {
+  return gulp.src(paths.md_merge.recommend)
+    .pipe(concat('style.md'))
     .pipe(gulp.dest(paths.output + '/../doc'));
 });
 
@@ -80,7 +92,7 @@ gulp.task('build', function(callback) {
   return runSequence(
     'clean',
     ['build-system', 'build-html', 'build-less', 'build-md', 'build-css'],
-    ['build-md-merge-simple'],
+    ['build-md-merge-home', 'build-md-merge-recommend', 'build-md-merge-style'],
     callback
   );
 });
