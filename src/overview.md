@@ -23,7 +23,7 @@ Topics covered in [Foo Company LTD](http://company.foo/) products' coding standa
 * [Naming Conventions](naming.md)
 * [Coding Style](style.md)
 * [CSS Coding Style](css-style.md)
-* [Recommended Tools](recommended.md)
+* [Recommended Tools](recommend.md)
 
 **Note**: Mainly [Foo Company LTD](http://company.foo/) is a [PHP](http://php.net/) company, thus all documentation
 written further will be developed over [PHP](http://php.net/) coding language.
