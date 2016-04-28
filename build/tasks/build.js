@@ -72,7 +72,7 @@ gulp.task('build-md-merge-recommend', function() {
 });
 
 gulp.task('build-md-merge-style', function() {
-  return gulp.src(paths.md_merge.recommend)
+  return gulp.src(paths.md_merge.style)
     .pipe(concat('style.md'))
     .pipe(gulp.dest(paths.output + '/../doc'));
 });
