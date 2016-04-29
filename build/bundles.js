@@ -27,7 +27,9 @@ module.exports = {
         "aurelia-history-browser",
         "aurelia-logging-console",
         "bootstrap",
-        "bootstrap/css/bootstrap.css!text"
+        "bootstrap/css/bootstrap.css!text",
+        "highlight.js",
+        "text"
       ],
       "options": {
         "inject": true,
