@@ -65,3 +65,5 @@ easily maintained.
 * [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 * [CFML Standards & Best Practices](http://wiki.coldbox.org/wiki/DevelopmentBestPractices.cfm) by [coldbox.org](coldbox.org)
 * [SBA ColdFusion Programming Standards](https://www.scribd.com/doc/17091861/Cold-Fusion-Coding-Standards)
+* [CSS Pro Tips](https://github.com/AllThingsSmitty/css-protips) by [AllThingsSmitty](https://github.com/AllThingsSmitty)
+* [Sass Style Guide](https://github.com/bigcommerce/sass-style-guide) by [BigCommerce](https://github.com/bigcommerce/sass-style-guide)
