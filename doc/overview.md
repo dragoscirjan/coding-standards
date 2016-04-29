@@ -23,7 +23,7 @@ Topics covered in [Foo Company LTD](http://company.foo/) products' coding standa
 * [Naming Conventions](naming.md)
 * [Coding Style](style.md)
 * [CSS Coding Style](css-style.md)
-* [Recommended Tools](recommended-tools.md)
+* [Recommended Tools](recommend.md)
 
 **Note**: Mainly [Foo Company LTD](http://company.foo/) is a [PHP](http://php.net/) company, thus all documentation
 written further will be developed over [PHP](http://php.net/) coding language.
@@ -65,3 +65,5 @@ easily maintained.
 * [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
 * [CFML Standards & Best Practices](http://wiki.coldbox.org/wiki/DevelopmentBestPractices.cfm) by [coldbox.org](coldbox.org)
 * [SBA ColdFusion Programming Standards](https://www.scribd.com/doc/17091861/Cold-Fusion-Coding-Standards)
+* [CSS Pro Tips](https://github.com/AllThingsSmitty/css-protips) by [AllThingsSmitty](https://github.com/AllThingsSmitty)
+* [Sass Style Guide](https://github.com/bigcommerce/sass-style-guide) by [BigCommerce](https://github.com/bigcommerce/sass-style-guide)
