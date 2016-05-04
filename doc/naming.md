@@ -1,9 +1,9 @@
 # Naming Conventions
 
-**Note**: This document is a draft and it will remain so. It is your duty as a developer to continuously
+> **Note**: This document is a draft and it will remain so. It is your duty as a developer to continuously
 improve this document and your knowledge of this document.
 
-**Note**: When continuing/extending a 3rd party project, it is recommended to continue with the naming
+> **Note**: When continuing/extending a 3rd party project, it is recommended to continue with the naming
 convention imposed/used by that specific project.
 
 ## Classes
@@ -225,16 +225,3 @@ class ClassName {
 ```
 
 <!-- --lang-ex-end -->
-
-<!-- ## Folders
-
-@TODO
-
-### Frameworks / Libraries / Modules
-
-@TODO
-The root level directory of Zend Framework's standard library is the "Zend/" directory, whereas the root level directory of Zend Framework's extras library is the "ZendX/" directory. All Zend Framework classes are stored hierarchically under these root directories.
-
-### Applications
-
-@TODO -->

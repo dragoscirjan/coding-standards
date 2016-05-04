@@ -12,15 +12,17 @@
 
    configureRouter(config, router) {
      config.map([
-       // { route: ['', 'overview'],        name: 'csh-overview',              moduleId: 'style-html/00.overview',              nav: true, title: 'Overview' },
-       { route: ['', 'specificity'],  name: 'csh-specificity',      moduleId: 'style-html/05.specificity',      nav: true, title: 'Specificity' },
-       { route: 'formatting',      name: 'csh-formatting',    moduleId: 'style-html/10.formatting',    nav: true, title: 'Formatting' },
-       { route: 'strings',                 name: 'csh-strings',               moduleId: 'style-html/15.strings',               nav: true, title: 'Strings' },
-       { route: 'arrays',                  name: 'csh-arrays',                moduleId: 'style-html/20.arrays',                nav: true, title: 'Arrays' },
-       // { route: 'functions',               name: 'csh-functions',             moduleId: 'style-html/40.functions',             nav: true, title: 'Functions' },
-       { route: 'classes',                 name: 'csh-classes',               moduleId: 'style-html/45.classes',               nav: true, title: 'Classes' },
-       { route: 'methods',                 name: 'csh-class-methods',         moduleId: 'style-html/50.class-methods',         nav: true, title: 'Functions & Methods' },
-       { route: 'inline-documentation',    name: 'csh-inline-documentation',  moduleId: 'style-html/80.inline-documentation',  nav: true, title: 'Inline Documentation' }
+       { route: ['', 'overview'],     name: 'csh-overview',     moduleId: 'style-html/00.overview',     nav: false, title: 'Overview' },
+       { route: ['', 'specificity'],  name: 'csh-specificity',  moduleId: 'style-html/05.specificity',  nav: true, title: 'Specificity' },
+       { route: 'formatting',         name: 'csh-formatting',   moduleId: 'style-html/10.formatting',   nav: true, title: 'Formatting' },
+       { route: 'pseudo',             name: 'csh-pseudo',       moduleId: 'style-html/15.pseudo',       nav: true, title: 'Pseudo Elements and Classes' },
+       { route: 'units',              name: 'csh-arrays',       moduleId: 'style-html/16.units',        nav: true, title: 'Units' },
+       { route: 'nesting',            name: 'csh-nesting',      moduleId: 'style-html/20.nesting',      nav: true, title: 'Nesting' },
+       { route: 'components',         name: 'csh-components',   moduleId: 'style-html/30.components',   nav: true, title: 'Components' },
+       { route: 'utilities',          name: 'csh-utilities',    moduleId: 'style-html/40.utilities',    nav: true, title: 'Utilities' },
+       { route: 'variables',          name: 'csh-variables',    moduleId: 'style-html/50.variables',    nav: true, title: 'Variables &\ Mixins' },
+       { route: 'polyfills',          name: 'csh-polyfills',    moduleId: 'style-html/60.polyfills',    nav: true, title: 'Polyfills' },
+       { route: 'folders',            name: 'csh-folders',      moduleId: 'style-html/70.folders',      nav: true, title: 'Folder Structure' }
      ]);
 
      this.router = router;

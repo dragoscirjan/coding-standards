@@ -10,6 +10,7 @@
       <a class="navbar-brand" href="#">
         <i class="fa fa-home"></i>
         <span>${router.title}</span>
+        <span class="beta">beta</span>
       </a>
     </div>
 
@@ -24,6 +25,25 @@
         <li class="loader" if.bind="router.isNavigating">
           <i class="fa fa-spinner fa-spin fa-2x"></i>
         </li>
+        <!-- <li>
+          <div class="dropdown preflang">
+            <button class="btn btn-link" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Preferred # Language
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li>C/C++/C#</li>
+              <li>ColdFusion</li>
+              <li>Dart</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>Perl</li>
+              <li>PHP</li>
+              <li>Python</li>
+              <li>Ruby</li>
+            </ul>
+          </div>
+        </li> -->
       </ul>
     </div>
   </nav>

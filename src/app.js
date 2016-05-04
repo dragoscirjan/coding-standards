@@ -7,6 +7,7 @@ export class App {
       { route: 'naming',         name: 'naming',      moduleId: 'naming',      nav: true, title: 'Naming Convetions' },
       { route: 'style',          name: 'style',       moduleId: 'style',       nav: true, title: 'Coding Style' },
       { route: 'style-html',     name: 'style-html',  moduleId: 'style-html',  nav: true, title: 'Coding Style (HTML)' },
+      { route: 'folders',        name: 'folders',     moduleId: 'folders',     nav: true, title: 'Fodlers' },
       { route: 'recommend',      name: 'recommend',   moduleId: 'recommend',   nav: true, title: 'Recommended Tools' }
     ]);
 

@@ -1,7 +1,7 @@
 # Overview
 
-**Note**: This document is a draft and it will remain so. It is your duty as a developer to continuously
-improve this document and your knowledge of this document.
+> **Note**: This document is a draft and it will remain so. It is your duty as a developer to continuously
+improve this document and update your knowledge of this document.
 
 ## Scope
 
@@ -11,7 +11,7 @@ have also found these coding standards useful because their code's style remains
 [Foo Company LTD](http://company.foo/) products code. It is also worth noting that it requires significant effort to
 fully specify coding standards.
 
-**Note**: Sometimes developers consider the establishment of a standard more important than what that standard actually
+> **Note**: Sometimes developers consider the establishment of a standard more important than what that standard actually
 suggests at the most detailed level of design. The guidelines in [Foo Company LTD](http://company.foo/) products' coding
 standards capture practices that have worked well on the [Foo Company LTD](http://company.foo/) products project. You
 may modify these standards or use them as is in accordance with the terms of our
@@ -22,24 +22,26 @@ Topics covered in [Foo Company LTD](http://company.foo/) products' coding standa
 * [File Formatting](formating.md)
 * [Naming Conventions](naming.md)
 * [Coding Style](style.md)
-* [CSS Coding Style](css-style.md)
+* [Coding Style for HTML](style-html.md)
 * [Recommended Tools](recommend.md)
 
-**Note**: Mainly [Foo Company LTD](http://company.foo/) is a [PHP](http://php.net/) company, thus all documentation
-written further will be developed over [PHP](http://php.net/) coding language.
+> **Note**: Mainly [Foo Company LTD](http://company.foo/) is a [PHP](http://php.net/) company, thus all documentation
+written further will be developed mainly over [PHP](http://php.net/) coding language.
 
 However, [PHP](http://php.net/) is not the only language we are using, so we tried extending and adapting coding
 standards to all coding languages used in our company. Also, with each adopted coding language, we engage in adding
 and adapting our coding standards to that specific language as well.
 
+> **Note**: Please note that even documentation was extended, in some cases, it may be incomplete.
+
 Languages included in [Foo Company LTD](http://company.foo/) products' coding standards include:
 
 * [Adobe](http://www.adobe.com)<sup>&copy;</sup> [ColdFusion](http://www.adobe.com/products/coldfusion-family.html)
-* C as [C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages), [C++](https://en.wikipedia.org/wiki/C%2B%2B) 
+* C as [C](https://en.wikipedia.org/wiki/List_of_C-family_programming_languages), [C++](https://en.wikipedia.org/wiki/C%2B%2B)
   and [C&#35;](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
-* JavaScript as [ECMAScript 5 or lower](https://en.wikipedia.org/wiki/JavaScript), 
-  [EcmaScript 6](https://github.com/lukehoban/es6features), [CoffeeScript](http://coffeescript.org), 
-  [Microsoft](http://microsoft.com)<sup>&copy;</sup> [TypeScript](http://www.typescriptlang.org) (not completed) and 
+* JavaScript as [ECMAScript 5 or lower](https://en.wikipedia.org/wiki/JavaScript),
+  [EcmaScript 6](https://github.com/lukehoban/es6features), [CoffeeScript](http://coffeescript.org),
+  [Microsoft](http://microsoft.com)<sup>&copy;</sup> [TypeScript](http://www.typescriptlang.org) (not completed) and
   [PureScript](http://www.purescript.org) (not completed)
 * [Google](http://code.google.com/p/dart)<sup>&copy;</sup> [Dart](https://www.dartlang.org)
 * [Oracle](https://www.oracle.com)<sup>&copy;</sup> [Java](https://www.oracle.com/java/index.html)
