@@ -84,10 +84,10 @@ Root foler can also contain:
 ```
 .
 ├── assets
-|   └── 3rdpt
-|   └── images
-|   └── styles
-|       └── fonts
+|   ├── 3rdpt
+|   ├── images
+|   ├── styles
+|   |   └── fonts
 |   └── scripts
 ├── src
 |   └── com
@@ -96,6 +96,7 @@ Root foler can also contain:
 |               └── subpackage
 |                   └── ...
 ├── vendor
+├── view
 └── index.*
 ```
 
@@ -103,37 +104,29 @@ Root foler can also contain:
 
 > Web Application based on (Aurelia Framework)[http://aurelia.io]
 
-**src** folder will be containing source code (since we can always use **jade**, **Coffee Script** or any other
-preprocessors).
-
-while
-
-**dist** folder will be containing the compiled code.
-
-Root foler can also contain:
-* .editoconfig for editor configuration
-* config files for linters
-* config files for javascript installers
-  * `bower` > `bower.json`
-  * `jspm` > `config.js`
-  * `npm` > `package.json`
-* config files and folders for compilers
-  * gulp
-  * webpack
-
 ```
 .
+|── assets
+|   └── 3rdpt
+|   └── styles.css
 ├── dist
+├── services
+|   └── views
+|   └── src
+|       ├── project
+|       |    └── package
+|       └ index.*
 ├── src
 |   └── assets
-|       └── 3rdpt
-|       └── images
-|       └── styles
-|           └── fonts
-|           └── *.css|less|sass
-|       └── scripts
-|           └── *.coffee|js|ts
-|       └── *.html|jade
+|       ├── images
+|       ├── styles
+|       |   └── fonts
+|       ├── scripts
+|       ├── *.html|jade
+|       └── *.js|ts
+├── config.js
+├── index.html
+└── index.js
 ```
 
 <!-- ###### Angular Application
