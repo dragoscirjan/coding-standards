@@ -144,6 +144,8 @@ Root foler can also contain:
 
 ### Frameworks / Libraries / Modules
 
+For Open Source projects, `org` level can be skipped.
+
 <!-- --lang-ex -->
 
 <!-- ##### C/C++/C&#35;
@@ -165,8 +167,6 @@ Root foler can also contain:
 ##### CFML
 
 ###### Open Source
-
-`org` level can be skipped
 
 ```
 .
@@ -221,8 +221,6 @@ Root foler can also contain:
 
 ###### Open Source
 
-`org` level can be skipped
-
 ```
 .
 ├── bin
@@ -248,7 +246,6 @@ Root foler can also contain:
 |               └── Subpackage
 |                   └── ...
 ├── vendor
-├── Application.cfc
 └── index.php
 ```
 

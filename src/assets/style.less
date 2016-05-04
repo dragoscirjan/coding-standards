@@ -2,7 +2,14 @@
 // @theme: "";
 
 @import "bootswatch/darkly/variables.less";
-// @import "bootswatch/darkly/bootswatch.less";
+
+code {
+  background: #2b2b2b;
+  border-radius: 0;
+  color: #e0c46c;
+  padding: 5px;
+  width: 100%;
+}
 
 blockquote {
   font-size: 15px;
@@ -10,73 +17,67 @@ blockquote {
 }
 
 pre {
+  background-color: transparent;
   border: 0;
-  padding: 0;
+  border-radius: 0;
+  padding: 0 5px;
+
 }
 
-.navbar-brand {
-  .beta {
-    display: block;
-    font-size: .5em;
-    text-align: right;
-    text-transform: uppercase;
-  }
-}
+h2 {
+  margin: 40px 0 20px;
 
-
-
-.lang-ex {
-  border-top: 1px #DDD solid;
-  border-bottom: 1px #DDD solid;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  .nav-tabs li {
-    & > a {
-      border: 0;
-      margin-left: 0;
-      padding-left: 0;
-    }
-    & > a:hover, & > a:focus {
-      background: transparent;
-      border: 0;
-      color: @brand-success;
-    }
-  }
-
-  li.active {
-    & > a {
-      border: 0;
-    }
-    & > a:hover, & > a:focus {
-      background: transparent;
-      border: 0;
-      color: @brand-success;
-    }
-  }
-
-  .tab-pane {
-    padding-top: 20px;
+  &:first-child {
+    margin-top: 0px;
   }
 }
 
-.code-pane {
+h3 {
+  margin: 40px 0 20px;
+}
+
+h4 {
+  margin: 20px 0 20px;
+}
+
+.flex {
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -5px;
+  flex-flow: row wrap;
 
-  pre {
-    // flex: 1 1 33.33%;
-    flex: 1 0 50%;
-    padding: 0 5px;
-    // background: #2b2b2b;
-    background: transparent;
-    display: flex;
-
-    code {
-      flex: 1;
-    }
+  p, ul {
+    // display: flex;
+    flex: 1 0 100%;
   }
+
+  &-item,
+  pre {
+    // display: flex;
+    flex: 1 0 50%;
+  }
+}
+
+.flex.active {
+  display: flex;
+}
+
+.nav-tabs > li > a {
+  border-left: 0;
+  border-radius: 0;
+  border-right: 0;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+  background-color: transparent;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+  border-left: 0;
+  border-right: 0;
+}
+
+.tab-content {
+  padding-top: 20px;
 }

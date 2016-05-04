@@ -18,6 +18,7 @@ module.exports = {
   md_merge: {
     home: appRoot + '*.md',
     recommend: appRoot + 'recommend/*.md',
-    style: appRoot + 'style/*.md'
+    style: appRoot + 'style/*.md',
+    style_html: appRoot + 'style-html/*.md'
   }
 };

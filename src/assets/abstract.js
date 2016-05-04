@@ -33,6 +33,10 @@ export class Component {
         }
         $ul.append($li);
         $div.append($dv);
+
+        if (!$dv.find('h6').length) {
+          $dv.addClass('flex');
+        }
       });
 
       $this.html('').append($ul).append($div);
@@ -54,7 +58,7 @@ export class Component {
       // let liFirstItem = liItemCount;
       $this.find('h6').each(function() {
         let $li = $(`<li role="presentation"><a href="#li-item-${liItemCount}" aria-controls="li-item-${liItemCount}" role="tab" data-toggle="tab"></a></li>`);
-        let $dv = $(`<div role="tabpanel" class="tab-pane" id="li-item-${liItemCount++}"><div class="code-pane"></div></div>`);
+        let $dv = $(`<div role="tabpanel" class="tab-pane example-pane flex" id="li-item-${liItemCount++}"></div>`);
         let $d = null;
         let count = 0;
 
@@ -65,9 +69,10 @@ export class Component {
           if (!$d || $d.prop('tagName') === 'H6') {
             break;
           }
-          $dv.find('.code-pane').append($d);
+          $dv.append($d);
           count ++;
         }
+
         $ul.append($li);
         $div.append($dv);
       });

@@ -18,6 +18,7 @@ gulp.task('watch', ['serve'], function() {
   gulp.watch(paths.md, ['build-md-merge-home', browserSync.reload]).on('change', reportChange);
   gulp.watch(paths.md, ['build-md-merge-recommend', browserSync.reload]).on('change', reportChange);
   gulp.watch(paths.md, ['build-md-merge-style', browserSync.reload]).on('change', reportChange);
+  gulp.watch(paths.md, ['build-md-merge-style-html', browserSync.reload]).on('change', reportChange);
   gulp.watch(paths.css, ['build-css']).on('change', reportChange);
   gulp.watch(paths.less, ['build-less']).on('change', reportChange);
   gulp.watch(paths.style, function() {

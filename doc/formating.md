@@ -47,9 +47,9 @@ For files that contain **only code**, the closing tag is never permitted (when p
 is not required by [PHP](http://php.net/), and omitting it prevents the accidental injection of trailing white space
 into the response.
 
-### [Editorconfig](http://editorconfig.org/)
+### EditorConfig
 
-In order to standardize all IDE configurations, we recommend the EditorConfig standard.
+In order to standardize all IDE configurations, we recommend the [Editorconfig](http://editorconfig.org/) standard.
 
 **What is EditorConfig?**
 

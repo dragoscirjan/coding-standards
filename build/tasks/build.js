@@ -77,6 +77,12 @@ gulp.task('build-md-merge-style', function() {
     .pipe(gulp.dest(paths.output + '/../doc'));
 });
 
+gulp.task('build-md-merge-style-html', function() {
+  return gulp.src(paths.md_merge.style_html)
+    .pipe(concat('style-html.md'))
+    .pipe(gulp.dest(paths.output + '/../doc'));
+});
+
 // copies changed css files to the output directory
 gulp.task('build-css', function() {
   return gulp.src(paths.css)
@@ -93,7 +99,7 @@ gulp.task('build', function(callback) {
   return runSequence(
     'clean',
     ['build-system', 'build-html', 'build-less', 'build-md', 'build-css'],
-    ['build-md-merge-home', 'build-md-merge-recommend', 'build-md-merge-style'],
+    ['build-md-merge-home', 'build-md-merge-recommend', 'build-md-merge-style', 'build-md-merge-style-html'],
     callback
   );
 });
