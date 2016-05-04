@@ -1,15 +1,18 @@
 ## Folders
 
+> **Note**: This document is a draft and it will remain so. It is your duty as a developer to continuously
+improve this document and update your knowledge of this document.
+
 Organizing and naming folder structures is a very sensitive subject and can be a subject of discussion to each project
 which is brought to development. The following are only recommendations of project structures as used by
 [Foo Company LTD](http://company.foo/).
 
 
+### Applications
+
 <!-- --lang-ex -->
 
-##### Applications
-
-###### HTML Website
+##### HTML Website
 
 **src** folder will be containing source code (since we can always use **jade**, **Coffee Script** or any other
 preprocessors).
@@ -44,7 +47,7 @@ Root foler can also contain:
 |       └── *.html|jade
 ```
 
-<!-- ###### Angular Website
+<!-- ##### Angular Website
 
 **src** folder will be containing source code (since we can always use **jade**, **Coffee Script** or any other
 preprocessors).
@@ -79,7 +82,7 @@ Root foler can also contain:
 |       └── *.html|jade
 ``` -->
 
-###### Web Application
+##### Web Application
 
 ```
 .
@@ -90,7 +93,7 @@ Root foler can also contain:
 |   |   └── fonts
 |   └── scripts
 ├── src
-|   └── com
+|   └── com|org
 |       └── project
 |           └── package
 |               └── subpackage
@@ -100,7 +103,7 @@ Root foler can also contain:
 └── index.*
 ```
 
-###### Aurelia Application
+##### Aurelia Application
 
 > Web Application based on (Aurelia Framework)[http://aurelia.io]
 
@@ -115,6 +118,7 @@ Root foler can also contain:
 |   └── src
 |       ├── project
 |       |    └── package
+|       |        └── ...
 |       └ index.*
 ├── src
 |   └── assets
@@ -129,20 +133,16 @@ Root foler can also contain:
 └── index.js
 ```
 
-<!-- ###### Angular Application
+<!-- ##### Angular Application
 
 > Web Application based on Aurelia Framework
 
 ```
 ``` -->
 
-##### Frameworks
-
-##### Libraries
-
-##### Modules
-
 <!-- --lang-ex-end -->
+
+### Frameworks / Libraries / Modules
 
 <!-- --lang-ex -->
 
@@ -162,7 +162,26 @@ Root foler can also contain:
 
 ``` -->
 
-<!-- ##### CFML
+##### CFML
+
+###### Open Source
+
+`org` level can be skipped
+
+```
+.
+├── src
+|   └── org
+|       └── project
+|           └── package
+|               └── subpackage
+|                   └── ...
+├── vendor
+├── Application.cfc
+└── index.cfm
+```
+
+###### Commercial
 
 ```
 .
@@ -175,7 +194,7 @@ Root foler can also contain:
 ├── vendor
 ├── Application.cfc
 └── index.cfm
-``` -->
+```
 
 <!-- #####  Dart
 
@@ -198,10 +217,40 @@ Root foler can also contain:
 ```
 ``` -->
 
-<!-- ##### PHP
+##### PHP
+
+###### Open Source
+
+`org` level can be skipped
 
 ```
-``` -->
+.
+├── bin
+├── src
+|   └── Org
+|       └── Project
+|           └── Package
+|               └── Subpackage
+|                   └── ...
+├── vendor
+└── index.php
+```
+
+###### Commercial
+
+```
+.
+├── bin
+├── src
+|   └── Com
+|       └── Project
+|           └── Package
+|               └── Subpackage
+|                   └── ...
+├── vendor
+├── Application.cfc
+└── index.php
+```
 
 <!-- ##### Ruby
 

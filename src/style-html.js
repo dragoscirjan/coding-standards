@@ -22,7 +22,7 @@
        { route: 'utilities',          name: 'csh-utilities',    moduleId: 'style-html/40.utilities',    nav: true, title: 'Utilities' },
        { route: 'variables',          name: 'csh-variables',    moduleId: 'style-html/50.variables',    nav: true, title: 'Variables &\ Mixins' },
        { route: 'polyfills',          name: 'csh-polyfills',    moduleId: 'style-html/60.polyfills',    nav: true, title: 'Polyfills' },
-       { route: 'folders',            name: 'csh-folders',      moduleId: 'style-html/70.folders',      nav: true, title: 'Folder Structure' }
+      //  { route: 'folders',            name: 'csh-folders',      moduleId: 'style-html/70.folders',      nav: true, title: 'Folder Structure' }
      ]);
 
      this.router = router;

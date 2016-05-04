@@ -1,14 +1,7 @@
 # Coding Style
 
-<!-- ## Overview
-
-**Note** This document is a draft and it will remain so. It is your duty as a developer to continuously
+> **Note** This document is a draft and it will remain so. It is your duty as a developer to continuously
 improve this document and your knowledge of this document.
-
-**Note** This document in inspired from
-[Zend Framework's Coding Standards](http://framework.zend.com/manual/1.12/en/coding-standard.coding-style.html)
-If you have any other suggestion, please comment in our issue section.
--->
 
 ## Code Demarcation (and context)
 
@@ -87,12 +80,12 @@ Language (nor substitutes) do not have code demarcation, unless usest within HTM
 <script type="text/javascript" src="typescript.compile.min.js"></script>
 ```
 
-**NOTE**: CoffeScript and TypeScript are separate programming languages meant to either extend or simplify ECMAScript usage.
+> **Note**: CoffeScript and TypeScript are separate programming languages meant to either extend or simplify ECMAScript usage.
 Their use within HTML can only be used by adding 3rd party 'compilers' to transpile their content into ECMAScript code and run it.
 
-**NOTE**: For [TypeScript](http://www.typescriptlang.org/)  please find a transpiler here in [typescript-compile](https://github.com/niutech/typescript-compile) project.
+> **Note**: For [TypeScript](http://www.typescriptlang.org/)  please find a transpiler here in [typescript-compile](https://github.com/niutech/typescript-compile) project.
 
-**NOTE**: For [CofeeScript](http://coffeescript.org/) please read more on their [github repository](https://github.com/jashkenas/coffeescript).
+> **Note**: For [CofeeScript](http://coffeescript.org/) please read more on their [github repository](https://github.com/jashkenas/coffeescript).
 
 ##### Java
 
@@ -154,7 +147,7 @@ Python has no code demarcation. -->
 
 <!-- --lang-ex-end -->
 
-**NOTE**: Absence of Programming Language from the list above suggests it does not have coding demarcation.
+> **Note**: Absence of Programming Language from the list above suggests it does not have coding demarcation.
 
 
 
@@ -162,7 +155,7 @@ Python has no code demarcation. -->
 
 ### Initial Notes
 
-**NOTE**: Do not take in consideration if desired programming language is not present.
+> **Note**: Do not take in consideration if desired programming language is not present.
 
 <!-- --lang-ex -->
 
@@ -192,14 +185,14 @@ Within the conditional statements between the parentheses, operators must be sep
 Inner parentheses are encouraged to improve logical grouping for larger conditional expressions.
 
 The opening brace is written on the same line as the conditional statement. The closing brace is always written on its
-own line. Any content within the braces must be indented using establised indentation rules.
+own line. Any content within the braces must be indented using established indentation rules.
 
-**NOTE**: In case of CFML, which is a XML like programming language the braces standard will not apply.
+> **Note**: In case of CFML, which is a XML like programming language the braces standard will not apply.
 
-**NOTE**: Being programming languages based on indentation delimiters and not braces, **CofeeScript** and **Python**
+> **Note**: Being programming languages based on indentation delimiters and not braces, **CofeeScript** and **Python**
 will not be affected by this standard. Indentation for both languages is 2 spaces, and this should suffice this section.
 
-**NOTE**: **Ruby** delimiters are not based on braces, but on **if ... then ... end** format. The parentheses standard
+> **Note**: **Ruby** delimiters are not based on braces, but on **if ... then ... end** format. The parentheses standard
 will apply within this format as well.
 
 <!-- --lang-ex -->
@@ -360,22 +353,23 @@ if (_expression_1_() && _expression_2_()):
 <!-- --lang-ex-end -->
 
 If the conditional statement causes the line length to exceed the maximum line length and has several clauses, you may
-break the conditional into multiple lines. In such a case, break the line prior to a logic operator, and pad the line
-such that it aligns under the first character of the conditional clause. The closing parent in the conditional will
-then be placed on a line with the opening brace, with one space separating the two, at an indentation level equivalent
-to the opening control statement.
+break the conditional into multiple lines and also start on a new indented line after the opening parent. In such a
+case, break the line prior to a logic operator, and pad the line such that it aligns under the first character of the
+conditional clause. The closing parent in the conditional will then be placed on a line with the opening brace, with one
+space separating the two, at an indentation level equivalent to the opening control statement.
 
-**NOTE**: Being programming languages based on indentation delimiters and not braces, CofeeScript and Python will not be
-affected by this standard. However, if the conditional statement is too large, it can always be broken in multiple inner
-conditions.
+> **Note**: Being programming languages based on indentation delimiters and not braces, **CofeeScript** and **Python**
+will not be affected by this standard. However, if the conditional statement is too large, it can always be broken in
+multiple inner conditions.
 
 <!-- --lang-ex -->
 
 ##### C/C++/C&#35;
 
 ```c
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 }
@@ -387,8 +381,9 @@ if ((_very_long_expression_1_())
 
 ```xml
 <!--- CFML --->
-<cfif ((_very_long_expression_1_())
-        OR (_very_long_expression_2_())
+<cfif (
+  (_very_long_expression_1_())
+  OR (_very_long_expression_2_())
 ) >
   <cfset _action_() />
 </cfif>
@@ -396,8 +391,9 @@ if ((_very_long_expression_1_())
 ###### CFScript
 
 ```javascript
-if ((_very_long_expression_1_())
-    OR (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  OR (_very_long_expression_2_())
 ) {
   _action_();
 }
@@ -406,8 +402,9 @@ if ((_very_long_expression_1_())
 #####  Dart
 
 ```dart
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 }
@@ -418,8 +415,9 @@ if ((_very_long_expression_1_())
 ###### ECMAScript
 
 ```javascript
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 }
@@ -439,21 +437,12 @@ if ((a == b) && (b == c) || (Foo.CONST == d))
   a = d
 ``` -->
 
-###### PureScript
-
-<!-- ```javascript
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
-) {
-  _action_();
-}
-``` -->
-
 ###### TypeScript
 
 ```javascript
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 }
@@ -462,8 +451,9 @@ if ((_very_long_expression_1_())
 ##### Java
 
 ```java
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 }
@@ -472,8 +462,9 @@ if ((_very_long_expression_1_())
 #####  Perl
 
 ```perl
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 }
@@ -482,8 +473,9 @@ if ((_very_long_expression_1_())
 ##### PHP
 
 ```php
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 }
@@ -492,8 +484,9 @@ if ((_very_long_expression_1_())
 ##### Ruby
 
 ```ruby
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) then
   _action_();
 end
@@ -524,8 +517,9 @@ if (_expression_()) {
   _else_action_();
 }
 
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 } else {
@@ -548,8 +542,9 @@ if ((_very_long_expression_1_())
   <cfset _else_action_() />
 </cfif>
 
-<cfif ((_very_long_expression_1_())
-    OR (_very_long_expression_2_())
+<cfif (
+  (_very_long_expression_1_())
+  OR (_very_long_expression_2_())
 ) >
   <cfset _action_() />
 <cfelseif ((_very_long_expression_3_()) >
@@ -567,8 +562,9 @@ if (_expression_()) {
   _else_action_();
 }
 
-if ((_very_long_expression_1_())
-    OR (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  OR (_very_long_expression_2_())
 ) {
   _action_();
 } else {
@@ -589,8 +585,9 @@ if (_expression_()) {
   _else_action_();
 }
 
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 } else {
@@ -613,8 +610,9 @@ if (_expression_()) {
   _else_action_();
 }
 
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 } else {
@@ -659,8 +657,9 @@ if (_expression_()) {
   _else_action_();
 }
 
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 } else {
@@ -681,8 +680,9 @@ if (_expression_()) {
   _else_action_();
 }
 
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 } else {
@@ -703,8 +703,9 @@ if (_expression_()) {
   _else_action_();
 }
 
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_()
 } elsif (_very_long_expression_3_()) {
@@ -723,8 +724,9 @@ if (_expression_()) {
   _else_action_();
 }
 
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) {
   _action_();
 } else {
@@ -745,8 +747,9 @@ else
   _else_action_();
 end
 
-if ((_very_long_expression_1_())
-    || (_very_long_expression_2_())
+if (
+  (_very_long_expression_1_())
+  || (_very_long_expression_2_())
 ) then
   _action_();
 elsif (_very_long_expression_3_()) then
@@ -764,7 +767,7 @@ if (_expression_()):
 else:
   _else_action_()
 
-if (((_very_long_expression_1_()) || (_very_long_expression_2_())):
+if ((_very_long_expression_1_()) || (_very_long_expression_2_())):
   _action_()
 elif (_very_long_expression_3_()):
   _elseif_action_()
@@ -797,11 +800,11 @@ of the conditional statement and after the closing parenthesis.
 All content within the "switch" statement must be indented using four spaces. Content under each "case" statement
 must be indented using an additional four spaces.
 
-**NOTE**: In case of **Perl** programming language, all case section must start with a brace on the same line as
+> **Note**: In case of **Perl** programming language, all case section must start with a brace on the same line as
 the case expression, and end with a brace on a new empty line indented at the same level with the opening case
 expression.
 
-**NOTE**: **Python**'s lack of a `switch` statement has garnered much discussion and even a PEP. The most popular
+> **Note**: **Python**'s lack of a `switch` statement has garnered much discussion and even a PEP. The most popular
 substitute uses dictionaries to map cases to functions, which requires lots of defs or lambdas. While
 the approach shown here may be O(n) for cases, it aims to duplicate C's original 'switch' functionality
 and structure with reasonable accuracy. Please read the complete [recipe](http://code.activestate.com/recipes/410692/).  
@@ -1014,7 +1017,7 @@ for case in switch(_expression_())
 
 The construct default should never be omitted from a switch statement unless programming language has no such directive.
 
-**Note:** It is sometimes useful to write a case statement which falls through to the next case by not including a break
+> **Note:** It is sometimes useful to write a case statement which falls through to the next case by not including a break
 or return within that case. To distinguish these cases from bugs, any case statement where break or return are omitted
 should contain a comment indicating that the break was intentionally omitted.
 
