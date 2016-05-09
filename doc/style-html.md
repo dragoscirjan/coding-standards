@@ -638,22 +638,24 @@ classes**_ with a single colon. Declare _**pseudo-elements**_ with a double colo
 
 ##### SCSS
 
-```css
+```less
 /* DO */
-.component:focus {
-    ...
-}
+.component
+    &:focus {
+        ...
+    }
 
-.component:hover {
-    ...
-}
+    &:hover {
+        ...
+    }
 
-.component::before {
-    ...
-}
+    &::before {
+        ...
+    }
 
-.component::after {
-    ...
+    &::after {
+        ...
+    }
 }
 
 /* DON'T */
@@ -696,132 +698,142 @@ very searchable
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
-.panel-body {
+/* DO */
+.panel {
     position: relative;
 }
 
-.panel-sideBar {
+.panel--sidebar {
     z-index: 10;
 }
 
-.panel-sideBar-item {
+.panel__item {
     cursor: pointer;
 }
 
-.panel-sideBar-item-label {
+.panel__item--sidebar {
     color: #AEAEAE;
-
 }
 
-.panel-sideBar-item-label.has-smallFont {
+.panel.has-smallFont {
     font-size: 13px;
 }
-```
 
-##### Less
-
-```css
-.panel-body {
+/* DON'T */
+body .wrapper .panel {
     position: relative;
 }
 
-.panel-sideBar {
+body .wrapper .sidebar .panel {
     z-index: 10;
+}
 
-    &-item {
-      cursor: pointer;
+body .wrapper .panel .item {
+    cursor: pointer;
+}
+
+body .wrapper .sidebar .panel .item {
+    color: #AEAEAE;
+}
+```
+
+##### LESS
+
+```less
+// DO
+.panel {
+    position: relative;
+
+    &--sidebar {
+        z-index: 10;
     }
 
-    &-item-label {
-      color: #AEAEAE;
+    &__item {
+        cursor: pointer;
+    }
 
-      &.has-smallFont {
+    &__item--sidebar {
+        color: #AEAEAE;
+    }
+
+    &.has-smallFont {
         font-size: 13px;
-      }
     }
 }
 
+// DON'T
+body {
+    .wrapper {
+        .panel {
+            position: relative;
 
-/* DON'T
-.bc-tab-panel {
-
-    .panel-body {
-        position: relative;
-        ...
-
-        .panel-side-bar {
-            z-index: 10;
-            ...
-
-            .panel-side-item {
+            .item {
                 cursor: pointer;
-                ...
+            }
+        }
 
-                .panel-side-item-label {
+        .sidebar {
+            .panel {
+                z-index: 10;
+
+                .item {
                     color: #AEAEAE;
-
-                    &.small-font {
-                        font-size: 13px;
-                    }
                 }
             }
         }
     }
-}*/
+}
 ```
 
-##### Sass
+##### SCSS
 
-```css
-.panel-body {
+```less
+// DO
+.panel {
     position: relative;
-}
 
-.panel-sideBar {
-    z-index: 10;
-
-    &-item {
-      cursor: pointer;
+    &--sidebar {
+        z-index: 10;
     }
 
-    &-item-label {
-      color: #AEAEAE;
+    &__item {
+        cursor: pointer;
+    }
 
-      &.has-smallFont {
+    &__item--sidebar {
+        color: #AEAEAE;
+    }
+
+    &.has-smallFont {
         font-size: 13px;
-      }
     }
 }
 
-/* DON'T
-.bc-tab-panel {
+// DON'T
+body {
+    .wrapper {
+        .panel {
+            position: relative;
 
-    .panel-body {
-        position: relative;
-        ...
-
-        .panel-side-bar {
-            z-index: 10;
-            ...
-
-            .panel-side-item {
+            .item {
                 cursor: pointer;
-                ...
+            }
+        }
 
-                .panel-side-item-label {
+        .sidebar {
+            .panel {
+                z-index: 10;
+
+                .item {
                     color: #AEAEAE;
-
-                    &.small-font {
-                        font-size: 13px;
-                    }
                 }
             }
         }
     }
-}*/
+} 
 ```
 
 <!-- --lang-ex-end -->
@@ -854,9 +866,9 @@ Make use of placeholder selectors to separate repeated local styles
 
 ## Components
 
-Syntax: `<componentName>[--modifierName|-descendantName]`
+Syntax: `<component-name>[--modifier-name|__descendant-name]`
 
-This component syntax is mainly taken from [Suit CSS](http://suitcss.github.io/) with minor modifications.
+This component syntax is mainly taken from [BEM](http://getbem.com/naming/) with minor modifications.
 
 Component driven development offers several benefits when reading and writing HTML and CSS:
 
@@ -864,17 +876,17 @@ Component driven development offers several benefits when reading and writing HT
 * It keeps the specificity of selectors low.
 * It helps to decouple presentation semantics from document semantics.
 
-You can think of components as custom elements that enclose specific semantics, styling, and behaviour.
+You can think of components as custom elements that enclose specific semantics, styling, and behavior.
 
 **Do not choose a class name based on its visual presentation or its content.**
 
 The primary architectural division is between components and utilities:
 
-* componentName (eg. `.dropdown` or `.buttonGroup`)
-* componentName--modifierName (eg. `.dropdown--dropUp` or `.button--primary`)
-* componentName-descendantName (eg. `.dropdown-item`)
-* componentName.is-stateOfComponent (eg. `.dropdown.is-active`)
-* u-utilityName (eg. `.u-textTruncate`)
+* component-name (eg. `.dropdown` or `.button-group`)
+* component-name--modifier-name (eg. `.dropdown--drop-up` or `.button--primary`)
+* component-name__descendant-name (eg. `.dropdown__item`)
+* component-name.is-state-of-component (eg. `.dropdown.is-active`)
+* u-utility-name (eg. `.u-textTruncate`)
 * `[<namespace>-]<componentName>[--modifierName|-descendentName]`
 
 #### ComponentName
