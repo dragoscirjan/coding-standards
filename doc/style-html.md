@@ -16,51 +16,53 @@ Yourself) CSS (LESS, SCSS/SASS), built around reusable components and patterns.
 
 ## Specificity
 
-On large code bases, it's preferable and a tonne more maintainable if the specificity of selectors are all as equal and
+On large code bases, it's preferable and a ton more maintainable if the specificity of selectors are all as equal and
 as low as humanly possible.
 
-In all three languages, the use of classes, for styling, is encouraged, while use ID's is completely prohibited. There
-is literally no point in using ids.
+In all three languages, the use of classes for styling is encouraged, while the use of IDs is completely prohibited. There is literally no point in using IDs in stylesheets.
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
+/* DO */
 .component {
     ...
 }
 
-/* DON'T
+/* DON'T */
 #component {
     ...
-}*/
+}
 ```
 
-##### Less
+##### LESS
 
 ```less
+// DO
 .component {
     ...
 }
 
-/* DON'T
+// DON'T
 #component {
-  ...
-}*/
+    ...
+}
 ```
 
-##### Sass
+##### SCSS
 
 ```css
+/* DO */
 .component {
     ...
 }
 
-/* DON'T
+/* DON'T */
 #component {
     ...
-}*/
+}
 ```
 <!-- --lang-ex-end -->
 
@@ -69,53 +71,59 @@ selectors.
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
+/* DO */
 h1 {
     ...
 }
 
-/* DON'T
+/* DON'T */
 .component h1 {
     ...
-}*/
+}
 ```
 
-##### Less
+##### LESS
 
 ```less
+// DO
 h1 {
     ...
 }
 
-/* DON'T
+// DON'T
 .component {
-    & h1 {
+    h1 {
         ...
     }
-}*/
+}
 ```
 
-##### Sass
+##### SCSS
 
 ```css
+/* DO */
 h1 {
     ...
 }
 
-/* DON'T
-.component h1 {
-  ...
-}*/
+/* DON'T */
+.component {
+    h1 {
+        ...
+    }
+}
 ```
 
 <!-- --lang-ex-end -->
 
 
-Use overqualified selectors in your CSS is not recommended. Do not prepend a class or ID with an element.
+Use of overqualified selectors in your CSS is not recommended. Do not prepend a class or ID with an element.
 
 ```css
+/* DON'T */
 div.container {
     ...
 }
@@ -127,7 +135,7 @@ Overly specific selectors can also cause performance issues. Consider:
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
 ul.user-list li span a:hover {
@@ -135,7 +143,7 @@ ul.user-list li span a:hover {
 }
 ```
 
-##### Less
+##### LESS
 
 ```css
 ul.user-list {
@@ -149,11 +157,17 @@ ul.user-list {
 }
 ```
 
-##### Sass
+##### SCSS
 
 ```css
-ul.user-list li span a:hover {
-    color: red;
+ul.user-list {
+    li {
+        span {
+            a:hover {
+                color: red;
+            }
+        }
+    }
 }
 ```
 
@@ -167,33 +181,43 @@ If we know we want to give all `a` elements inside the `.user-list` red on hover
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
-.user-list-link:hover {
+.user-list__link:hover {
     color: red;
 }
 ```
 
-##### Less
+##### LESS
 
 ```less
-.user-list-link {
-    &:hover {
-        color: red;
-    }
+.user-list__link:hover {
+    color: red;
 }
 ```
 
-##### Sass
+##### SCSS
 
 ```css
-.user-list-link:hover {
+.user-list__link:hover {
     color: red;
 }
 ```
 
 <!-- --lang-ex-end -->
+
+#### General Rules
+
+Your selectors are fundamental to writing good CSS. To very briefly sum up the above sections:
+
+* **Select what you want explicitly**, rather than relying on circumstance or coincidence. Good Selector Intent will rein in the reach and leak of your styles.
+* **Write selectors for reusability**, so that you can work more efficiently and reduce waste and repetition.
+* **Do not nest selectors unnecessarily**, because this will increase specificity and affect where else you can use your styles.
+* **Do not qualify selectors unnecessarily**, as this will impact the number of different elements you can apply styles to.
+* **Keep selectors as short as possible**, in order to keep specificity down and performance up.
+
+Focusing on these points will keep your selectors a lot more sane and easy to work with on changing and long-running projects.
 
 ## Formatting
 
@@ -207,24 +231,27 @@ Annotation of code inside a comment block, leaving a reference # next to the lin
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
-/*******************************************************************************
- * FILE TITLE / SECTION TITLE
- ******************************************************************************/
+/* ==========================================================================
+   Section comment block
+   ========================================================================== */
 
+/* Sub-section comment block
+   ========================================================================== */
 
-/* Comment Block / Sub-section
- *******************************************************************************
+/**
+ * Short description using Doxygen-style comment format
  *
  * Purpose: This will describe when this component should be used. This comment
  * block is 80 chars long
  *
  * 1. Mark lines of code with numbers which are explained here.
  * This keeps your code clean, while also allowing detailed comments.
- *
- ******************************************************************************/
+ */
+
+/* Basic comment */
 
 .component {
     ... /* 1 */
@@ -232,24 +259,25 @@ Annotation of code inside a comment block, leaving a reference # next to the lin
 
 ```
 
-##### Less
+##### LESS
 
 ```less
 // =============================================================================
-// FILE TITLE / SECTION TITLE
+// Section comment block
 // =============================================================================
 
-
 // Comment Block / Sub-section
-// -----------------------------------------------------------------------------
+// ==========================================================================
+
+// Short description using Doxygen-style comment format
 //
 // Purpose: This will describe when this component should be used. This comment
 // block is 80 chars long
 //
 // 1. Mark lines of code with numbers which are explained here.
 // This keeps your code clean, while also allowing detailed comments.
-//
-// -----------------------------------------------------------------------------
+
+// Basic comment
 
 .component {
     ... // 1
@@ -257,24 +285,25 @@ Annotation of code inside a comment block, leaving a reference # next to the lin
 
 ```
 
-##### Sass
+##### SCSS
 
 ```less
 // =============================================================================
-// FILE TITLE / SECTION TITLE
+// Section comment block
 // =============================================================================
 
-
 // Comment Block / Sub-section
-// -----------------------------------------------------------------------------
+// ==========================================================================
+
+// Short description using Doxygen-style comment format
 //
 // Purpose: This will describe when this component should be used. This comment
 // block is 80 chars long
 //
 // 1. Mark lines of code with numbers which are explained here.
 // This keeps your code clean, while also allowing detailed comments.
-//
-// -----------------------------------------------------------------------------
+
+// Basic comment
 
 .component {
     ... // 1
@@ -290,13 +319,14 @@ Multiple CSS rules, having the same styles, should be comma separated but live o
 
 Braces should start one space from the last defined rule, and end on a new line after the last style has been defined.
 
-Style lines should always end with semi-colons, while a space must also always be added after ":". A space shoudl also
+Style lines should always end with semi-colons, while a space must also always be added after ":". A space should also
 be included after each comma in comma-separated property or function values.
 
 CSS blocks should be separated by a single clear line, while two blank lines should be added between sections and one
 between sub-sections.
 
 ```css
+/* DO */
 .content,
 .content-edit {
     padding: 0;
@@ -313,7 +343,7 @@ between sub-sections.
     ...
 }
 
-/* DON'T
+/* DON'T */
 .content, .content-edit{
     padding:0; margin:0;
     font-family: "Helvetica",sans-serif}
@@ -322,7 +352,7 @@ between sub-sections.
 }
 .newSection-edit {
     ...
-*/
+}
 ```
 
 #### Quotes
@@ -330,16 +360,17 @@ between sub-sections.
 Use of double quotes, when available, is mandatory. Quote attribute values in selectors.
 
 ```css
+/* DO */
 input[type="checkbox"] {
     background-image: url("/img/you.jpg");
     font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
 }
 
-/* DON'T
+/* DON'T */
 input[type=checkbox] {
     background-image: url(/img/you.jpg);
     font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, Arial;
-}*/
+}
 ```
 
 #### When declaring values
@@ -358,6 +389,7 @@ might want to inherit
   * Use shorthand if you can, be sensible
 
 ```css
+/* DO */
 .component {
     background-color: #ccc;
     color: #aaa;
@@ -368,7 +400,7 @@ might want to inherit
     top: 0;
 }
 
-/* DON'T
+/* DON'T */
 .component {
     background: #ccc;
     color: #AAAAAA;
@@ -377,24 +409,27 @@ might want to inherit
     height: 400px !important; //jerk #yolo FUUUUUU
     padding: 0px 20px 0px 20px;
     top: 0px;
-}*/
+}
 ```
 
 
 #### Declaration order
 
 There are a millions opinions and thoughts on logical ordering and grouping. Don't force someone to learn your opinion,
-ordering doesn't matter, consistency does. Just use the alphabet, _everyone_ knows it.
-* @extend _(for Sass)_
-* @include _(for Sass)_
-* Alphabetical, always.
+ordering doesn't matter, consistency does.
+* @extend _(for SCSS)_, :extend _(for LESS)_
+* @include _(for SCSS)_, .mixin-name() _(for LESS)_
+* Declarations:
+    * Alphabetical order
+    * Cluster related properties (e.g. positioning and box-model) together
 
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
+/*** ALPHABETICAL ***/
 .component {
     color: #aaa;
     left: 0;
@@ -405,23 +440,45 @@ ordering doesn't matter, consistency does. Just use the alphabet, _everyone_ kno
     width: 150px;
 }
 
-/* DON'T
+/*** CLUSTER ***/
 .component {
-    min-height: 400px;
-    left: 0;
+    /* Positioning */
+    position: absolute;
     top: 0;
-    width: 150px;
-    color: #aaa;
-    line-height: 1.25;
-    width: 200px;
-    padding: 0 20px;
-}*/
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    /* Box-model */
+    display: block;
+    float: right;
+    width: 100px;
+    height: 100px;
+
+    /* Typography */
+    font: normal 13px "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+
+    /* Visual */
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+    /* Misc */
+    opacity: 1;
+}
 ```
 
-##### Less
+##### LESS
 
-```css
+```less
+//** ALPHABETICAL ***//
 .component {
+    &:extend(.other-component);
+    .mixin();
     color: #aaa;
     left: 0;
     line-height: 1.25;
@@ -431,22 +488,45 @@ ordering doesn't matter, consistency does. Just use the alphabet, _everyone_ kno
     width: 150px;
 }
 
-/* DON'T
+//*** CLUSTER ***//
 .component {
-    min-height: 400px;
-    left: 0;
+    &:extend(.other-component);
+    .mixin();
+
+    // Positioning
+    position: absolute;
     top: 0;
-    width: 150px;
-    color: #aaa;
-    line-height: 1.25;
-    width: 200px;
-    padding: 0 20px;
-}*/
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    // Box-model
+    display: block;
+    float: right;
+    width: 100px;
+    height: 100px;
+
+    // Typography
+    font: normal 13px "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+
+    // Visual
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+    // Misc
+    opacity: 1;
+}
 ```
 
-##### Sass
+##### SCSS
 
 ```css
+//*** ALPHABETICAL ***//
 .component {
     @extend %a-placeholder;
     @include silly-links;
@@ -459,32 +539,53 @@ ordering doesn't matter, consistency does. Just use the alphabet, _everyone_ kno
     width: 150px;
 }
 
-/* DON'T
+//*** CLUSTER ***//
 .component {
-    min-height: 400px;
-    left: 0;
-    @include silly-links;
-    top: 0;
-    width: 150px;
-    color: #aaa;
     @extend %a-placeholder;
-    line-height: 1.25;
-    width: 200px;
-    padding: 0 20px;
-}*/
+    @include silly-links;
+
+    // Positioning
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    // Box-model
+    display: block;
+    float: right;
+    width: 100px;
+    height: 100px;
+
+    // Typography
+    font: normal 13px "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+
+    // Visual
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+    // Misc
+    opacity: 1;
+}
 ```
 
 <!-- --lang-ex-end -->
 
 ## Pseudo Elements and Classes
-Pseudo elements and classes are very different things, as is the syntax used to declare them. Declare pseudo
-_**classes**_ with a single colon. Declare pseudo _**elements**_ with a double colon.
+Pseudo elements and classes are very different things, as is the syntax used to declare them. Declare _**pseudo-
+classes**_ with a single colon. Declare _**pseudo-elements**_ with a double colon.
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
+/* DO */
 .component:focus {
     ...
 }
@@ -501,15 +602,16 @@ _**classes**_ with a single colon. Declare pseudo _**elements**_ with a double c
     ...
 }
 
-/* DON'T
+/* DON'T */
 .component:after {
     ...
-}*/
+}
 ```
 
-##### Less
+##### LESS
 
-```css
+```less
+// DO
 .component
     &:focus {
         ...
@@ -528,15 +630,16 @@ _**classes**_ with a single colon. Declare pseudo _**elements**_ with a double c
     }
 }
 
-/* DON'T
+// DON'T
 .component:after {
     ...
-}*/
+}
 ```
 
-##### Sass
+##### SCSS
 
 ```css
+/* DO */
 .component:focus {
     ...
 }
@@ -553,10 +656,10 @@ _**classes**_ with a single colon. Declare pseudo _**elements**_ with a double c
     ...
 }
 
-/* DON'T
+/* DON'T */
 .component:after {
     ...
-}*/
+}
 ```
 
 <!-- --lang-ex-end -->
