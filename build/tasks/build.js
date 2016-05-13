@@ -54,7 +54,7 @@ gulp.task('build-md', function() {
     .pipe(replace(/<!\-\- \-\-lang\-ex \-\->/gi, '<div class="lang-ex">'))
     .pipe(replace(/<!\-\- \-\-lang\-ex-end \-\->/gi, '</div>'))
     .pipe(replace(/<p><strong>Note<\/strong>/gi, '<p class="note"><strong>Note</strong>'))
-    .pipe(replace(/([\w\-]+).md/gi, function($1) { return '/#/' + $1.replace('.md', ''); }))
+    .pipe(replace(/([\w\-]+)\.md/gi, function($1) { return '/#/' + $1.replace('.md', ''); }))
     .pipe(changed(paths.output, {extension: '.html'}))
     .pipe(gulp.dest(paths.output));
 });

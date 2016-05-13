@@ -27,12 +27,12 @@ In all three languages, the use of classes for styling is encouraged, while the 
 
 ```css
 /* DO */
-.component {
+.Component {
     ...
 }
 
 /* DON'T */
-#component {
+#Component {
     ...
 }
 ```
@@ -41,12 +41,12 @@ In all three languages, the use of classes for styling is encouraged, while the 
 
 ```less
 // DO
-.component {
+.Component {
     ...
 }
 
 // DON'T
-#component {
+#Component {
     ...
 }
 ```
@@ -55,12 +55,12 @@ In all three languages, the use of classes for styling is encouraged, while the 
 
 ```css
 /* DO */
-.component {
+.Component {
     ...
 }
 
 /* DON'T */
-#component {
+#Component {
     ...
 }
 ```
@@ -80,7 +80,7 @@ h1 {
 }
 
 /* DON'T */
-.component h1 {
+.Component h1 {
     ...
 }
 ```
@@ -94,7 +94,7 @@ h1 {
 }
 
 // DON'T
-.component {
+.Component {
     h1 {
         ...
     }
@@ -110,7 +110,7 @@ h1 {
 }
 
 /* DON'T */
-.component {
+.Component {
     h1 {
         ...
     }
@@ -138,15 +138,15 @@ Overly specific selectors can also cause performance issues. Consider:
 ##### CSS
 
 ```css
-ul.user-list li span a:hover {
+ul.UserList li span a:hover {
     color: red;
 }
 ```
 
 ##### LESS
 
-```css
-ul.user-list {
+```less
+ul.UserList {
     li {
         span {
             a:hover {
@@ -159,8 +159,8 @@ ul.user-list {
 
 ##### SCSS
 
-```css
-ul.user-list {
+```less
+ul.UserList {
     li {
         span {
             a:hover {
@@ -184,7 +184,7 @@ If we know we want to give all `a` elements inside the `.user-list` red on hover
 ##### CSS
 
 ```css
-.user-list__link:hover {
+.UserList-link:hover {
     color: red;
 }
 ```
@@ -192,15 +192,15 @@ If we know we want to give all `a` elements inside the `.user-list` red on hover
 ##### LESS
 
 ```less
-.user-list__link:hover {
+.UserList-link:hover {
     color: red;
 }
 ```
 
 ##### SCSS
 
-```css
-.user-list__link:hover {
+```less
+.UserList-link:hover {
     color: red;
 }
 ```
@@ -215,7 +215,7 @@ Your selectors are fundamental to writing good CSS. To very briefly sum up the a
 * **Write selectors for reusability**, so that you can work more efficiently and reduce waste and repetition.
 * **Do not nest selectors unnecessarily**, because this will increase specificity and affect where else you can use your styles.
 * **Do not qualify selectors unnecessarily**, as this will impact the number of different elements you can apply styles to.
-* **Keep selectors as short as possible**, in order to keep specificity down and performance up.
+* Keep selectors as short as possible, in order to keep specificity down and performance up.
 
 Focusing on these points will keep your selectors a lot more sane and easy to work with on changing and long-running projects.
 
@@ -253,7 +253,7 @@ Annotation of code inside a comment block, leaving a reference # next to the lin
 
 /* Basic comment */
 
-.component {
+.Component {
     ... /* 1 */
 }
 
@@ -279,7 +279,7 @@ Annotation of code inside a comment block, leaving a reference # next to the lin
 
 // Basic comment
 
-.component {
+.Component {
     ... // 1
 }
 
@@ -305,7 +305,7 @@ Annotation of code inside a comment block, leaving a reference # next to the lin
 
 // Basic comment
 
-.component {
+.Component {
     ... // 1
 }
 
@@ -327,30 +327,30 @@ between sub-sections.
 
 ```css
 /* DO */
-.content,
-.content-edit {
+.Component,
+.OtherComponent {
     padding: 0;
     margin: 0;
     font-family: "Helvetica", sans-serif;
 }
 
 
-.newSection {
+.NewSection {
     ...
 }
 
-.newSection-edit {
+.NewSection-edit {
     ...
 }
 
 /* DON'T */
-.content, .content-edit{
+.Component, .Component-edit{
     padding:0; margin:0;
     font-family: "Helvetica",sans-serif}
-.newSection {
+.NewSection {
     ...
 }
-.newSection-edit {
+.NewSection-edit {
     ...
 }
 ```
@@ -390,7 +390,7 @@ might want to inherit
 
 ```css
 /* DO */
-.component {
+.Component {
     background-color: #ccc;
     color: #aaa;
     left: 0;
@@ -401,7 +401,7 @@ might want to inherit
 }
 
 /* DON'T */
-.component {
+.Component {
     background: #ccc;
     color: #AAAAAA;
     left: 0px;
@@ -430,7 +430,7 @@ ordering doesn't matter, consistency does.
 
 ```css
 /*** ALPHABETICAL ***/
-.component {
+.Component {
     color: #aaa;
     left: 0;
     line-height: 1.25;
@@ -441,7 +441,7 @@ ordering doesn't matter, consistency does.
 }
 
 /*** CLUSTER ***/
-.component {
+.Component {
     /* Positioning */
     position: absolute;
     top: 0;
@@ -476,8 +476,8 @@ ordering doesn't matter, consistency does.
 
 ```less
 //** ALPHABETICAL ***//
-.component {
-    &:extend(.other-component);
+.Component {
+    &:extend(.OtherComponent);
     .mixin();
     color: #aaa;
     left: 0;
@@ -489,8 +489,8 @@ ordering doesn't matter, consistency does.
 }
 
 //*** CLUSTER ***//
-.component {
-    &:extend(.other-component);
+.Component {
+    &:extend(.OtherComponent);
     .mixin();
 
     // Positioning
@@ -527,7 +527,7 @@ ordering doesn't matter, consistency does.
 
 ```css
 //*** ALPHABETICAL ***//
-.component {
+.Component {
     @extend %a-placeholder;
     @include silly-links;
     color: #aaa;
@@ -540,7 +540,7 @@ ordering doesn't matter, consistency does.
 }
 
 //*** CLUSTER ***//
-.component {
+.Component {
     @extend %a-placeholder;
     @include silly-links;
 
@@ -586,24 +586,24 @@ classes**_ with a single colon. Declare _**pseudo-elements**_ with a double colo
 
 ```css
 /* DO */
-.component:focus {
+.Component:focus {
     ...
 }
 
-.component:hover {
+.Component:hover {
     ...
 }
 
-.component::before {
+.Component::before {
     ...
 }
 
-.component::after {
+.Component::after {
     ...
 }
 
 /* DON'T */
-.component:after {
+.Component:after {
     ...
 }
 ```
@@ -612,7 +612,7 @@ classes**_ with a single colon. Declare _**pseudo-elements**_ with a double colo
 
 ```less
 // DO
-.component
+.Component
     &:focus {
         ...
     }
@@ -631,7 +631,7 @@ classes**_ with a single colon. Declare _**pseudo-elements**_ with a double colo
 }
 
 // DON'T
-.component:after {
+.Component:after {
     ...
 }
 ```
@@ -640,7 +640,7 @@ classes**_ with a single colon. Declare _**pseudo-elements**_ with a double colo
 
 ```less
 /* DO */
-.component
+.Component
     &:focus {
         ...
     }
@@ -659,7 +659,7 @@ classes**_ with a single colon. Declare _**pseudo-elements**_ with a double colo
 }
 
 /* DON'T */
-.component:after {
+.Component:after {
     ...
 }
 ```
@@ -702,40 +702,40 @@ very searchable
 
 ```css
 /* DO */
-.panel {
+.Panel {
     position: relative;
 }
 
-.panel--sidebar {
+.Panel--sidebar {
     z-index: 10;
 }
 
-.panel__item {
+.Panel-item {
     cursor: pointer;
 }
 
-.panel__item--sidebar {
+.Panel-item--sidebar {
     color: #AEAEAE;
 }
 
-.panel.has-smallFont {
+.Panel.has-smallFont {
     font-size: 13px;
 }
 
 /* DON'T */
-body .wrapper .panel {
+body .wrapper .Panel {
     position: relative;
 }
 
-body .wrapper .sidebar .panel {
+body .wrapper .sidebar .Panel {
     z-index: 10;
 }
 
-body .wrapper .panel .item {
+body .wrapper .Panel .item {
     cursor: pointer;
 }
 
-body .wrapper .sidebar .panel .item {
+body .wrapper .sidebar .Panel .item {
     color: #AEAEAE;
 }
 ```
@@ -744,18 +744,18 @@ body .wrapper .sidebar .panel .item {
 
 ```less
 // DO
-.panel {
+.Panel {
     position: relative;
 
     &--sidebar {
         z-index: 10;
     }
 
-    &__item {
+    &-item {
         cursor: pointer;
     }
 
-    &__item--sidebar {
+    &-item--sidebar {
         color: #AEAEAE;
     }
 
@@ -767,7 +767,7 @@ body .wrapper .sidebar .panel .item {
 // DON'T
 body {
     .wrapper {
-        .panel {
+        .Panel {
             position: relative;
 
             .item {
@@ -776,7 +776,7 @@ body {
         }
 
         .sidebar {
-            .panel {
+            .Panel {
                 z-index: 10;
 
                 .item {
@@ -792,18 +792,18 @@ body {
 
 ```less
 // DO
-.panel {
+.Panel {
     position: relative;
 
     &--sidebar {
         z-index: 10;
     }
 
-    &__item {
+    &-item {
         cursor: pointer;
     }
 
-    &__item--sidebar {
+    &-item--sidebar {
         color: #AEAEAE;
     }
 
@@ -815,7 +815,7 @@ body {
 // DON'T
 body {
     .wrapper {
-        .panel {
+        .Panel {
             position: relative;
 
             .item {
@@ -824,7 +824,7 @@ body {
         }
 
         .sidebar {
-            .panel {
+            .Panel {
                 z-index: 10;
 
                 .item {
@@ -833,7 +833,7 @@ body {
             }
         }
     }
-} 
+}
 ```
 
 <!-- --lang-ex-end -->
@@ -853,12 +853,12 @@ Make use of placeholder selectors to separate repeated local styles
     background-color: #eee;
 }
 
-.component1 {
+.Component1 {
     @extend %placeholderSelector;
     color: red;
 }
 
-.component2 {
+.Component2 {
     @extend %placeholderSelector;
     color: blue;
 }
@@ -866,9 +866,9 @@ Make use of placeholder selectors to separate repeated local styles
 
 ## Components
 
-Syntax: `<component-name>[--modifier-name|__descendant-name]`
+Syntax: `[<namespace>-]<ComponentName>[--modifierName|-descendantName]`
 
-This component syntax is mainly taken from [BEM](http://getbem.com/naming/) with minor modifications.
+This component syntax is mainly taken from [Suit CSS](http://suitcss.github.io/) with minor modifications.
 
 Component driven development offers several benefits when reading and writing HTML and CSS:
 
@@ -882,31 +882,61 @@ You can think of components as custom elements that enclose specific semantics, 
 
 The primary architectural division is between components and utilities:
 
-* component-name (eg. `.dropdown` or `.button-group`)
-* component-name--modifier-name (eg. `.dropdown--drop-up` or `.button--primary`)
-* component-name__descendant-name (eg. `.dropdown__item`)
-* component-name.is-state-of-component (eg. `.dropdown.is-active`)
-* u-utility-name (eg. `.u-textTruncate`)
-* `[<namespace>-]<componentName>[--modifierName|-descendentName]`
+* `ComponentName` (eg. `.Dropdown` or `.ButtonGroup`)
+* `ComponentName--modifierName` (eg. `.Dropdown--dropUp` or `.Button--primary`)
+* `ComponentName-descendantName` (eg. `.Dropdown-item`)
+* `ComponentName.is-stateOfComponent` (eg. `.Dropdown.is-active`)
+* `u-[sm-|md-|lg-]utilityName` (eg. `.u-textTruncate`, `.u-sm-floatLeft`)
 
 #### ComponentName
 
-The component's name must be written in camel case. Use class names that are as short as possible but as long as necessary.
+The component's name must be written in pascal case. Use class names that are as short as possible but as long as necessary.
 
-* Example: `.nav` not `.navigation`
-* Example: `.button` not `.btn`
+* Example: `.Nav` not `.navigation`
+* Example: `.Button` not `.btn`
 
 ```css
-.myComponent { /* ... */ }
+.MyComponent { /* ... */ }
 ```
 
 ```html
-<article class="myComponent">
+<article class="MyComponent">
   ...
 </article>
 ```
 
-#### componentName--modifierName
+If necessary, components can be prefixed with a namespace. For example, you may wish to avoid the potential for collisions between libraries and your custom components by prefixing all your components with a namespace.
+
+<!-- --lang-ex -->
+
+##### CSS
+
+```css
+.twt-Button { /* … */ }
+.twt-Tabs { /* … */ }
+```
+
+##### LESS
+
+```less
+.twt {
+    &-Button { /* … */ }
+    &-Tabs { /* … */ }
+}
+```
+
+##### SCSS
+
+```less
+.twt {
+    &-Button { /* … */ }
+    &-Tabs { /* … */ }
+}
+```
+
+<!-- --lang-ex-end -->
+
+#### ComponentName--modifierName
 
 A component modifier is a class that modifies the presentation of the base component in some form. Modifier names must
 be written in camel case and be separated from the component name by two hyphens. The class should be included
@@ -914,24 +944,24 @@ in the HTML _in addition_ to the base component class.
 
 <!-- --lang-ex -->
 
-##### Css
+##### CSS
 
 ```css
 /* Core button */
-.button {
+.Button {
     ...
 }
 
-.button--primary {
+.Button--primary {
     ...
 }
 ```
 
-##### Less
+##### LESS
 
 ```less
 /* Core button */
-.button {
+.Button {
     ...
 
     &--primary {
@@ -941,11 +971,11 @@ in the HTML _in addition_ to the base component class.
 
 ```
 
-##### Sass
+##### SCSS
 
 ```less
 /* Core button */
-.button {
+.Button {
     ...
 
     &--primary {
@@ -957,107 +987,177 @@ in the HTML _in addition_ to the base component class.
 <!-- --lang-ex-end -->
 
 ```html
-<button class="button button--primary">...</button>
+<button class="Button Button--primary">...</button>
 ```
 
-#### componentName__descendantName
+#### ComponentName__descendantName
 
 A component descendant is a class that is attached to a descendant node of a component. It's responsible for applying
 presentation directly to the descendant on behalf of a particular component. Descendant names must be written in camel
 case.
 
 ```html
-<article class="tweet">
-  <header class="tweet-header">
-    <img class="tweet-avatar" src="{$src}" alt="{$alt}">
+<article class="Tweet">
+  <header class="Tweet-header">
+    <img class="Tweet-avatar" src="{$src}" alt="{$alt}">
     ...
   </header>
-  <div class="tweet-body">
+  <div class="Tweet-body">
     ...
   </div>
 </article>
 ```
 
-You might notice that `tweet-avatar`, despite being a descendant of `tweet-header` does not have the class of
-`tweet-header-avatar`. Why? Because it doesn't necessarily **have** to live there. It could be adjacent to
+You might notice that `Tweet-avatar`, despite being a descendant of `Tweet-header` does not have the class of
+`Tweet-header-avatar`. Why? Because it doesn't necessarily **have** to live there. It could be adjacent to
 `tweet-header` and function the same way. Therefore, you should **only** prepend a descendant with its parent if must
 live there. Strive to keep class names as short as possible, but as long as necessary.
 
-When building a component, you'll often run into the situation where you have a list, group or simply require a container
-for some descendants. In this case, it's much better to follow a pattern of pluralising the container and having each
-descendant be singular. This keeps the relationship clear between descendant levels.
+When building a component, you'll often run into the situation where you have a list, group or simply require a container for some descendants. In this case, it's much better to follow a pattern of pluralising the container and having each descendant be singular. This keeps the relationship clear between descendant levels.
 
 ```html
-<nav class="pagination">
-  <ul class="pagination-list">
-    <li class="pagination-listItem">
+<nav class="Pagination">
+  <ul class="Pagination-list">
+    <li class="Pagination-listItem">
       ...
     </li>
   </ul>
 </nav>
 
-<ul class="breadcrumbs">
-  <li class="breadcrumb">
-    <a class="breadcrumb-label" href="#"></a>
+<ul class="Breadcrumbs">
+  <li class="Breadcrumb">
+    <a class="Breadcrumb-label" href="#"></a>
   </li>
 </ul>
 
-/* DON'T DO
+<!-- DON'T DO
 Avoid verbose descendant names
-*/
-<nav class="pagination">
-  <ul class="pagination-pages">
-    <li class="pagination-pages-page">
+-->
+<nav class="Pagination">
+  <ul class="Pagination-pages">
+    <li class="Pagination-pages-page">
       ...
     </li>
   </ul>
 </nav>
 
-  <ul class="breadcrumbs">
-    <li class="breadcrumbs-breadcrumb">
-      <a class="breadcrumbs-breadcrumb-label" href="#"></a>
+  <ul class="Breadcrumbs">
+    <li class="Breadcrumbs-breadcrumb">
+      <a class="Breadcrumbs-breadcrumb-label" href="#"></a>
     </li>
   </ul>
 ```
 
-#### componentName.is-stateOfComponent
+#### ComponentName.is-stateOfComponent
 
-Use `is-stateName` for state-based modifications of components. The state name must be Camel case. **Never style these
-classes directly; they should always be used as an adjoining class.**
+Use `is-stateName` for state-based modifications of components. The state name must be Camel case. States can be global (affecting all components that have the state attached to them) or particular to a specific component (affecting just the component they are attached to). **Never style particular classes directly; they should always be used as an adjoining class to the component they serve. Never use !important in these states. Only global states are allowed to use !important in they declaration to enforce overriding the styles.**
 
 JS can add/remove these classes. This means that the same state names can be used in multiple contexts, but every
 component must define its own styles for the state (as they are scoped to the component).
 
+
 ```html
-<article class="tweet is-expanded">
+<article class="Tweet is-expanded">
   ...
 </article>
 ```
 
+<!-- --lang-ex -->
+
+##### CSS
+
 ```css
-.tweet {
+.Tweet {
     ...
 }
 
-.tweet.is-expanded {
+.Tweet.is-expanded {
     ...
+}
+
+.is-hidden {
+    display: none !important;
 }
 ```
 
+##### LESS
+
+```less
+.Tweet {
+    ...
+
+    &.is-expanded {
+        ...
+    }
+}
+
+.is-hidden {
+    display: none !important;
+}
+```
+
+##### SCSS
+
+```less
+.Tweet {
+    ...
+
+    &.is-expanded {
+        ...
+    }
+}
+
+.is-hidden {
+    display: none !important;
+}
+```
+<!-- --lang-ex-end -->
+
 ## Utilities
 
-Utility classes are low-level structural and positional traits. Utilities can be applied directly to any element;
-multiple utilities can be used together; and utilities can be used alongside component classes.
+Utility classes are low-level structural and positional traits. Utilities can be applied directly to any element. Multiple utilities can be used together and utilities can be used alongside component classes.
 
-Utility classes should be used sparingly, lean towards component level styling to make for as reusable HTML patterns as
-possible.
+Utility classes should be used sparingly, lean towards component level styling to make for as reusable HTML patterns as possible.
 
+Utilities must use a camel case name, prefixed with a `u-` namespace.
 
-#### u-utilityName
+```html
+<div class="Tweet u-cf">
+  <a class="u-sizeFit" href="{{url}}">
+    <img class="u-block" src="{{src}}" alt="">
+  </a>
+  <p class="Tweet-text u-sizeFill u-textBreak">
+    …
+  </p>
+</div>
+```
 
-Syntax: `u-<utilityName>`
+Utilities are grouped by type. The names of utilities with similar concerns usually start with a common string, e.g., `u-textCenter`, `u-textTruncate`; `u-linkClean`, `u-linkBlock`.
 
-Utilities must use a camel case name, prefixed with a `u` namespace.
+Any classes with terse names, e.g., `u-cf` and `u-nbfc`, are either particularly abstract or very commonly used utilities with otherwise excessively long names. For example, the `u-cf` utility is used to "contain floats" without clipping any overflow (also known as "clearfix"), while the `u-nbfc` utility is used to create a "new block formatting context".
+
+#### Why to use utilities
+
+Certain CSS properties and patterns are used frequently. For example: floats, containing floats, vertical alignment, text truncation. Relying on utilities can help to reduce repetition and provide consistent implementations.
+
+```html
+<div class="u-cf">
+    <p class="u-textTruncate">{{text}}</p>
+    <img class="u-floatLeft" src="{{src}}" alt="">
+    <img class="u-floatLeft" src="{{src}}" alt="">
+    <img class="u-floatLeft" src="{{src}}" alt="">
+</div>
+```
+
+Some utilities apply only a single declaration, so why not use inline styles? Even here, small utilities are preferred because their values can be preprocessed (e.g., generating RTL style sheets) or adjusted to viewport dimensions. The scope of styles not contained in components can be tightly defined, and code is a little easier to read.
+
+#### Responsive utilities
+
+Certain utilities have responsive variants using the patterns: `u-sm-<utilityName>`, `u-md-<utilityName>` and `u-lg-<utilityName>` for small, medium, and large Media Query breakpoints.
+
+#### Modifiying utilities
+
+Utilities **should not** be edited while in use, unless it is to fix a bug. Modifications to utilities cascade throughout the application and should be made with extreme care.
 
 ## Variables and Mixins
 
@@ -1065,7 +1165,7 @@ Variables and Mixins should follow similar naming conventions.
 
 #### Variables
 
-Syntax: `[<componentName>[--modifierName][-descendentName]-]<propertyName>-<variablename>[--<modifierName>]`
+Syntax: `[<ComponentName>[--modifierName][-descendentName]-]<propertyName>-<variablename>[--<modifierName>]`
 
 Variables should be named as such, things that can change over time.
 
@@ -1112,190 +1212,62 @@ Micro apps must base their local variables on the global variables primarily.
 You may add your own specific variables as required if no global variable is available.
 
 For portability, your component should declare it's own set of variables inside it's own settings partial, inside the
-settings folder. Even if at the time, your
-component only uses globally available variables from Bigcommerce's Library, you should reassign the global variable to
-a local one.
-If your component styles change from those global variables at all in the future, less of your SCSS will have to change,
-as you only change the local variable value.
+settings folder.
+If your component styles change from those global variables at all in the future, less of your styles will have to change, as you only change the local variable value.
 
 If your variable is scoped to your component, it should be namespaced as such following our component naming conventions.
 
 <!-- --lang-ex -->
 
-##### Less
+##### LESS
 
-```css
-$componentName-fontSize:                                fontSize("small");
-$componentName-decendantName-backgroundColor:           #ccc;
-$componentName-decendantName-marginBottom:              fontSize("large");
-$componentName-decendantName--active-backgroundColor:   #000;
+```less
+$ComponentName-fontSize:                                fontSize("small");
+$ComponentName-descendantName-backgroundColor:           #ccc;
+$ComponentName-descendantName-marginBottom:              fontSize("large");
+$ComponentName-descendantName--active-backgroundColor:   #000;
 ```
 
-```css
-.componentName {
-    font-size: $componentName-fontSize;
+```less
+.ComponentName {
+    font-size: $ComponentName-fontSize;
 }
 
-.componentName-decendantName {
-    background-color: $componentName-decendantName-backgroundColor;
-    margin-bottom: $componentName-decendantName-marginBottom;
+.ComponentName-descendantName {
+    background-color: $ComponentName-descendantName-backgroundColor;
+    margin-bottom: $ComponentName-descendantName-marginBottom;
 }
 
-.componentName-decendantName--active {
-    background-color: $componentName-decendantName--active-backgroundColor;
+.ComponentName-descendantName--active {
+    background-color: $ComponentName-descendantName--active-backgroundColor;
 }
 ```
 
-##### Sass
+##### SCSS
 
-```css
-$componentName-fontSize:                                fontSize("small");
-$componentName-decendantName-backgroundColor:           #ccc;
-$componentName-decendantName-marginBottom:              fontSize("large");
-$componentName-decendantName--active-backgroundColor:   #000;
+```less
+$ComponentName-fontSize:                                fontSize("small");
+$ComponentName-descendantName-backgroundColor:           #ccc;
+$ComponentName-descendantName-marginBottom:              fontSize("large");
+$ComponentName-descendantName--active-backgroundColor:   #000;
 ```
 
-```css
-.componentName {
-    font-size: $componentName-fontSize;
+```less
+.ComponentName {
+    font-size: $ComponentName-fontSize;
 }
 
-.componentName-decendantName {
-    background-color: $componentName-decendantName-backgroundColor;
-    margin-bottom: $componentName-decendantName-marginBottom;
+.ComponentName-descendantName {
+    background-color: $ComponentName-descendantName-backgroundColor;
+    margin-bottom: $ComponentName-descendantName-marginBottom;
 }
 
-.componentName-decendantName--active {
-    background-color: $componentName-decendantName--active-backgroundColor;
+.ComponentName-descendantName--active {
+    background-color: $ComponentName-descendantName--active-backgroundColor;
 }
 ```
 
 <!-- --lang-ex-end -->
-
-#### Maps, maps are cool
-
-Variable maps with a simple getter mixin, can help simplify your variable names when calling them, and help better group
-variables together using their relationship. [More info](http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/)
-
-<!-- --lang-ex -->
-
-##### Sass
-
-```less
-// Setting variables and mixin
-// -----------------------------------------------------------------------------
-
-$colors: (
-    primary: (
-        base: #00abc9,
-        light: #daf1f6,
-        dark: #12799a
-    ),
-    secondary: (
-        base: #424d55,
-        light: #ccc,
-        lightest: #efefef,
-        dark: #404247
-    ),
-    success: (
-        base: #bbd33e,
-        light: #eaf0c6
-    )
-);
-
-@function color($color, $tone: "base") {
-    @return map-get(map-get($colors, $color), $tone);
-}
-```
-
-
-```less
-// Usage
-// -----------------------------------------------------------------------------
-
-body {
-    color: color("secondary");
-}
-
-h1,
-h2,
-h3 {
-    color: color("secondary", "dark");
-}
-
-.alert {
-    background-color: color("primary", "light");
-}
-
-.alert-close {
-      color: color("primary");
-    }
-
-.alert--success {
-    background-color: color("success", "light");
-
-    > .alert-close {
-        color: color("success");
-    }
-}
-```
-
-<!-- --lang-ex-end -->
-
-**Every variable used in the core architecture must be based off the global variables.**
-
-#### Colors
-
-Please only use the globally available colors from the Bigcommerce Library. Your Micro app or component shouldn't really
-have a need for a *new* color. This creates consistency and sanity.
-
-Avoid using the `darken(color, %)` and `lighten(color, %)` mixins for similar reasons.
-
-Use the color maps available to you:
-
-```css
-.component {
-    background-color: color("brand", "primary");
-}
-```
-
-#### z-index scale
-
-Please use the z-index scale defined in the Bigcommerce Library under global settings.
-
-`zIndex("lowest")` or `zIndex("high")` for example.
-
-#### Font Weight
-
-Apps should share a strict set of font weights. Never declare a new font weight, only use the available font settings
-from the Bigcommerce Library. e.g.
-
-```css
-fontWeight("light");
-fontWeight("semibold");
-```
-#### Line Height
-
-The Bigcommerce Library also provides a line height scale. This should be used for blocks of text. e.g.
-
-```css
-lineHeight("smallest");
-lineHeight("large");
-```
-
-Alternatively, when using line height to vertically centre a single line of text, be sure to set the line height to the
-height of the container - 1.
-
-```CSS
-.button {
-  height: remCalc(50px);
-  line-height: remCalc(49px);
-}
-```
-
-#### Animations
-
-Animation delays, durations and easing should be taken from the global framework
 
 #### Mixins
 
@@ -1307,24 +1279,24 @@ utility, it will need to match the utility name (including `u` namespacing).
 
 ## Polyfills
 
-At Bigcommerce, we try not to replicate CSS polyfills that auto-prefixer can supply in a Grunt or Gulp task. This keeps
-our SCSS code base lean and future proof.
+Don't replicate CSS polyfills that Autoprefixer can supply in a Grunt or Gulp task. This keeps the code base lean and future proof.
 
 ```css
 .button {
     border-radius: 3px;
 }
-
+```
+```less
 /* DON'T Add vendor prefixes at all. */
-
 .button {
     @include border-radius(3px);
 }
-
+```
+```css
 .button {
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+        -ms-border-radius: 3px;
+         -o-border-radius: 3px;
+            border-radius: 3px;
 }
 ```
