@@ -1,15 +1,41 @@
-# aurelia-skeleton-navigation
+# Coding Standards
 
-[![ZenHub](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
-[![Join the chat at https://gitter.im/aurelia/discuss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aurelia/discuss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## Overview
 
-This library is part of the [Aurelia](http://www.aurelia.io/) platform and provides production quality skeletons for people ready to build apps. There are various skeleton options available, depending on your platform and tooling choices.
+This project is an attempt to provide guidelines for code formatting and documentation to individuals, teams and
+companies all over the world.
 
-> To keep up to date on [Aurelia](http://www.aurelia.io/), please visit and subscribe to [the official blog](http://blog.durandal.io/). If you have questions, we invite you to [join us on Gitter](https://gitter.im/aurelia/discuss). If you would like to have deeper insight into our development process, please install the [ZenHub](https://zenhub.io) Chrome Extension and visit any of our repository's boards. You can get an overview of all Aurelia work by visiting [the framework board](https://github.com/aurelia/framework#boards).
+The project comes under two forms: Markdown and HTML
 
-## Available skeletons
+### Markdown
 
-* **skeleton-es2016** - This is a standard front-end project setup configured to use the Babel transpiler so that you can write your application in ES 2016 code. It should work well with any standard text editor.
-* **skeleton-typescript** - This is a standard front-end setup configured to use the TypeScript transpiler so that you can write your application using TypeScript. It should work well with any standard text editor, however it has been specially configured to work well with VSCode and Atom, including full TypeScript intellisense for app, unit test and e2e test code.
-* **skeleton-typescript-asp.net5** - This is an ASP.NET 5 web project pre-configured for building a .NET backend and an Aurelia front-end. It is configured for full TypeScript support, similar to the standard skeleton-typescript option.
-* **skeleton-es2016-asp.net5** - This is an ASP.NET 5 web project pre-configured for building a .NET backend and an Aurelia front-end. It is configured for full ES 2016 support with Babel, similar to the standard skeleton-es2016 option.
+Please see [doc](doc/overview.md) folder.
+
+### HTML
+
+For running this project as a website you will need [gulp](http://gulpjs.com/), [jspm](http://jspm.io/) and, obviously,
+[nodejs](https://nodejs.org/en/).
+
+```bash
+git clone https://github.com/dragoscirjan/coding-standards.git coding-standards
+cd coding-standards
+npm install
+jspm install
+gulp watch
+```
+
+After running the section above in CLI, just launch [http://localhost:9000](http://localhost:9000) in your browser.
+
+> **Note**: If you're using the 9000 port, gulp watch may choose to use another port.
+
+## Issues
+
+Please report any problem to this project's [issues section](/dragoscirjan/coding-standards/issues).
+
+## Collaborating
+
+If you feel this documentation is incomplete, please feel free to fork it, extend it and create a pull request.
+
+## License
+
+Project's license is [MIT](LICENSE). Feel free to use it, complete it, alter it as you want.
