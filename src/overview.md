@@ -69,3 +69,5 @@ easily maintained.
 * [SBA ColdFusion Programming Standards](https://www.scribd.com/doc/17091861/Cold-Fusion-Coding-Standards)
 * [CSS Pro Tips](https://github.com/AllThingsSmitty/css-protips) by [AllThingsSmitty](https://github.com/AllThingsSmitty)
 * [Sass Style Guide](https://github.com/bigcommerce/sass-style-guide) by [BigCommerce](https://github.com/bigcommerce/sass-style-guide)
+* [BEM](https://en.bem.info/methodology/)
+* [Style tools for UI components](https://suitcss.github.io/)
