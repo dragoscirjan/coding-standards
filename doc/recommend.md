@@ -60,232 +60,311 @@ git clone https://github.com/dragoscirjan/mylin2.git /opt/mylin2 && \
 
 ### Vim
 
-## IDE Plugins
+## IDE Settings &amp; Plugins
 
 ## Tools
 
+### Atom
+
 <!-- --lang-ex -->
 
-##### Project Manager
+##### General Settings
 
-###### Atom
+###### Coding
 
 ```bash
-# https://github.com/danielbrodin/atom-project-manager
+# https://atom.io/packages/atom-beautify
+apm install atom-beautify
+# https://atom.io/packages/docblockr
+apm install docblockr
+
+apm install autocomplete-plus
+
+apm install linter
+```
+
+###### General
+
+```bash
+
+apm install editorconfig
+
 apm install project-manager
 ```
 
-###### Visual Studio Code
-
-```bash  
-# https://github.com/alefragnani/vscode-project-manager/
-ext install project-manager
-```
-
-###### Sublime Text
-
-* [Sublime Text Project Manager](https://github.com/randy3k/Project-Manager)
-
-###### Vim
-
-* [vim Project Manager](http://www.vim.org/scripts/script.php?script_id=69)
-
-##### Synchronize Settings
-
-###### Atom
-
 ```bash
-# https://github.com/atom-community/sync-settings
+
 apm install sync-settings
 ```
 
-###### Visual Studio Code
-
-```bash  
-# https://github.com/shanalikhan/code-settings-sync
-ext install code-settings-sync
-```
-<!-- --lang-ex-end -->
-
-
-## Highlighters &amp; Linters
-
-<!-- --lang-ex -->
-
-##### Ansible
-
-###### Atom
+###### Git
 
 ```bash
-# https://github.com/haad/language-Ansible
-apm install language-ansible
-# https://atom.io/packages/linter-ansible-linting
-apm install atom-lint
-apm install linter
-apm install linter-ansible-linting
+# https://atom.io/packages/git-control
+apm install git-control
 ```
 
-##### C/C++/C&#35;
-
-###### C
-
-```c
-// code here
+```
+apm install merge-conflicts
 ```
 
-###### C++
+###### UI
 
-```cpp
-// code here
-```
-
-###### C&#35;
-
-```csharp
-// code here
+```bash
+# https://atom.io/packages/atom-material-syntax
+apm install atom-material-syntax 
+# https://atom.io/packages/atom-material-numix-syntax
+apm install atom-material-numix-syntax
+# https://atom.io/packages/atom-material-ui
+apm install atom-material-ui
+# https://atom.io/packages/file-icons
+apm install file-icons
+# or https://atom.io/packages/seti-icons
+# apm install seti-icons 
+# https://atom.io/packages/expose
+apm install expose
 ```
 
 ##### ColdFusion
 
-###### CFML
+```bash
+# http://atom.io/packages/language-cfml
+apm install language-cfml
 
-```xml
-<!--- code here --->
-```
-###### CFScript
+# https://atom.io/packages/language-lucee 
+apm install language-lucee
 
-```javascript
-// code here
-```
-
-#####  Dart
-
-```dart
-// code here
+# https://atom.io/packages/linter-cflint
+apm install linter-cflint
 ```
 
-##### JavaScript
+...
 
-###### ECMAScript5 and lower
+##### JavaScript &amp; HTML
 
-```javascript
-// code here
+```bash
+#
+# ES5+
+#
+
+# http://atom.io/packages/atom-ternjs
+apm install atom-ternjs
+
+# https://atom.io/packages/gulp-control
+# Make sure change shortcat from ctrl+alt+o to ctrl+alt+shift+o 
+apm install gulp-control
+
+# https://atom.io/packages/autocomplete-modules
+apm install autocomplete-modules
+
+# http://atom.io/packages/langauge-babel
+apm install language-babel
+# http://atom.io/packages/linter-eslint
+apm install linter-eslint
 ```
 
-###### ECMAScript6
+```bash
+#
+# Coffee
+#
 
-```javascript
-// code here
+# http://atom.io/packages/language-coffee-script
+apm install language-coffee-script
+# http://atom.io/packages/linter-coffeelint
+apm install linter-coffeelint
 ```
 
-###### CoffeeScript
-```coffeescript
-# code here
+```bash
+#
+# TypeScript
+#
+
+# http://atom.io/packages/atom-typescript
+apm install atom-typescript
 ```
 
-###### PureScript
-
-```purescript
-// code here
+```bash
+#
 ```
 
-###### TypeScript
+```bash
+#
+# HTML
+#
 
-```typescript
-// code here
+# https://atom.io/packages/emmet
+apm install emmet
+# https://atom.io/packages/autocomplete-html
+apm install autocomplete-html
+# https://atom.io/packages/language-html
+apm install language-html
+```	
+
+```bash
+#
+# Jade
+#
+
+# https://atom.io/packages/atom-jade
+apm install atom-jade
+# https://atom.io/packages/html2jade-plus
+apm install html2jade-plus
+# https://atom.io/packages/linter-jade
+apm install linter-jade
+# https://atom.io/packages/jade-beautify
+apm install jade-beautify
+```	
+
+```bash
+#
+# Css
+#
+
+# https://atom.io/packages/language-css
+apm install language-css
+# https://atom.io/packages/autocomplete-css
+apm install autocomplete-css
+# https://atom.io/packages/linter-csslint
+apm install linter-csslint
+# https://atom.io/packages/pigments
+apm install pigments
+# CSS COMB ?
+# https://atom.io/packages/css-spy
+apm install css-spy # (new suggestion)
+```	
+
+```bash
+#
+# Less
+#
+
+# https://atom.io/packages/language-less
+apm install language-less
+# https://atom.io/packages/linter-less
+apm install linter-less
 ```
 
-##### Java
-
-```java
-// code here
-```
-
-#####  Perl
-
-```perl
-# code here
-```
+...
 
 ##### PHP
 
-```php
-// code here
-```
-
-##### Ruby
-
-```ruby
-// code here
-```
+...
 
 ##### Python
 
-```python
-# code here
 ```
-
-##### CSS
-
-```css
-/* your code here */
-```
-
-##### HTML
-
-```html
-<!-- your code here -->
+# https://atom.io/packages/atom-jinja2
+apm install atom-jinja2
 ```
 
 <!-- --lang-ex-end -->
 
-<!--| :----------- | :-------------------------- | :-------------------- | :------------ | :------ | :------- | :-- |
-| C/C++/Obj-C  | atom-lint[101]              | -                     | -             |         |          |     |
-| CSS          | atom-lint, *-ccslint        | -                     | -             |         |          |     |
-| - LESS       | *-less                      | -                     | WebStorm      |         |          |     |
-| - SASS       | *-9e-sass                   | -                     | WebStorm      |         |          |     |
-| - SCSS       | atom-lint, *-scss-lint      | -                     | WebStorm      |         |          |     |
-| ColdFusion   | -                           | -                     | -             |         |          |     |
-| HTML         | -                           | -                     | -             |         |          |     |
-|  - Jade      | -                           | -                     | -             |         |          |     |
-|  - Haml      | *-haml                      | -                     | -             |         |          |     |
-|  - Jinja     | -                           | -                     | -             |         |          |     |
-| Java         | *-javac                     | -                     | IntelliJ IDEA |         |          |     |
-| JavaScript   | atom-lint                   | -                     | native        |         |          |     |
-|  - ES6[901]  | *-eslint[102]               | *-jshint[2], babel[3] | [301]         |         |          |     |
-|  - Coffee    | atom-lint, coffee-lint      | *-coffeelint          | -             |         |          |     |
-| PHP          | *-php                       | -                     | PhpStorm      |         |          |     |
-| Python       | atom-lint                   | -                     | PyCharm       |         |          |     |
-| Ruby         | atom-lint                   | -                     | RubyMine      |         |          |     |
-| XML          |                             |                       |               |         |          |     |
-|              | language-xml                | native                | native        |         |          |     |
-|              | *-xmllint                   | *-xmllint | native    |               |         |          |     |
-| YAML         | *-js-yaml[104]              | -                     | native        |         |          |     |
-| Comments     | *-js-yaml                   | docblockr             | native        |         |          |     |-->
+### Brackets
 
-### Notes: (Plugins) ###
- 
-2. For Sublime, all linters seem to start with 'SublimeLinter'
-3. For more about Babel Sublime, read here: https://github.com/babel/babel-sublime
-103. [103] linter-js-yaml depens on [yaml-js](https://github.com/connec/yaml-js) ``
+...
+
+### IntelliJ IDEA
+
+...
+
+### Sublime Text
+
+...
+
+### Vim
+
+...
+
+### Visual Studio Code
+
+<!-- --lang-ex -->
+
+##### General Settings
+
+###### Coding
+
+```
+apm install autocomplete-plus
+```
+
+```
+apm install linter
+```
+
+###### General
+
+```
+apm install docblockr
+```
+
+```
+apm install project-manager
+```
+
+```
+ext install code-settings-sync
+```
+
+###### Git
+
+```
+apm install git-control
+```
+
+```
+apm install merge-conflicts
+```
+
+###### UI
 
 
-#### ECMA Script 6 ####
+##### ColdFusion
 
-102. [102] [linter-eslint](https://atom.io/packages/linter-eslint) depends on [eslint](https://www.npmjs.com/package/eslint) `npm install -g eslint && apm install linter-eslint`.
-Also, in order for your prject benefit eslint, we suggest downloading [.eslintrc](../../../raw/master/.eslintrc) and extend it according to your needs.
-301. [201] In order to use ES6 on JetBrains IDEs, please follow these [instructions](http://blog.jetbrains.com/webstorm/2015/05/ecmascript-6-in-webstorm-transpiling/).
-There is also [JavaScript.next Support](https://plugins.jetbrains.com/plugin/7643?pr=) Plugin, however I could not make it work (yet).
+...
 
-### Notes: (Documentation) ###
+##### JavaScript &amp; HTML
 
-901. [901] Best documentation for EcmaScript 6 can be found at https://github.com/lukehoban/es6features or http://www.ecma-international.org/ecma-262/6.0/
+```bash
+#
+# ES6
+#
 
-## Other
+# Babel ES6/ES7 Syntax highlight 
+ext install vscode-babel-coloring
+# ESLint 
+ext install vscode-eslint
+# JavaScript (ES6) code snippets => https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
+ext install JavaScriptSnippets
+```
+```bash
+#
+# TypeScript
+#
+```
+```bash
+#
+# HTML
+#
+```
+```bash
+#
+# Jade
+#
+```
+```bash
+#
+# Handlebars
+#
+```
 
-| vers./IDE    | Atom                                  | Sublime Text        | IntelliJ | Eclipse | Netbeans | Vim |
-| :----------: | :-----------------------------------: | :-----------------: | :------: | :-----: | :------- | :-- |
-| git          | git-control, git-plus, git-tab-status | -                   |  native  |         |          |     |
-| svn          | svn                                   | -                   |  native  |         |          |     |
-| copy/paste   | native                                | SideBarEnhancements |  native  |         |          |     |
-| editorconfig | ?                                     | EditorConfig        |  native  |         |          |     |
+...
+
+##### PHP
+
+...
+
+##### Python
+
+...
+
+<!-- --lang-ex-end -->
