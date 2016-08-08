@@ -104,6 +104,19 @@ apm install sync-settings
 apm install git-control
 ```
 
+```css
+/** in case of git and gulp control add this to stylesheet */
+
+.gulp-control, .git-control {
+  .output {
+    pre {
+      border: 0px;
+      color: white;
+    }
+  }
+}
+```
+
 ```
 apm install merge-conflicts
 ```
@@ -135,6 +148,7 @@ apm install language-cfml
 apm install language-lucee
 
 # https://atom.io/packages/linter-cflint
+# NOTE: Do not activate unless you know what you do!
 apm install linter-cflint
 ```
 
