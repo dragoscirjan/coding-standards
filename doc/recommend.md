@@ -90,6 +90,9 @@ apm install linter
 apm install editorconfig
 
 apm install project-manager
+
+apm install linter-jsonlint
+apm install language-json5
 ```
 
 ```bash
@@ -138,6 +141,18 @@ apm install file-icons
 apm install expose
 ```
 
+###### Linux
+
+```bash
+
+# https://atom.io/packages/language-apache
+apm install language-apache
+# https://atom.io/packages/linter-docker
+apm install linter-docker
+# https://atom.io/packages/language-docker
+apm install language-docker
+```
+
 ##### ColdFusion
 
 ```bash
@@ -156,11 +171,9 @@ apm install linter-cflint
 
 ##### JavaScript &amp; HTML
 
-```bash
-#
-# ES5+
-#
+###### ES5+
 
+```bash
 # http://atom.io/packages/atom-ternjs
 apm install atom-ternjs
 
@@ -175,37 +188,31 @@ apm install autocomplete-modules
 apm install language-babel
 # http://atom.io/packages/linter-eslint
 apm install linter-eslint
+
+# http://atom.io/packages/flow-ide
+apm install flow-ide
+
+# https://atom.io/packages/js-hyperclick
+apm install js-hyperclick
 ```
 
-```bash
-#
-# Coffee
-#
+###### Coffee
 
+```bash
 # http://atom.io/packages/language-coffee-script
 apm install language-coffee-script
 # http://atom.io/packages/linter-coffeelint
 apm install linter-coffeelint
 ```
+###### TypeScript
 
 ```bash
-#
-# TypeScript
-#
-
 # http://atom.io/packages/atom-typescript
 apm install atom-typescript
 ```
+###### HTML
 
 ```bash
-#
-```
-
-```bash
-#
-# HTML
-#
-
 # https://atom.io/packages/emmet
 apm install emmet
 # https://atom.io/packages/autocomplete-html
@@ -214,11 +221,9 @@ apm install autocomplete-html
 apm install language-html
 ```	
 
-```bash
-#
-# Jade
-#
+###### Jade/Pug
 
+```bash
 # https://atom.io/packages/atom-jade
 apm install atom-jade
 # https://atom.io/packages/html2jade-plus
@@ -229,11 +234,9 @@ apm install linter-jade
 apm install jade-beautify
 ```	
 
-```bash
-#
-# Css
-#
+###### Css &amp; Less
 
+```bash
 # https://atom.io/packages/language-css
 apm install language-css
 # https://atom.io/packages/autocomplete-css
@@ -245,12 +248,7 @@ apm install pigments
 # CSS COMB ?
 # https://atom.io/packages/css-spy
 apm install css-spy # (new suggestion)
-```	
 
-```bash
-#
-# Less
-#
 
 # https://atom.io/packages/language-less
 apm install language-less
@@ -273,17 +271,50 @@ apm install atom-jinja2
 
 <!-- --lang-ex-end -->
 
-### Brackets
-
-...
-
 ### IntelliJ IDEA
 
 ...
 
 ### Sublime Text
 
+<!-- --lang-ex -->
+
+##### General Settings
+
+###### Coding
+
 ...
+
+###### General
+
+...
+
+###### Git
+
+* [Sublimerge](http://www.sublimerge.com/) (LICENSED)
+* [GitConflictResolver](https://github.com/Zeeker/sublime-GitConflictResolver)
+
+...
+
+###### UI
+
+##### ColdFusion
+
+...
+
+##### JavaScript &amp; HTML
+
+...
+
+##### PHP
+
+...
+
+##### Python
+
+...
+
+<!-- --lang-ex-end -->
 
 ### Vim
 
@@ -297,81 +328,54 @@ apm install atom-jinja2
 
 ###### Coding
 
-```
-apm install autocomplete-plus
-```
-
-```
-apm install linter
-```
+* [mrmlnc.vscode-json5](https://github.com/Microsoft/vscode-json5) :: Adds syntax highlighting of JSON5 files http://json5.org/
+* [joelday.docthis](https://github.com/joelday/vscode-docthis) :: JSDoc generator extension for Visual Studio Code.
 
 ###### General
 
-```
-apm install docblockr
-```
-
-```
-apm install project-manager
-```
-
-```
-ext install code-settings-sync
-```
+* [EditorConfig.EditorConfig](#) :: EditorConfig for Visual Studio Code
+* [Shan.code-settings-sync](https://github.com/shanalikhan/code-settings-sync) :: Synchronize your Visual Studio Code Settings Across Multiple Machines using Github GIST
 
 ###### Git
 
-```
-apm install git-control
-```
+* [donjayamanne.githistory](https://github.com/DonJayamanne/gitHistoryVSCode) :: Git History for Visual Studio Code
+* [vector-of-bool.gitflow](https://github.com/vector-of-bool/vscode-gitflow) :: Gitflow integration for Visual Studio Code
+* [codezombiech.gitignore](https://github.com/github/gitignore) :: Language support for .gitignore files.
 
-```
-apm install merge-conflicts
-```
+* [jasonn-porch.gitlab-mr](https://gitlab.com/jasonnutter/vscode-gitlab-mr) :: VS Code plugin for working with Gitlab MRs.
 
 ###### UI
 
 
 ##### ColdFusion
 
-...
+* [ilich8086.ColdFusion](#) CFML (ColdFusion) Language Support
 
 ##### JavaScript &amp; HTML
 
-```bash
-#
-# ES6
-#
+###### ES 5+
 
-# Babel ES6/ES7 Syntax highlight 
-ext install vscode-babel-coloring
-# ESLint 
-ext install vscode-eslint
-# JavaScript (ES6) code snippets => https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
-ext install JavaScriptSnippets
-```
-```bash
-#
-# TypeScript
-#
-```
-```bash
-#
-# HTML
-#
-```
-```bash
-#
-# Jade
-#
-```
-```bash
-#
-# Handlebars
-#
-```
+* [dbaeumer.vscode-eslint](https://github.com/Microsoft/vscode-eslint) :: Integrate eslint into VSCode
+* [vscode-babel-coloring](https://github.com/dzannotti/vscode-babel) :: Adds Js Babel es6/es7 syntax coloring
 
-...
+###### TypeScript
+
+###### HTML
+
+###### Jade/Pug
+
+* [mrmlnc.vscode-puglint](https://github.com/mrmlnc/vscode-puglint) :: Linter and style checker for Pug (formerly Jade) as plugin for VS Code.
+
+###### Handlebars
+
+
+###### Css &amp; Less
+
+* [mrmlnc.vscode-csscomb](https://github.com/mrmlnc/vscode-csscomb) :: CSS coding style formatter. https://goo.gl/lKARa5
+* [mrmlnc.vscode-less](https://github.com/mrmlnc/vscode-less) :: Less intellisense for Variables and Mixins in all Less files.
+
+###### Scss
+* [mrmlnc.vscode-scss](https://github.com/mrmlnc/vscode-scss) :: IntelliSense for Variables, Mixins and Functions in all Sass (SCSS syntax only) files.
 
 ##### PHP
 
@@ -382,3 +386,27 @@ ext install JavaScriptSnippets
 ...
 
 <!-- --lang-ex-end -->
+
+## Using Git
+
+https://developer.atlassian.com/blog/2015/12/tips-tools-to-solve-git-conflicts/
+
+### Saving Credentials
+
+We do not recomment storing credentials more than one hour on any computer. So please use the following.
+
+``` bash
+git config --global credential.helper 'cache --timeout 3600'
+```
+
+For windows, we do accept `wincred` as well, since `cache` would not work.
+
+```shell
+git config --global credential.helper wincred
+```
+
+For removing credentials - best use the credential helper unset command, after which use again the credential helper set command.
+
+```bash
+git config --global --unset credential.helper
+```
